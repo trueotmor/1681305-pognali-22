@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
-* Студент: [Sasha Proskurin](https://up.htmlacademy.ru/adaptive/22/user/1681305).
-* Наставник: `Неизвестно`.
+* Студент: [Александр Проскурин](https://up.htmlacademy.ru/htmlcss/30/user/1681305).
+* Наставник: [Виктор Гирда](https://up.htmlacademy.ru/htmlcss/30/user/73026).
 
 ---
 
