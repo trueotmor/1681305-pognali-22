@@ -16,10 +16,344 @@
     <!--подключение стилей-->
   </head>
   <body>
-    <header>
+    <header class="page-header">
 
+      <a class="page-header__logo" href="#">
+        <img src="img/logo_mobile.png" width="96" height="15" alt="Сервис поиска попутчиков «Погнали»">  <!--class="page-header__logo-image"-->
+      </a>
+      <nav class="page-header__navigate navigate">
+        <button class="navigate__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="wrapper">
+          <a class="navigate__logo" href="#">
+            <img src="img/logo_mobile_menu.png" width="100" height="15" alt="Сервис поиска попутчиков «Погнали»">
+          </a>
+          <ul class="navigate__user-list">
+            <li class="navigate__user-item navigate__user-item--current">
+              <a class="navigate__user-link" href="#">О сервисе</a>
+            </li>
+            <li class="navigate__user-item">
+              <a class="navigate__user-link" href="#">Направления</a>
+            </li>
+            <li class="navigate__user-item">
+              <a class="navigate__user-link" href="#">Попутчики</a>
+            </li>
+          </ul>
+          <a class="navigate__login-button" href="">Авторизация</a>
+          <ul class="navigate__contact-list">
+            <li class="navigate__contact-item">
+              <a class="navigate__nav-phone nav-phone" href="tel:+78005558628">
+                <svg class="nav-phone__image" width="17" height="15" viewBox="0 0 17 15" fill="#FFD74B" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.49995 0.0861511C5.7035 0.0861511 2.90033 0.558819 1.88322 1.50093C1.03934 2.28252 0.758038 3.66329 0.663214 4.53753C0.663214 4.53753 0.650146 4.62393 0.650146 4.66109C0.650146 5.00391 0.944447 5.27887 1.30427 5.27887C1.34678 5.27887 2.92002 5.15837 3.86851 5.08425C3.89134 5.08112 3.91434 5.07806 3.93716 5.07191C4.29043 5.0627 4.57505 4.7908 4.57505 4.45413L4.57822 3.237C4.57822 2.86014 4.90214 2.55737 5.3012 2.55737H11.6987C12.0978 2.55737 12.4218 2.86011 12.4218 3.237L12.425 4.45413C12.425 4.7908 12.7095 5.0627 13.0628 5.07191C13.0854 5.0781 13.1085 5.08112 13.1315 5.08425C14.0801 5.15834 15.6533 5.27887 15.6957 5.27887C16.0553 5.27887 16.3499 5.00391 16.3499 4.66109C16.3499 4.62393 16.3368 4.53753 16.3368 4.53753C16.2419 3.66329 15.9609 2.28255 15.117 1.50093C14.0996 0.558819 11.2964 0.0861511 8.49995 0.0861511ZM8.49995 8.11773C7.7771 8.11773 7.19164 8.67064 7.19164 9.35333C7.19164 10.036 7.7771 10.5889 8.49995 10.5889C9.22279 10.5889 9.80823 10.036 9.80823 9.35333C9.80823 8.67064 9.22279 8.11773 8.49995 8.11773ZM7.51873 5.33752V4.56528C7.51873 4.13902 7.15236 3.79304 6.70106 3.79304C6.24977 3.79304 5.8834 4.13905 5.8834 4.56528V5.33752L1.47095 9.7889C1.16689 10.07 0.977135 10.4622 0.977135 10.8948V12.1335C0.977135 12.8162 1.56264 13.3691 2.28545 13.3691H2.61254V14.1414C2.61254 14.5677 2.97895 14.9136 3.43025 14.9136C3.88154 14.9136 4.24792 14.5677 4.24792 14.1414V13.3691H12.752V14.1414C12.752 14.5677 13.1182 14.9136 13.5697 14.9136C14.021 14.9136 14.3873 14.5677 14.3873 14.1414V13.3691H14.7144C15.4373 13.3691 16.0227 12.8162 16.0227 12.1335V10.8948C16.0227 10.4622 15.833 10.07 15.5289 9.7889L11.1166 5.33752V4.56528C11.1166 4.13902 10.7502 3.79304 10.2989 3.79304C9.84757 3.79304 9.48124 4.13905 9.48124 4.56528V5.33752H7.51873ZM8.49995 6.8821C9.94564 6.8821 11.1166 7.98799 11.1166 9.35333C11.1166 10.7187 9.94567 11.8247 8.49995 11.8247C7.05426 11.8247 5.88336 10.7187 5.88336 9.35333C5.88336 7.98795 7.05426 6.8821 8.49995 6.8821Z"/>
+                </svg>
+                <span class="nav-phone__number">8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="navigate__contact-item">
+              <a class="navigate__nav-mail nav-mail" href="mailto:mail@htmlacademy.ru">
+                <svg class="nav-mail__image" width="19" height="13" viewBox="0 0 19 13" fill="#FFD74B" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1393 10.4663L11.8089 6.5L16.1393 2.53365L15.5488 1.90264L9.24997 7.67188L2.95117 1.90264L2.36066 2.53365L6.69108 6.5L2.36066 10.4663L2.95117 11.0974L7.33081 7.08594L9.24997 8.84375L11.1691 7.08594L15.5488 11.0974L16.1393 10.4663ZM1.57593 0.25C0.76692 0.25 0.111084 0.948839 0.111084 1.80786V11.1921C0.111084 12.0525 0.7616 12.75 1.57593 12.75H16.924C17.733 12.75 18.3889 12.0512 18.3889 11.1921V1.80786C18.3889 0.947478 17.7383 0.25 16.924 0.25H1.57593Z"/>
+                </svg>
+                <span class="nav-mail__adress" >mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navigate__social-list">
+            <li class="navigate__social-item">
+              <a class="navigate__social-link social-link" href="#" aria-label="facebook">
+                <svg class="social-link__fb" width="11" height="21" fill="#192144" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.49 20.81H2.13v-9.67H0V6.35h2.07c-.16-2.17.23-3.75 1.2-4.83A4.88 4.88 0 016.86 0h3.75v4.61H7.67a4.7 4.7 0 00-.2 1.74h3.15v4.79H7.46l.02 9.67zM3.32 19.7h2.97V10h3.14V7.5H6.29v-.57c0-1.5 0-2.84.78-3.34l.15-.1h2.2V1.12H6.9a3.82 3.82 0 00-2.74 1.13c-.79.92-1.11 2.47-.87 4.6l.08.63h-2.2V10h2.15v9.68z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="navigate__social-item">
+              <a class="navigate__social-link social-link" href="#" aria-label="vkontakte">
+                <svg class="social-link__vk" width="23" height="12" fill="#192144" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.77 11.83a2.98 2.98 0 01-1.55-.47 7.57 7.57 0 01-1.32-1.15c-.32-.33-.87-.88-1.07-.88-.21 0-.36.69-.35 1.18 0 .33-.12.66-.35.9-.26.22-.57.35-.9.38H10.8c-2.05-.05-4-.85-5.51-2.25C2.56 7 .2 2.18.12 1.97a1.01 1.01 0 01.1-1.1C.52.61.88.48 1.25.5h3.12c.24.04.48.13.7.26.2.14.36.33.46.55.32.7.7 1.36 1.1 2 .97 1.5 1.4 1.85 1.56 1.92.17-.7.22-1.43.14-2.15.03-.33-.03-.66-.15-.96a.98.98 0 00-.58-.22l-.54-.51c-.1-.5.44-.93.82-1.1A6.38 6.38 0 0110.2.02h.52c.54-.01 1.07.04 1.6.15 1.26.27 1.21 1.3 1.16 2.49 0 .34-.03.75-.03 1.21v.36c-.03.33-.01.66.06.98a6.8 6.8 0 001.54-1.86c.43-.67.8-1.38 1.13-2.1a1.18 1.18 0 011.18-.72h3.46c.74 0 1.18.22 1.36.64.18.42.12 1.25-1.75 3.46l-.74.85a5.5 5.5 0 00-.92 1.19c.28.32.6.6.95.85.85.65 1.6 1.43 2.22 2.3a1.2 1.2 0 01.2 1.27 1.71 1.71 0 01-1.4.75l-2.81.03-.17-.03zM13.83 8.2c.66 0 1.24.6 1.86 1.22.33.37.7.7 1.11.97.31.21.67.32 1.04.32h.07l2.82-.04c.14 0 .28-.04.4-.1l-.07-.12a9.86 9.86 0 00-1.99-2.04c-.88-.75-1.33-1.1-1.39-1.68-.05-.58.37-1.08 1.2-2.04l.74-.83a8.05 8.05 0 001.52-2.21 4.16 4.16 0 00-.5 0H17.4a.4.4 0 00-.18 0c-.34.8-.75 1.56-1.22 2.29-1.4 2.11-2.06 2.4-2.53 2.4a.88.88 0 01-.41-.1c-.75-.44-.75-1.39-.7-2.08v-.32c0-.49 0-.9.03-1.27.06-1.26 0-1.27-.28-1.33-.45-.1-.91-.14-1.38-.12h-.5c-.48-.01-.95.01-1.42.07.07.05.13.12.19.19.3.49.46 1.06.43 1.63.1 1.24.05 2.85-.74 3.24-.14.07-.29.1-.44.1-.7 0-1.38-.66-2.54-2.44-.45-.69-.85-1.4-1.2-2.14l-.05-.08a.9.9 0 00-.24-.08H1.2c.44.92 2.51 4.97 4.84 7.09 1.3 1.2 2.99 1.9 4.76 1.97h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.95 1.17-2.25.1-.04.19-.06.29-.08z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="navigate__social-item social-link">
+              <a class="navigate__social-link" href="#" aria-label="instagram">
+                <svg class="social-link__insta" width="18" height="18" fill="#192144" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.96 1.8a3.25 3.25 0 013.24 3.24v7.92a3.25 3.25 0 01-3.24 3.24H5.04a3.25 3.25 0 01-3.23-3.24V5.04A3.25 3.25 0 015.04 1.8h7.92zm0-1.08H5.04A4.32 4.32 0 00.72 5.04v7.92a4.32 4.32 0 004.32 4.32h7.92a4.32 4.32 0 004.32-4.32V5.04A4.32 4.32 0 0012.96.72z"/>
+                  <path d="M9 5.82a3.19 3.19 0 110 6.38 3.19 3.19 0 010-6.38zm0-1.08a4.27 4.27 0 100 8.54 4.27 4.27 0 000-8.54zM13.43 5.56a.96.96 0 100-1.93.96.96 0 000 1.93z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <main>
+    <header class="inner-header">
+      <div class="wrapper">
+        <h1 class="inner-header__title">Попутчки</h1>
+        <a class="inner-header__to-the-main" href="index.html">На главную</a>
+      </div>
+    </header>
+    <div class="interaction">
+      <a class="login-button" href="#">Авторизация</a>
+        <a class="phone-button" href="tel:+78005558628">
+          <!--svg-->
+        </a>
+        <a class="mail-button" href="mailto:mail@htmlacademy.ru">
+         <!--svg-->
+        </a>
+    </div>
+    <main class="inner-main">
+      <section class="filter">
+        <div class="wrapper">
+          <form class="filter__form" action="https://echo.htmlacademy.ru">
+            <fieldset class="filter__country country">
+              <legend class="country__legend">Фильтрация по странам</legend> <!--visually-hidden для tablet-->
+              <ul class="country__list">
+                <li class="country__item">
+                  <!--Европа-->
+                </li>
+                <li class="country__item">
+                  <!--Азия-->
+                </li>
+                <li class="country__item">
+                  <!--Америка-->
+                </li>
+                <li class="country__item">
+                  <!--Острова-->
+                </li>
+              </ul>
+              <!-- <button class="filter__toggle">Показать все</button> -->
+            </fieldset>
+            <div class="filter__companion companion">
+              <h2 class="companion__title">Подберите идеального попутчика</h2>
+              <fieldset class="companion__checkboxes checkboxes">
+                <legend class="checkboxes__name">Хобби:</legend>
+                <ul class="checkboxes__list">
+                  <li class="checkboxes__item ">
+                    <input class="checkboxes__input" type="checkbox" name="gym" id="gym" checked>
+                    <label for="gym">Спортзал</label>
+                  </li>
+                  <li class="checkboxes__item ">
+                    <input class="checkboxes__input" type="checkbox" name="hookah" id="hookah">
+                    <label for="hookah">Кальян</label>
+                  </li>
+                  <li class="checkboxes__item ">
+                    <input class="checkboxes__input" type="checkbox" name="laze" id="laze">
+                    <label for="laze">Диван</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="companion__checkboxes checkboxes">
+                <legend class="checkboxes__name">Музыка:</legend>
+                <ul class="checkboxes__list">
+                  <li class="checkboxes__item ">
+                    <input class="checkboxes__input" type="checkbox" name="hard-rock" id="hard-rock" checked>
+                    <label for="hard-rock">Тяжелый рок</label>
+                  </li>
+                  <li class="checkboxes__item ">
+                    <input class="checkboxes__input" type="checkbox" name="rus-rap" id="rus-rap">
+                    <label for="rus-rap">Русский рэп</label>
+                  </li>
+                  <li class="checkboxes__item ">
+                    <input class="checkboxes__input" type="checkbox" name="eurodance" id="eurodance">
+                    <label for="eurodance">Евроденс</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="companion__checkboxes checkboxes">
+                <legend class="checkboxes__name">Еда:</legend>
+                <ul class="checkboxes__list">
+                  <li class="checkboxes__item ">
+                    <input class="checkboxes__input" type="checkbox" name="meat-eater" id="meat-eater" checked>
+                    <label for="meat-eater">Мясоед</label>
+                  </li>
+                  <li class="checkboxes__item ">
+                    <input class="checkboxes__input" type="checkbox" name="proper-nutrition" id="proper-nutrition">
+                    <label for="proper-nutrition">Сидит на ПП</label>
+                  </li>
+                  <li class="checkboxes__item ">
+                    <input class="checkboxes__input" type="checkbox" name="vegetarian" id="vegetarian">
+                    <label for="vegetarian">Веган-сыроед</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="companion__transport transport">
+                <legend class="transport__name">Транспорт:</legend>
+                <ul class="transport__list">
+                  <li class="transport__item ">
+                    <input class="transport__input visually-hidden" type="checkbox" name="air" id="air" checked>
+                    <label for="air"><!--svg--></label>
+                  </li>
+                  <li class="transport__item ">
+                    <input class="transport__input visually-hidden" type="checkbox" name="auto" id="auto" checked>
+                    <label for="auto"><!--svg--></label>
+                  </li>
+                  <li class="transport__item ">
+                    <input class="transport__input visually-hidden" type="checkbox" name="bike" id="bike">
+                    <label for="bike"><!--svg--></label>
+                  </li>
+                  <li class="transport__item ">
+                    <input class="transport__input visually-hidden" type="checkbox" name="foot" id="foot" checked>
+                    <label for="foot"><!--svg--></label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="companion__level">
+                <legend class="companion__name">Левел</legend>
+                <!--Выбор уровня -->
+              </fieldset>
+            </div>
+            <button type="submit">Показать</button>
+          </form>
+        </div>
+      </section>
+      <section class="filter-results">
+        <div class="wrapper">
+          <div class="card">
+            <img class="card__avatar" src="" alt="Аватар попутчика">
+            <div class="card__likes-wrapper">
+              <img class="likes" src="" alt="like's">
+              <p class="likes-count">1,5 М</p>
+            </div>
+            <p class="card__companion-name">Таня Фирсова</p>
+            <div class="card__online-status"></div>
+            <div class="card__options"></div>
+            <div class="card__liked-countries liked-countries">
+              <p>хочет посетить:</p>
+              <ul class="liked-countries__list">
+                <li class="liked-countries__item">
+                  <img src="img/card/sri-lanka_mob.png" alt="Шри-Ланка">
+                  <p>Шри-Ланка</p>
+                </li>
+                <li class="liked-countries__item">
+                  <img src="img/card/thailand_mob.png" alt="Тайланд">
+                  <p>Тайланд</p>
+                </li>
+                <li class="liked-countries__item">
+                  <img src="img/card/seychelles_mob.png" alt="Сейшелы">
+                  <p>Сейшелы</p>
+                </li>
+            </div>
+            <div class="card__transport transport">
+              <p>транспорт:</p>
+              <img src="" alt="Самолет">
+              <img src="" alt="Автотранспорт">
+              <img src="" alt="Велосипед">
+              <img src="" alt="Путешествует на своих двоих">
+            </div>
+            <div class="card__level">
+              <p>левел:</p>
+              <div></div> <!--Левел с прогресс-баром-->
+            </div>
+            <button class="card__button" type="button">Позвать!</button>
+          </div>
+          <div class="card">
+            <img class="card__avatar" src="" alt="Аватар попутчика">
+            <div class="card__likes-wrapper">
+              <img class="likes" src="" alt="like's">
+              <p class="likes-count">1500</p>
+            </div>
+            <p class="card__companion-name">Петя Демин</p>
+            <div class="card__online-status"></div>
+            <div class="card__options"></div>
+            <div class="card__liked-countries liked-countries">
+              <p>хочет посетить:</p>
+              <ul class="liked-countries__list">
+                <li class="liked-countries__item">
+                  <img src="img/card/belgium_mob.png" alt="Бельгия">
+                  <p>Бельгия</p>
+                </li>
+                <li class="liked-countries__item">
+                  <img src="img/card/czech_mob.png" alt="Чехия">
+                  <p>Чехия</p>
+                </li>
+            </div>
+            <div class="card__transport">
+              <p>транспорт:</p>
+              <img src="" alt="Самолет">
+              <img src="" alt="Автотранспорт">
+              <img src="" alt="Велосипед">
+              <img src="" alt="Путешествует на своих двоих">
+            </div>
+            <div class="card__level">
+              <p>левел:</p>
+              <div></div> <!--Левел с прогресс-баром-->
+            </div>
+            <button class="card__button" type="button">Позвать!</button>
+          </div>
+          <div class="card">
+            <img class="card__avatar" src="" alt="Аватар попутчика">
+            <div class="card__likes-wrapper">
+              <img class="likes" src="" alt="like's">
+              <p class="likes-count">170</p>
+            </div>
+            <p class="card__companion-name">Марк Смолов</p>
+            <div class="card__online-status"></div>
+            <div class="card__options"></div>
+            <div class="card__liked-countries liked-countries">
+              <p>хочет посетить:</p>
+              <ul class="liked-countries__list">
+                <li class="liked-countries__item">
+                  <img src="img/card/america_mob.png" alt="США">
+                  <p>США</p>
+                </li>
+                <li class="liked-countries__item">
+                  <img src="img/card/australia_mob.png" alt="Австралия">
+                  <p>Австралия</p>
+                </li>
+                <li class="liked-countries__item">
+                  <img src="img/card/dominica_mob.png" alt="Доминика">
+                  <p>Доминика</p>
+                </li>
+            </div>
+            <div class="card__transport">
+              <p>транспорт:</p>
+              <img src="" alt="Самолет">
+              <img src="" alt="Автотранспорт">
+              <img src="" alt="Велосипед">
+              <img src="" alt="Путешествует на своих двоих">
+            </div>
+            <div class="card__level">
+              <p>левел:</p>
+              <div class="level-progress"></div> <!--Левел с прогресс-баром-->
+            </div>
+            <button class="card__button" type="button">Позвать!</button>
+          </div>
+          <div class="card">
+            <img class="card__avatar" src="" alt="Аватар попутчика">
+            <div class="card__likes-wrapper">
+              <img class="likes" src="" alt="like's">
+              <p class="likes-count">23</p>
+            </div>
+            <p class="card__companion-name">Лариса Роговая</p>
+            <div class="card__online-status"></div>
+            <div class="card__options"></div>
+            <div class="card__liked-countries liked-countries">
+              <p>хочет посетить:</p>
+              <ul class="liked-countries__list">
+                <li class="liked-countries__item">
+                  <img src="img/card/united-kingdom_mob.jpg" alt="Великобритания">
+                  <p>Великобритания</p>
+                </li>
+                <li class="liked-countries__item">
+                  <img src="img/card/germany_mob.jpg" alt="Германия">
+                  <p>Германия</p>
+                </li>
+            </div>
+            <div class="card__transport">
+              <p>транспорт:</p>
+              <img src="" alt="Самолет">
+              <img src="" alt="Автотранспорт">
+              <img src="" alt="Велосипед">
+              <img src="" alt="Путешествует на своих двоих">
+            </div>
+            <div class="card__level">
+              <p>левел:</p>
+              <div></div> <!--Левел с прогресс-баром-->
+            </div>
+            <button class="card__button" type="button">Позвать!</button>
+          </div>
+
+        </div>
+      </section>
+
       <section class="map">
         <div class="wrapper">
           <h2 class="map__title visually-hidden">Карта</h2> <!--Скрытый заголовок-->
@@ -38,8 +372,42 @@
         </div>
       </section>
     </main>
-    <footer>
-
+    <footer class="page-footer">
+      <div class="wrapper">
+        <a class="page-footer__logo" href="#">
+          <img src="img/logo_mobile_menu.png" width="100" height="15" alt="Сервис поиска попутчиков «Погнали»">
+        </a>
+        <ul class="page-footer__social-list">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link social-link" href="#" aria-label="facebook">
+              <svg class="social-link__fb" width="11" height="21" fill="#192144" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.49 20.81H2.13v-9.67H0V6.35h2.07c-.16-2.17.23-3.75 1.2-4.83A4.88 4.88 0 016.86 0h3.75v4.61H7.67a4.7 4.7 0 00-.2 1.74h3.15v4.79H7.46l.02 9.67zM3.32 19.7h2.97V10h3.14V7.5H6.29v-.57c0-1.5 0-2.84.78-3.34l.15-.1h2.2V1.12H6.9a3.82 3.82 0 00-2.74 1.13c-.79.92-1.11 2.47-.87 4.6l.08.63h-2.2V10h2.15v9.68z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link social-link" href="#" aria-label="vkontakte">
+              <svg class="social-link__vk" width="23" height="12" fill="#192144" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.77 11.83a2.98 2.98 0 01-1.55-.47 7.57 7.57 0 01-1.32-1.15c-.32-.33-.87-.88-1.07-.88-.21 0-.36.69-.35 1.18 0 .33-.12.66-.35.9-.26.22-.57.35-.9.38H10.8c-2.05-.05-4-.85-5.51-2.25C2.56 7 .2 2.18.12 1.97a1.01 1.01 0 01.1-1.1C.52.61.88.48 1.25.5h3.12c.24.04.48.13.7.26.2.14.36.33.46.55.32.7.7 1.36 1.1 2 .97 1.5 1.4 1.85 1.56 1.92.17-.7.22-1.43.14-2.15.03-.33-.03-.66-.15-.96a.98.98 0 00-.58-.22l-.54-.51c-.1-.5.44-.93.82-1.1A6.38 6.38 0 0110.2.02h.52c.54-.01 1.07.04 1.6.15 1.26.27 1.21 1.3 1.16 2.49 0 .34-.03.75-.03 1.21v.36c-.03.33-.01.66.06.98a6.8 6.8 0 001.54-1.86c.43-.67.8-1.38 1.13-2.1a1.18 1.18 0 011.18-.72h3.46c.74 0 1.18.22 1.36.64.18.42.12 1.25-1.75 3.46l-.74.85a5.5 5.5 0 00-.92 1.19c.28.32.6.6.95.85.85.65 1.6 1.43 2.22 2.3a1.2 1.2 0 01.2 1.27 1.71 1.71 0 01-1.4.75l-2.81.03-.17-.03zM13.83 8.2c.66 0 1.24.6 1.86 1.22.33.37.7.7 1.11.97.31.21.67.32 1.04.32h.07l2.82-.04c.14 0 .28-.04.4-.1l-.07-.12a9.86 9.86 0 00-1.99-2.04c-.88-.75-1.33-1.1-1.39-1.68-.05-.58.37-1.08 1.2-2.04l.74-.83a8.05 8.05 0 001.52-2.21 4.16 4.16 0 00-.5 0H17.4a.4.4 0 00-.18 0c-.34.8-.75 1.56-1.22 2.29-1.4 2.11-2.06 2.4-2.53 2.4a.88.88 0 01-.41-.1c-.75-.44-.75-1.39-.7-2.08v-.32c0-.49 0-.9.03-1.27.06-1.26 0-1.27-.28-1.33-.45-.1-.91-.14-1.38-.12h-.5c-.48-.01-.95.01-1.42.07.07.05.13.12.19.19.3.49.46 1.06.43 1.63.1 1.24.05 2.85-.74 3.24-.14.07-.29.1-.44.1-.7 0-1.38-.66-2.54-2.44-.45-.69-.85-1.4-1.2-2.14l-.05-.08a.9.9 0 00-.24-.08H1.2c.44.92 2.51 4.97 4.84 7.09 1.3 1.2 2.99 1.9 4.76 1.97h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.95 1.17-2.25.1-.04.19-.06.29-.08z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link social-link" href="#" aria-label="instagram">
+              <svg class="social-link__insta" width="18" height="18" fill="#192144" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.96 1.8a3.25 3.25 0 013.24 3.24v7.92a3.25 3.25 0 01-3.24 3.24H5.04a3.25 3.25 0 01-3.23-3.24V5.04A3.25 3.25 0 015.04 1.8h7.92zm0-1.08H5.04A4.32 4.32 0 00.72 5.04v7.92a4.32 4.32 0 004.32 4.32h7.92a4.32 4.32 0 004.32-4.32V5.04A4.32 4.32 0 0012.96.72z"/>
+                <path d="M9 5.82a3.19 3.19 0 110 6.38 3.19 3.19 0 010-6.38zm0-1.08a4.27 4.27 0 100 8.54 4.27 4.27 0 000-8.54zM13.43 5.56a.96.96 0 100-1.93.96.96 0 000 1.93z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="page-footer__devby-text">Разработано</p>
+        <a class="page-footer__devby-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="page-footer__devby-image" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy">
+        </a>
+      </div>
     </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a49c1bfe-97e3-407b-9b2d-e226713e4778&lang=ru_RU"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
