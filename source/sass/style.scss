@@ -1,1 +1,19 @@
-@import "content.scss";
+@import "vars.scss"; /* Глобальные переменные, цвета и стили*/
+@import "page.scss";
+@import "page-body.scss";
+@import "page-header.scss";
+@import "navigate.scss";
+@import "wrapper.scss";
+@import "interaction.scss";
+@import "login-button.scss";
+@import "phone-button";
+@import "mail-button";
+@import "page-main";
+@import "sequence";
+@import "about";
+@import "directions";
+@import "companions";
+@import "rate";
+@import "interest";
+@import "map";
+@import "page-footer";

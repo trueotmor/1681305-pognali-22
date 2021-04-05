@@ -1,0 +1,24 @@
+$colors : (
+  pog-main :#161c35,
+  pog-second :#1d2e5b,
+  pog-extra :#dfe3f0,
+  pog-special-first :#ffd74b,
+  pog-special-second :#ffbd30,
+  pog-special-third :#ff8d30,
+  pog-special :#444444
+);
+
+@function color($name, $ascss:0) {
+  @if $ascss == 1 {
+    @return var(--color-#{unquote($name)});
+  }
+  @else {
+    @return map-get($colors, $name);
+  }
+}
+
+:root {
+  @each $key, $value in $colors {
+    --color-#{$key}: #{$value};
+  }
+}
