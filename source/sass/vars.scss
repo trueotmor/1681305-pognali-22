@@ -5,10 +5,11 @@ $colors : (
   pog-special-first :#ffd74b,
   pog-special-second :#ffbd30,
   pog-special-third :#ff8d30,
-  pog-special :#444444
+  pog-special :#444444,
+  pog-clear: #ffffff
 );
 
-@function color($name, $ascss:0) {
+@function color($name, $ascss:1) {
   @if $ascss == 1 {
     @return var(--color-#{unquote($name)});
   }
@@ -17,8 +18,113 @@ $colors : (
   }
 }
 
+$font-weights : (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  bold: 700
+);
+
+@function fw($name, $ascss:1) {
+  @if $ascss == 1 {
+    @return var(--font-weight-#{unquote($name)});
+  }
+  @else {
+    @return map-get($font-weights, $name);
+  }
+}
+
+$font-sizes : (
+  mob-small : 14px,
+  mob-basic : 16px,
+  mob-basic-plus : 17px,
+  mob-medium : 18px,
+  basic : 20px,
+  basic-plus : 21px,
+  medium : 24px,
+  large : 28px,
+  very-large: 30px,
+  big: 36px,
+  very-big : 45px,
+  wery-big: 60px
+);
+
+@function fs($name, $ascss:1) {
+  @if $ascss == 1 {
+    @return var(--font-size-#{unquote($name)});
+  }
+  @else {
+    @return map-get($font-sizes, $name);
+  }
+}
+
+$line-heights: (
+small: 18px,
+basic: 20px,
+basic-plus: 21px,
+medium: 22px,
+medium-plus: 24px,
+large: 25px,
+very-large: 28px,
+wery-large: 30px,
+big: 32px,
+bigger: 33px,
+very-big: 34px,
+wery-big: 35px,
+more-big: 40px,
+giant: 45px,
+very-giant: 70px,
+wery-giant: 71px
+);
+
+@function lh($name, $ascss:1) {
+  @if $ascss == 1 {
+    @return var(--line-height-#{unquote($name)});
+  }
+  @else {
+    @return map-get($line-heights, $name);
+  }
+}
+
 :root {
+  /*цвета*/
   @each $key, $value in $colors {
     --color-#{$key}: #{$value};
   }
+  /*размер шрифта*/
+  @each $key, $value in $font-sizes {
+    --font-size-#{$key}: #{$value};
+  }
+  /*вес шрифта*/
+  @each $key, $value in $font-weights {
+    --font-weight-#{$key}: #{$value};
+  }
+  /*интервал*/
+  @each $key, $value in $line-heights {
+    --line-height-#{$key}: #{$value};
+  }
+}
+
+@mixin mob-text-type1 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin mob-text-type2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin level-type1 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+@mixin level-type2 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
 }

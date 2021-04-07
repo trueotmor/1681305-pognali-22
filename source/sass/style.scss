@@ -1,4 +1,7 @@
-@import "vars.scss"; /* Глобальные переменные, цвета и стили*/
+/* Глобальные переменные, цвета и стили*/
+@import "vars.scss";
+/*добавляем шрифты bloggersans*/
+@import "fonts.scss";
 @import "page.scss";
 @import "page-body.scss";
 @import "page-header.scss";
