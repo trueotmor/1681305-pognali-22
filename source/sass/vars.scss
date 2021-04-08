@@ -5,8 +5,10 @@ $colors : (
   pog-special-first :#ffd74b,
   pog-special-second :#ffbd30,
   pog-special-third :#ff8d30,
+  pog-special-third-hover : #f26926,
   pog-special :#444444,
-  pog-clear: #ffffff
+  pog-clear: #ffffff,
+  pog-standart: #000000
 );
 
 @function color($name, $ascss:1) {

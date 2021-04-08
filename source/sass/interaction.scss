@@ -1,3 +1,89 @@
 .interaction {
-  background-color: color("pog-main");
+  display: flex;
+  list-style-type: none;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.interaction__item {
+  display: block;
+}
+
+.interaction__phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: color("pog-special-third");
+
+  &:hover {
+    background-color: color("pog-special-third-hover");
+    transition: all 0.3s;
+  }
+
+  &:active .handset {
+    opacity: 0.3;
+    transition: all 0.3s;
+  }
+}
+
+.handset {
+  fill: color("pog-main");
+}
+
+.interaction__envelop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: color("pog-special-second");
+
+  &:hover {
+    background-color: color("pog-special-third");
+    transition: all 0.3s;
+  }
+
+  &:active .envelop {
+    opacity: 0.3;
+    transition: all 0.3s;
+  }
+}
+
+.envelop {
+  fill: color("pog-main");
+}
+
+.interaction__login {
+  text-decoration: none;
+  color: color("pog-main");
+  font-weight: fw("bold");
+  font-size: fs("mob-basic-plus");
+  line-height: lh("basic");
+  background-color: color("pog-special-first");
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 12px 39px 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  justify-content: center;
+  border: none;
+
+  &:hover {
+    background-color: color("pog-special-second");
+    transition: all 0.3s;
+  }
+
+  &:active .interaction__login-text {
+    opacity: 0.3;
+    transition: all 0.3s;
+  }
 }

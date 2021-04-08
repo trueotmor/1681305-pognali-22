@@ -1,20 +1,18 @@
 .sequence {
   background-color: color("pog-main");
-  height: 780px;
+  height: min-content;
 }
 
-.sequence__back {
+.sequence--back {
   background-image: url("../img/sequence/globe-back-mob.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-
 }
-
 
 .sequence .wrapper {
   background-image: url("../img/sequence/traveller-illustration-mob.png");
   background-repeat: no-repeat;
-  background-position: left 56px bottom 0px;
+  background-position: left 56px bottom 0;
 }
 
 .sequence__title {
@@ -26,4 +24,13 @@
   margin-top: 93px;
   margin-bottom: 265px;
   padding: 0 16px;
+}
+
+.sequence__text-wrapper {
+  margin:  0 0 30px;
+  padding: 0 25px 0 25px;
+}
+
+.sequence__detail {
+  background-color: color("pog-main");
 }
