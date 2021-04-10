@@ -4,6 +4,7 @@ $colors : (
   pog-extra :#dfe3f0,
   pog-special-first :#ffd74b,
   pog-special-second :#ffbd30,
+  pog-special-secondark : #ffa530,
   pog-special-third :#ff8d30,
   pog-special-third-hover : #f26926,
   pog-special :#444444,
@@ -129,4 +130,17 @@ wery-giant: 71px
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
+}
+
+@mixin bg-color($color) {
+  background-color: $color;
+}
+
+@mixin bg-color($color) {
+  @if  (lightness($color) >= 50%) {
+    color: color("pog-special")
+  }
+  @else {
+    color: color("pog-clear")
+  }
 }
