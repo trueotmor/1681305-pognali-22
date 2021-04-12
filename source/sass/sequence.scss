@@ -16,6 +16,7 @@
   margin-right: auto;
   width: 100%;
   position: relative;
+
   &::before {
     position: absolute;
     content: "";
@@ -25,6 +26,7 @@
     left: 55px;
     background-image: url("../img/sequence/traveller-illustration-mob.png");
     background-repeat: no-repeat;
+    z-index: 50;
   }
 }
 
@@ -41,9 +43,14 @@
 }
 
 .sequence__text-wrapper {
-  margin:  0 0 30px;
+  margin: 0 0 30px;
   padding: 0 25px 0 25px;
+
   @include bg-color(color("pog-main", 0));
+}
+
+.sequence__text-type-one {
+  margin-bottom: 18px;
 }
 
 .sequence__detail {
@@ -66,9 +73,14 @@
   margin: 0;
   border-radius: 10px;
   box-sizing: border-box;
+  font-size: fs("mob-medium");
+  line-height: lh("small");
+  font-weight: fw("bold");
+
   &:not(:last-child) {
     min-height: 100px;
   }
+
   &:not(:first-child) {
     margin-top: -20px;
   }
@@ -91,13 +103,12 @@
 }
 
 .step {
+  color: color("pog-clear");
   margin: 0;
 }
 
 .step-text {
-  font-size: fs("mob-medium");
-  line-height: lh("small");
+  color: color("pog-main");
   margin: 0;
   max-width: 140px;
 }
-

@@ -1,0 +1,50 @@
+.country-info {
+  background-color: color("pog-clear");
+  box-sizing: border-box;
+  padding: 25px 25px 20px;
+  border-radius: 10px;
+  margin-top: -17px;
+  position: relative;
+  z-index: 10;
+}
+
+.country-info__name {
+  font-size: fs("basic-plus");
+  line-height: lh("basic-plus");
+  font-weight: fw("bold");
+  color: color("pog-standart");
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.country-info__tagline {
+  font-size: fs("mob-basic");
+  line-height: lh("small");
+  font-weight: fw("medium");
+  color: color("pog-special");
+  opacity: 0.3;
+  margin: 0;
+}
+
+.country-info__users-count {
+  font-size: fs("mob-basic");
+  line-height: lh("basic");
+  font-weight: fw("medium");
+  color: color("pog-main");
+  opacity: 0.3;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 3px;
+    left: -17px;
+    background-image: url("../img/directions/4el.svg");
+    background-repeat: no-repeat;
+    opacity: 0.4;
+  }
+}

@@ -1,3 +1,30 @@
 .about {
-  background-color: color("pog-main");
+  background-color: color("pog-first");
+  border-radius: 0 0 30px 30px;
+  z-index: 20;
+  position: relative;
+
+  @include bg-color(color("pog-first", 0));
+}
+
+.about .wrapper {
+  padding: 0 60px 82px 49px;
+  box-sizing: border-box;
+  background-image: url("../img/about/mobile-back-mob.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.about__title {
+  font-size: fs("medium");
+  line-height: lh("medium-plus");
+  font-weight: fw("bold");
+  color: color("pog-special-third");
+  margin: 0 0 20px;
+  padding-top: 30px;
+}
+
+.about__text-type-one {
+  margin-bottom: 20px;
 }

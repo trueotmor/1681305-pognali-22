@@ -15,6 +15,7 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml"/>
     <meta name="theme-color" content="#ffffff">
     <!--подключение стилей-->
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -117,7 +118,7 @@
           </div>
           <div class="sequence__detail">
             <blockquote class="sequence__text-wrapper">
-              <p class="text-type-one">«Лучшее приложение,<br>что я видел в жизни!»</p>
+              <p class="sequence__text-type-one text-type-one">«Лучшее приложение,<br>что я видел в жизни!»</p>
               <p class="text-type-two">Мурат Эльтазин<br>главный редактор<br>газеты «гаджетлайф»</p>
             </blockquote>
             <ul class="sequence__list">
@@ -146,8 +147,8 @@
       <section class="about">
         <div class="wrapper">
           <h2 class="about__title">О сервисе</h2>
-          <p class="about__text-type1">Любое путешествие веселее<br>с попутчиками, которые на<br>одной волне с тобой! Делитесь<br>своими идеями путешествий и<br>черпайте вдохновение в чужих.</p>
-          <p class="about__text-type2">А если найдете кого-то<br>близкого по духу — скорее<br>зовите в совместный трип!</p>
+          <p class="about__text-type-one text-type-one">Любое путешествие веселее<br>с попутчиками, которые на<br>одной волне с тобой! Делитесь<br>своими идеями путешествий и<br>черпайте вдохновение в чужих.</p>
+          <p class="about__text-type-two text-type-two">А если найдете кого-то<br>близкого по духу — скорее<br>зовите в совместный трип!</p>
         </div>
       </section>
 
@@ -155,16 +156,40 @@
       <section class="directions">
         <div class="wrapper">
           <h2 class="directions__title">Направления</h2>
-          <p class="directions__text-type1">Мы не продаем туры<br>и ничего не рекламируем.<br>Люди сами пишут о странах,<br>куда хотели бы отправиться<br>и чем можно там заняться.</p>
+          <p class="directions__text-type-one text-type-one">Мы не продаем туры<br>и ничего не рекламируем.<br>Люди сами пишут о странах,<br>куда хотели бы отправиться<br>и чем можно там заняться.</p>
           <ul class="directions__list">
             <li class="directions__item">
-
+              <picture>
+                <source>
+                <img class="directions__image" src="img/directions/thailand-mobile.jpg" alt="Тайланд" width="270" height="110">
+              </picture>
+              <div class="directions__country-info country-info">
+                <h3 class="country-info__name">Тайланд</h3>
+                <p class="country-info__tagline">Джунгли зовут!</p>
+                <span class="country-info__users-count">18321</span>
+              </div>
             </li>
             <li class="directions__item">
-
+              <picture>
+                <source>
+                <img class="directions__image" src="img/directions/france-mobile.jpg" alt="Франция" width="270" height="110">
+              </picture>
+              <div class="directions__country-info country-info">
+                <h3 class="country-info__name">Франция</h3>
+                <p class="country-info__tagline">Трэ бьен, манифик!</p>
+                <span class="country-info__users-count">12518</span>
+              </div>
             </li>
             <li class="directions__item">
-
+              <picture>
+                <source>
+                <img class="directions__image" src="img/directions/czech-mobile.jpg" alt="Чехия" width="270" height="110">
+              </picture>
+              <div class="directions__country-info country-info">
+                <h3 class="country-info__name">Тайланд</h3>
+                <p class="country-info__tagline">Закоулки старой Европы</p>
+                <span class="country-info__users-count">5326</span>
+              </div>
             </li>
           </ul>
           <a class="directions__show-all" href="">Показать все</a>
