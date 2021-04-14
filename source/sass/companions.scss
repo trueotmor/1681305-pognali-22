@@ -61,10 +61,15 @@
 .companions__cards-list {
   list-style: none;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/*.companions__cards-item {
-}*/
+.companions__cards-list {
+  position: relative;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
 
 .companions__show-all {
   margin-bottom: 34px;
@@ -89,4 +94,10 @@
     opacity: 0.3;
     transition: all 0.3s;
   }
+}
+
+.profile__image-wrapper {
+  display: block;
+  width: 270px;
+  height: 270px;
 }
