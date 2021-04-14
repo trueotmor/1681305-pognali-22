@@ -8,6 +8,42 @@
   z-index: 10;
 }
 
+.country-info--thailand {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    width: 35px;
+    height: 24px;
+    background-image: url("../img/flags/mobile_flags/thailand_mob.png");
+  }
+}
+
+.country-info--france {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    width: 35px;
+    height: 24px;
+    background-image: url("../img/flags/mobile_flags/france_mob.png");
+  }
+}
+
+.country-info--czech {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    width: 35px;
+    height: 24px;
+    background-image: url("../img/flags/mobile_flags/czech_mob.png");
+  }
+}
+
 .country-info__name {
   font-size: fs("basic-plus");
   line-height: lh("basic-plus");

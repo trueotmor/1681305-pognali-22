@@ -2,8 +2,10 @@
 @import "vars.scss";
 /*добавляем шрифты bloggersans*/
 @import "fonts.scss";
+@import "visually-hidden.scss";
 @import "text-type-one";
 @import "text-type-two";
+@import "button.scss";
 @import "page.scss";
 @import "page-body.scss";
 @import "page-header.scss";

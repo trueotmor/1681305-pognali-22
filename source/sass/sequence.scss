@@ -11,11 +11,10 @@
 }
 
 .sequence__ave {
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 100%;
   position: relative;
+  box-sizing: border-box;
 
   &::before {
     position: absolute;
@@ -32,6 +31,8 @@
 
 .sequence__title {
   display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
   vertical-align: middle;
   text-align: center;
   font-size: fs("big");

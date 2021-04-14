@@ -1,0 +1,26 @@
+.button {
+  display: inline-block;
+  width: 100%;
+  color: color("pog-second");
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.button--arguments {
+  padding: 23px 23px 22px;
+  font-size: fs("mob-medium");
+  line-height: lh("small");
+  font-weight: fw("bold");
+  border-radius: 10px;
+}
+
+.button__color--yellow {
+  background-color: color("pog-special-first");
+
+  &:focus,
+  &:hover {
+    background-color: color("pog-special-second");
+    transition: all 0.3s;
+  }
+}

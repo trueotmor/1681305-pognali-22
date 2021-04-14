@@ -1,7 +1,9 @@
 $colors : (
   pog-main :#161c35,
+  pog-back-decorate: #141b3b,
   pog-first : #192144,
   pog-second :#1d2e5b,
+  pog-third: #132576,
   pog-extra :#dfe3f0,
   pog-special-first :#ffd74b,
   pog-special-second :#ffbd30,
@@ -9,6 +11,7 @@ $colors : (
   pog-special-third :#ff8d30,
   pog-special-third-hover : #f26926,
   pog-special :#444444,
+  pog-special-lighter: #e1e3e9,
   pog-clear: #ffffff,
   pog-standart: #000000
 );
@@ -139,9 +142,9 @@ wery-giant: 71px
 
 @mixin bg-color($color) {
   @if  (lightness($color) >= 50%) {
-    color: color("pog-special")
+    color: color("pog-special");
   }
   @else {
-    color: color("pog-clear")
+    color: color("pog-clear");
   }
 }

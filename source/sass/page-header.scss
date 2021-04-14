@@ -1,3 +1,23 @@
 .page-header {
+  position: relative;
+  z-index: 20;
+  box-sizing: border-box;
   background-color: color("pog-main");
+}
+
+.page-header__navigate {
+
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.page-header__top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 270px;
+}
+
+.page-header__menu {
+  background-color: color("pog-clear");
 }
