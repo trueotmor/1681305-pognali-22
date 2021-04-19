@@ -73,6 +73,28 @@
   }
 }
 
+.profile__countries-item--belgium {
+  &::before {
+    background-image: url("../img/flags/belgium.png");
+    background-repeat: no-repeat;
+  }
+
+  &:hover .profile__country-title {
+    display: flex;
+  }
+}
+
+.profile__countries-item--czech {
+  &::before {
+    background-image: url("../img/flags/czechia.png");
+    background-repeat: no-repeat;
+  }
+
+  &:hover .profile__country-title {
+    display: flex;
+  }
+}
+
 .profile__countries-item {
   position: relative;
   box-sizing: border-box;
@@ -184,7 +206,7 @@
   box-sizing: border-box;
   margin: 0;
   margin-bottom: 14px;
-  padding: 0 25px;
+  padding: 0 30px;
 }
 
 .profile__hashtag-link {
