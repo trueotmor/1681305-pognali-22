@@ -1,0 +1,208 @@
+.profile {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.profile__image-wrapper {
+  display: block;
+  width: 270px;
+  height: 270px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.profile__info-wrapper {
+  background-color: color("pog-clear");
+  border-radius: 0 0 10px 10px;
+  box-sizing: border-box;
+  height: 158px;
+}
+
+.profile__image {
+  border-radius: 10px 10px 0 0;
+}
+
+.profile__level {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  box-sizing: border-box;
+}
+
+.profile__countries-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 24px;
+  box-sizing: border-box;
+}
+
+.profile__countries-item--sri-lanka {
+  &::before {
+    background-image: url("../img/flags/srilanka.png");
+    background-repeat: no-repeat;
+  }
+  &:hover .profile__country-title {
+    display: flex;
+  }
+}
+
+.profile__countries-item--thailand {
+  &::before {
+    background-image: url("../img/flags/thailand.png");
+    background-repeat: no-repeat;
+  }
+  &:hover .profile__country-title {
+    display: flex;
+  }
+}
+
+.profile__countries-item--seychelles {
+  &::before {
+    background-image: url("../img/flags/seychelles.png");
+    background-repeat: no-repeat;
+  }
+  &:hover .profile__country-title {
+    display: flex;
+  }
+}
+
+.profile__countries-item {
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-top: -24px;
+  width: 35px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 47px;
+    left: -17px;
+    transform: scale(0.5);
+  }
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.profile__country-title {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  height: 56px;
+  font-size: fs("basic");
+  line-height: lh("basic");
+  font-weight: fw("normal");
+  color: color("pog-clear");
+  border-radius: 4px;
+  background-color: color("pog-first");
+  position: absolute;
+  bottom: -60px;
+  z-index: 1;
+  white-space: nowrap;
+  transform: translate(-43%);
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    border-bottom: 8px solid color("pog-first");
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+}
+
+.profile__inner-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.profile__more {
+  text-decoration: none;
+  margin-bottom: 15px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.profile__name {
+  font-size: fs("basic-plus");
+  line-height: lh("basic-plus");
+  font-weight: fw("bold");
+  color: color("pog-second");
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.profile__online-status {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  left: -15px;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.profile__online-status--off {
+  background-color: color("pog-status-off");
+}
+
+.profile__online-status--on {
+  background-color: color("pog-status-on");
+}
+
+
+.profile__hashtag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 14px;
+  padding:  0 25px;
+}
+
+.profile__hashtag-item {
+
+}
+
+.profile__hashtag-link {
+  text-decoration: none;
+  color: color("pog-special");
+  margin-right: 5px;
+  font-size: fs("mob-basic");
+  line-height: lh("small");
+  font-weight: fw("normal");
+}
+
+.profile__transport-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile__transport-item {
+
+}

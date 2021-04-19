@@ -1,0 +1,23 @@
+.transport {
+  position: relative;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.transport--param {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  fill: color("pog-second");
+  &:hover {
+    opacity: 0.15;
+    transition: all 0.3s;
+  }
+}
+
+.transport--no-bg {
+  background-color: transparent;
+}

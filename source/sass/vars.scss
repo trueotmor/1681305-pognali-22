@@ -13,7 +13,9 @@ $colors : (
   pog-special :#444444,
   pog-special-lighter: #e1e3e9,
   pog-clear: #ffffff,
-  pog-standart: #000000
+  pog-standart: #000000,
+  pog-status-off: #f97676,
+  pog-status-on: #81e31e
 );
 
 @function color($name, $ascss:1) {
