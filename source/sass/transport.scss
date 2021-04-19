@@ -21,3 +21,44 @@
 .transport--no-bg {
   background-color: transparent;
 }
+
+.transport__title {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  height: 56px;
+  font-size: fs("basic");
+  line-height: lh("basic");
+  font-weight: fw("normal");
+  color: color("pog-clear");
+  border-radius: 4px;
+  background-color: color("pog-first");
+  position: absolute;
+  bottom: -60px;
+  z-index: 1;
+  white-space: nowrap;
+  transform: translate(-44%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    border-bottom: 8px solid color("pog-first");
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+}
+
+.profile__transport-item {
+
+  &:hover .transport__title {
+    display: flex;
+  }
+}

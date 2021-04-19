@@ -58,10 +58,15 @@
   padding: 0 25px;
 }
 
+.companions__cards-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .companions__cards-list {
   list-style: none;
   box-sizing: border-box;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
   position: relative;
   border-radius: 10px;
