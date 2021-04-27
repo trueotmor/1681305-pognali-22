@@ -346,10 +346,71 @@
               <p class="new-plan__step-description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
               <div class="new-plan__country-select country-select">
                 <ul class="country-select__list">
-                  <li class="country-select__item country-select__selected"></li>
-                  <li class="country-select__item country-select__selected"></li>
-                  <li class="country-select__item country-select__pick"></li>
-                  <li class="country-select__item country-select__new"></li>
+                  <li class="country-select__item country-select__selected">
+                    <div class="country-select__name-wrapper">
+                      <span class="country-select__name">Босния и Герцеговина</span>
+                      <button class="country-select__button" type="button">
+                        Выбор страны
+                        <svg class="country-select__button-image">
+                          <use xlink:href="img/transport/icon_sprite.svg#past"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="country-select__flag-wrapper">
+                      <span class="country-select__flag country-select__flag--bosnia"></span>
+                    </div>
+                    <button class="country-select__remove" type="button">
+                      <svg class="country-select__cross-image">
+                        <use xlink:href="img/transport/icon_sprite.svg#cross"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="country-select__item country-select__selected">
+                    <div class="country-select__name-wrapper">
+                      <span class="country-select__name">Чехия</span>
+                      <button class="country-select__button" type="button">
+                        Выбор страны
+                        <svg class="country-select__button-image">
+                          <use xlink:href="img/transport/icon_sprite.svg#past"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="country-select__flag-wrapper">
+                      <span class="country-select__flag country-select__flag--czech"></span>
+                    </div>
+                    <button class="country-select__remove" type="button">
+                      <svg class="country-select__cross-image">
+                        <use xlink:href="img/transport/icon_sprite.svg#cross"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="country-select__item country-select__pick">
+                    <div class="country-select__name-wrapper">
+                      <span class="country-select__name">Выберите страну</span>
+                      <button class="country-select__button" type="button">
+                        Выбор страны
+                        <svg class="country-select__button-image">
+                          <use xlink:href="img/transport/icon_sprite.svg#past"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <button class="country-select__remove" type="button">
+                      <svg class="country-select__cross-image">
+                        <use xlink:href="img/transport/icon_sprite.svg#cross"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="country-select__item country-select__new">
+                    <div class="country-select__name-wrapper country-select__name-wrapper--new">
+                      <span class="country-select__name">Добавить страну</span>
+                      <button class="country-select__button-new" type="button">
+                        Выбор страны
+                        <svg class="country-select__button-new-image" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-width="2" d="M7 0v14M0 7h14"/>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
                 </ul>
               </div>
               <a class="button button__color--yellow  button__next-step button__next-step--arguments" href="#step-three"><span class="button__text-active">Следующий шаг</span></a>
@@ -362,8 +423,8 @@
               <ul class="new-plan__joys-list">
                 <li class="new-plan__joys-item">
                   <div class="new-plan__joys-inner-wrapper">
-                    <span class="new-plan__joys-country">Босния и герцеговина</span>
-                    <span class="new-plan__joys-flag new-plan__joys-flag--bosnia">Босния и герцеговина</span>
+                    <span class="new-plan__joys-country">Босния и Герцеговина</span>
+                    <span class="new-plan__joys-flag new-plan__joys-flag--bosnia">Босния и Герцеговина</span>
                   </div>
                   <textarea class="new-plan__joys-plan" placeholder="План действий" aria-label="План действий"></textarea>
                 </li>
