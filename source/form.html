@@ -101,91 +101,288 @@
     </header>
     <div class="double-back"></div>
     <main>
-        <section class="preview-profile">
-          <div class="wrapper">
-            <h2 class="visually-hidden">Мои настройки профиля</h2>
-            <div class="preview-profile__lvl-photo-wrapper">
-              <div class="preview-profile__level-progress">
-                <svg class="preview-profile__level-progress-bar level-progress-bar--80">
-                  <use xlink:href="#level-progress-bar">
-                    <svg id="level-progress-bar" viewBox="0 0 100 100">
-                      <circle cx="35" cy="35" r="30" fill="none"></circle>
-                      <path class="preview-profile__lvl-stroke" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
-                    </svg>
-                  </use>
+      <section class="preview-profile">
+        <div class="wrapper">
+          <h2 class="visually-hidden">Мои настройки профиля</h2>
+          <div class="preview-profile__lvl-photo-wrapper">
+            <div class="preview-profile__level-progress">
+              <svg class="preview-profile__level-progress-bar level-progress-bar--80">
+                <use xlink:href="#level-progress-bar">
+                  <svg id="level-progress-bar" viewBox="0 0 100 100">
+                    <circle cx="35" cy="35" r="30" fill="none"></circle>
+                    <path class="preview-profile__lvl-stroke" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
+                  </svg>
+                </use>
+              </svg>
+            </div>
+
+            <div class="preview-profile__photo-wrapper">
+              <picture class="preview-profile__photo">
+                <source>
+                  <img class="preview-profile__img" src="img/demin.jpg" alt="Ваше фото" width="190" height="190">
+              </picture>
+            </div>
+
+          </div>
+          <div class="preview-profile__button-wrapper">
+            <button class="preview-profile__button" type="button"><span class="preview-profile__button-text">Сменить фото</span></button>
+          </div>
+
+          <div class="preview-profile__tags tags">
+            <h3 class="tags__title">Тэги</h3>
+            <div class="tags__list-wrapper">
+              <ul class="tags__list">
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#бургер</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#бар</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#футбол</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#концерт</a>
+                </li>
+                <li class="tags__item">
+                  <a class="tags__link" href="#">#крафт</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="preview-profile__my-transport my-transport">
+            <h3 class="tags__title">Транспорт</h3>
+            <div class="my-transport__list-wrapper">
+              <ul class="my-transport__list">
+                <li class="preview-profile__transport-item transport transport--bg-clear">
+                  <svg class="transport--my-transport">
+                    <use xlink:href="img/transport/icon_sprite.svg#plane"></use>
+                  </svg>
+                </li>
+                <li class="preview-profile__transport-item transport transport--bg-clear">
+                  <svg class="transport--my-transport">
+                    <use xlink:href="img/transport/icon_sprite.svg#auto"></use>
+                  </svg>
+                </li>
+                <li class="preview-profile__transport-item transport transport--bg-clear">
+                  <svg class="transport--my-transport">
+                    <use xlink:href="img/transport/icon_sprite.svg#bicycle"></use>
+                  </svg>
+                </li>
+                <li class="preview-profile__transport-item transport transport--bg-clear">
+                  <svg class="transport--my-transport">
+                    <use xlink:href="img/transport/icon_sprite.svg#run"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="my-plans">
+        <div class="wrapper">
+          <h2 class="my-plans__title">Мои планы:</h2>
+          <ol class="my-plans__list plans-list">
+            <li class="plans-list__item">
+              <div class="plans-list__inner-wrapper">
+                <p class="plans-list__number">1.</p>
+                <p class="plans-list__name">Франция, Италия</p>
+              </div>
+              <p class="plans-list__companions-count">3 попутчика</p>
+              <p class="plans-list__dates">26 мар - 29 мар</p>
+              <a class="plans-list__link" href="plans.html">Изменить</a>
+            </li>
+            <li class="plans-list__item">
+              <div class="plans-list__inner-wrapper">
+                <p class="plans-list__number">2.</p>
+                <p class="plans-list__name">Тайланд, Индонезия</p>
+              </div>
+              <p class="plans-list__companions-count">1 попутчик</p>
+              <p class="plans-list__dates">1 июл - 15 июл</p>
+              <a class="plans-list__link" href="plans.html">Изменить</a>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="new-plan">
+        <div class="wrapper">
+          <h2 class="new-plan__title">Добавить план:</h2>
+          <form class="new-plan__form" action="http://echo.htmlacademy.ru" method="POST">
+            <div class="new-plan__step new-plan__date date" id="step-one">
+              <ul class="new-plan__slider new-plan__slider--step-one">
+                <li class="new-plan__slider-item">
+                  <span class="new-plan__slider-dot new-plan__slider-dot--current">
+                    "Даты пребывания"
+                  </span>
+                </li>
+                <li class="new-plan__slider-item">
+                  <span class="new-plan__slider-dot">
+                    "Маршрут"
+                  </span>
+                </li>
+                <li class="new-plan__slider-item">
+                  <span class="new-plan__slider-dot">
+                    "Развлечения"
+                  </span>
+                </li>
+              </ul>
+              <h3 class="new-plan__step-title"><span class="new-plan__step-title-text">Шаг 1.</span><span class="new-plan__step-title-text">Даты пребывания</span></h3>
+              <p class="new-plan__step-description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <div class="step-counts">
+                <div class="step-counts__label-wrapper">
+                  <span class="step-counts__label">Ищу попутчиков:</span>
+                  <span class="step-counts__units">Чел.</span>
+                </div>
+                <div class="step-counts__input-box">
+                  <button class="step-counts__button step-counts__button-minus" type="button">&#8212</button>
+                  <input class="step-counts__input" type="text" aria-label="Количество попутчиков" value="2">
+                  <button class="step-counts__button step-counts__button-plus" type="button">+</button>
+                </div>
+              </div>
+
+              <div class="step-counts">
+                <div class="step-counts__label-wrapper">
+                  <span class="step-counts__label">Длительность:</span>
+                  <span class="step-counts__units">Дн.</span>
+                </div>
+                <div class="step-counts__input-box">
+                  <button class="step-counts__button step-counts__button-minus" type="button">&#8212</button>
+                  <input class="step-counts__input" type="text" aria-label="Количество попутчиков" value="3">
+                  <button class="step-counts__button step-counts__button-plus" type="button">+</button>
+                </div>
+            </div>
+
+            <div class="new-plan__whith-kids">
+              <input class="visually-hidden new-plan__checkbox" type="checkbox" name="kids" id="kids" checked>
+              <label class="new-plan__kids-label new-plan__kids-checkbox-img" for="kids">
+                <svg class="new-plan__kids-checkbox-img--checked">
+                  <use xlink:href="img/transport/icon_sprite.svg#check"></use>
                 </svg>
-              </div>
+                Можно с детьми
+              </label>
+            </div>
 
-              <div class="preview-profile__photo-wrapper">
-                <picture class="preview-profile__photo">
-                  <source>
-                    <img class="preview-profile__img" src="img/demin.jpg" alt="Ваше фото" width="190" height="190">
-                </picture>
+            <div class="new-plan__calendar calendar">
+              <div class="calendar__month-select">
+                <div class="calendar__inner-wrapper">
+                  <button class="calendar__button calendar__past-month" type="button">
+                    <svg class="calendar__button-past-image">
+                      <use xlink:href="img/transport/icon_sprite.svg#past"></use>
+                    </svg>
+                    Предыдущий месяц
+                  </button>
+                  <div class="calendar__month">Март 2019</div>
+                  <button class="calendar__button calendar__next-month" type="button">
+                    <svg class="calendar__button-next-image">
+                      <use xlink:href="img/transport/icon_sprite.svg#next"></use>
+                    </svg>
+                    Следующий месяц
+                  </button>
+                </div>
+                <ul class="calendar__day-of-week-list">
+                  <li class="calendar__day-of-week-item">П</li>
+                  <li class="calendar__day-of-week-item">В</li>
+                  <li class="calendar__day-of-week-item">С</li>
+                  <li class="calendar__day-of-week-item">Ч</li>
+                  <li class="calendar__day-of-week-item">П</li>
+                  <li class="calendar__day-of-week-item--dayoff">С</li>
+                  <li class="calendar__day-of-week-item--dayoff">В</li>
+                </ul>
+                <ul class="calendar__month-days-list">
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">24</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">25</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">26</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">27</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">28</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">1</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">2</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">3</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">4</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">5</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">6</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">7</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">8</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">9</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">10</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">11</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">12</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">13</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">14</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">15</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">16</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">17</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">18</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">19</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">20</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">21</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">22</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">23</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">24</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">25</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--select calendar__month-days-item--focus">26</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--select">27</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--select">28</li>
+                  <li class="calendar__month-days-item">29</li>
+                  <li class="calendar__month-days-item">30</li>
+                  <li class="calendar__month-days-item">31</li>
+                  <li class="calendar__month-days-item">1</li>
+                  <li class="calendar__month-days-item">2</li>
+                  <li class="calendar__month-days-item">3</li>
+                  <li class="calendar__month-days-item">4</li>
+                  <li class="calendar__month-days-item">5</li>
+                  <li class="calendar__month-days-item">6</li>
+                </ul>
               </div>
+              <a class="button button__color--yellow  button__next-step button__next-step--arguments" href="#step-two"><span class="button__text-active">Следующий шаг</span></a>
+            </div>
+            </div>
 
+            <div class="new-plan__step" id="step-two">
+              <h3 class="new-plan__step-title"><span class="new-plan__step-title-text">Шаг 2.</span><span class="new-plan__step-title-text">Маршрут</span></h3>
+              <p class="new-plan__step-description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <div class="new-plan__country-select country-select">
+                <ul class="country-select__list">
+                  <li class="country-select__item country-select__selected"></li>
+                  <li class="country-select__item country-select__selected"></li>
+                  <li class="country-select__item country-select__pick"></li>
+                  <li class="country-select__item country-select__new"></li>
+                </ul>
+              </div>
+              <a class="button button__color--yellow  button__next-step button__next-step--arguments" href="#step-three"><span class="button__text-active">Следующий шаг</span></a>
+              <a class="button  button__next-step button__next-step--arguments" href="#step-one"><span class="button__text-active">На шаг назад</span></a>
             </div>
-            <div class="preview-profile__button-wrapper">
-              <button class="preview-profile__button" type="button">Сменить фото</button>
+
+            <div class="new-plan__step" id="step-three">
+              <h3 class="new-plan__step-title"><span class="new-plan__step-title-text">Шаг 3.</span><span class="new-plan__step-title-text">Развлечения</span></h3>
+              <p class="new-plan__step-description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <ul class="new-plan__joys-list">
+                <li class="new-plan__joys-item">
+                  <div class="new-plan__joys-inner-wrapper">
+                    <span class="new-plan__joys-country">Босния и герцеговина</span>
+                    <span class="new-plan__joys-flag new-plan__joys-flag--bosnia">Босния и герцеговина</span>
+                  </div>
+                  <textarea class="new-plan__joys-plan" placeholder="План действий" aria-label="План действий"></textarea>
+                </li>
+                <li class="new-plan__joys-item">
+                  <div class="new-plan__joys-inner-wrapper">
+                    <span class="new-plan__joys-country">Чехия</span>
+                    <span class="new-plan__joys-flag new-plan__joys-flag--czech">Чехия</span>
+                  </div>
+                  <textarea class="new-plan__joys-plan" placeholder="План действий" aria-label="План действий">Пить пиво и лазить
+по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </li>
+              </ul>
+              <button class="button button__color--yellow  button__next-step button__next-step--arguments" type="submit"><span class="button__text-active">Отправить</span></button>
+              <a class="button  button__next-step button__next-step--arguments" href="#step-two"><span class="button__text-active">На шаг назад</span></a>
             </div>
-            <div class="profile-tags tags">
-              <p>Тэги</p>
-            </div>
-            <div class="transport">
-              <p>транспорт:</p>
-              <img src="" alt="Самолет">
-              <img src="" alt="Автотранспорт">
-              <img src="" alt="Велосипед">
-              <img src="" alt="Путешествует на своих двоих">
-            </div>
-          </div>
-        </section>
-        <section class="my-plans">
-          <div class="wrapper">
-            <h2 class="my-plans__title">Мои планы:</h2>
-            <div class="my-plans__my-plans-list"> <!---карточки планов-->
-            </div>
-          </div>
-        </section>
-        <form action="">
-        <section class="new-plan">
-          <div class="wrapper">
-            <h2 class="new-plan__title">Добавить план</h2>
-            <div class="new-plan__step step">
-              <h3 class="step__title">Шаг 1.</h3>
-              <p class="step__name">Даты пребывания</p>
-              <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-              <input type="number">
-              <input type="checkbox">
-              <input type="number">
-              <input type="date"> <!--что то на JS наверное-->
-              <button class="step__next" type="button"> Следующий шаг</button>
-            </div>
-            <div class="new-plan__step step">
-              <h3 class="step__title">Шаг 2.</h3>
-              <p class="step__name">Маршрут</p>
-              <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
-              <select name="" id=""></select>
-              <select name="" id=""></select>
-              <select name="" id=""></select>
-              <button>Добавить страну</button> <!--Добавить селект-->
-              <button class="step__next" type="button"> Следующий шаг</button>
-              <button class="step__previous" type="button"> На шаг назад</button>
-            </div>
-            <div class="new-plan__step step">
-              <h3 class="step__title">Шаг 3.</h3>
-              <p class="step__name">Развлечения</p>
-              <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-              <label for="">Босния и Герцеговина</label>
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-              <label for="">Чехия</label>
-              <input type="date"> <!--что то на JS наверное-->
-              <button type="submit"> Отправить</button>
-              <button class="step__previous" type="button"> На шаг назад</button>
-            </div>
-          </div>
-        </section>
-      </form>
+          </form>
+        </div>
+      </section>
+
     </main>
     <footer class="page-footer">
       <div class="wrapper">

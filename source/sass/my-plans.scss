@@ -1,0 +1,30 @@
+.my-plans {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  margin: -30px auto 0;
+  background-color: color("pog-extra");
+  border-radius: 30px 30px 0 0;
+  box-sizing: border-box;
+}
+
+.my-plans .wrapper {
+  padding: 28px 25px 60px;
+  box-sizing: border-box;
+}
+
+.my-plans__title {
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: fs("medium");
+  font-weight: fw("bold");
+  line-height: lh("medium-plus");
+  color: color("pog-second");
+}
+
+.my-plans__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}

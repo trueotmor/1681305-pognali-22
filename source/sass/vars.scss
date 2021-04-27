@@ -1,21 +1,31 @@
 $colors : (
   pog-main :#161c35,
   pog-back-decorate: #141b3b,
+  pog-back-light : #edeff6,
   pog-first : #192144,
   pog-second :#1d2e5b,
   pog-third: #132576,
   pog-extra :#dfe3f0,
+  pog-extra-second : #d1d7e9,
+  pog-extra-third : #dfe3f0,
+  pog-extra-four : #cbced9,
+  pog-extra-five : #d4d9eb,
+  pog-extra-six : #d6d9e6,
+  pog-extra-dark: #959bb2,
+  pog-extra-light : #cccccc,
   pog-special-first :#ffd74b,
   pog-special-second :#ffbd30,
   pog-special-secondark : #ffa530,
   pog-special-third :#ff8d30,
   pog-special-third-hover : #f26926,
+  pog-special-four : #ff5c23,
   pog-special :#444444,
   pog-special-lighter: #e1e3e9,
   pog-clear: #ffffff,
   pog-standart: #000000,
   pog-status-off: #f97676,
-  pog-status-on: #81e31e
+  pog-status-on: #81e31e,
+  pog-grad :rgba(255,255,255,0)
 );
 
 @function color($name, $ascss:1) {

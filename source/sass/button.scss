@@ -5,6 +5,7 @@
   text-decoration: none;
   box-sizing: border-box;
   cursor: pointer;
+  border: 0;
 }
 
 .button--arguments {
@@ -23,4 +24,20 @@
     background-color: color("pog-special-second");
     transition: all 0.3s;
   }
+}
+
+.button__next-step:active .button__text-active {
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+.button__next-step--arguments {
+  padding: 7px 0 3px;
+  width: 100%;
+  font-size: fs("mob-basic-plus");
+  line-height: lh("wery-large");
+  font-weight: fw("bold");
+  border-radius: 20px;
+  text-transform: uppercase;
+  text-align: center;
 }

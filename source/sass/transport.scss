@@ -8,9 +8,9 @@
 }
 
 .transport--param {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
+  display: block;
+  width: 30px;
+  height: 30px;
   fill: color("pog-second");
 
   &:hover {
@@ -19,8 +19,23 @@
   }
 }
 
+.transport--my-transport {
+  display: block;
+  width: 25px;
+  height: 25px;
+  fill: color("pog-second");
+}
+
 .transport--no-bg {
   background-color: transparent;
+}
+
+.transport--bg-clear {
+  background-color: color("pog-clear");
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .transport__title {

@@ -1,0 +1,63 @@
+.plans-list__item {
+  box-sizing: border-box;
+  padding: 24px 25px 20px;
+  color: color("pog-second");
+  background-color: color("pog-clear");
+  border-radius: 10px;
+}
+
+.plans-list__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.plans-list__inner-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.plans-list__number {
+  margin: 0;
+  margin-right: 5px;
+  font-size: fs("mob-basic");
+  line-height: lh("small");
+  font-weight: fw("medium");
+}
+
+.plans-list__name {
+  margin: 0;
+  font-size: fs("mob-basic");
+  line-height: lh("small");
+  font-weight: fw("bold");
+}
+
+.plans-list__companions-count {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: fs("mob-small");
+  line-height: lh("small");
+  font-weight: fw("medium");
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.plans-list__dates {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: fs("mob-small");
+  line-height: lh("small");
+  font-weight: fw("medium");
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.plans-list__link {
+  font-size: fs("mob-small");
+  line-height: lh("small");
+  font-weight: fw("medium");
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  color: color("pog-standart");
+  opacity: 0.3;
+}

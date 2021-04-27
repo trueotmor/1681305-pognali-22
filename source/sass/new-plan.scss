@@ -1,0 +1,314 @@
+.new-plan {
+  position: relative;
+  z-index: 11;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -30px;
+  background-color: color("pog-extra-five");
+  border-radius: 30px 30px 0 0;
+  box-sizing: border-box;
+}
+
+.new-plan .wrapper {
+  position: relative;
+  box-sizing: border-box;
+  padding: 30px 25px 95px;
+}
+
+.new-plan__title {
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: fs("medium");
+  font-weight: fw("bold");
+  line-height: lh("medium-plus");
+  color: color("pog-second");
+}
+
+
+.new-plan__form {
+  box-sizing: border-box;
+}
+
+.new-plan__step {
+  position: relative;
+  box-sizing: border-box;
+  background-color: color("pog-clear");
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 23px 25px 19px;
+}
+
+.new-plan__slider {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 25px;
+  top: -56px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.new-plan__slider-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.new-plan__slider-dot {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  position: relative;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: color("pog-second");
+    opacity: 0.3;
+  }
+}
+
+.new-plan__slider-dot--current::after {
+  opacity: 1;
+}
+
+.new-plan__step-title {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.new-plan__step-title-text {
+  font-size: fs("basic");
+  line-height: lh("basic");
+  font-weight: fw("bold");
+  color: color("pog-second");
+
+  &:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
+
+.new-plan__step-description {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: fs("mob-basic");
+  line-height: lh("medium");
+  font-weight: fw("normal");
+  color: color("pog-special");
+}
+
+.new-plan__whith-kids {
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+
+  &:hover .new-plan__kids-checkbox-img::before,
+  &:focus .new-plan__kids-checkbox-img::before {
+    border: solid 1px color("pog-extra-dark");
+    transition: all 0.3s;
+  }
+}
+
+.new-plan__kids-label {
+  color: color("pog-second");
+  font-size: fs("mob-basic");
+  font-weight: fw("normal");
+  line-height: lh("small");
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.new-plan__kids-checkbox-img {
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    border: solid 1px color("pog-extra-four");
+  }
+
+  &:active::before {
+    background-color: color("pog-back-light");
+    transition: all 0.3s;
+  }
+
+  &:active .new-plan__kids-checkbox-img--checked {
+    opacity: 0.3;
+  }
+}
+
+.new-plan__kids-checkbox-img--checked {
+  display: none;
+  position: absolute;
+  top: 3px;
+  left: 9px;
+  width: 11px;
+  height: 11px;
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: center;
+  fill: color("pog-main");
+}
+
+.new-plan__checkbox:checked + .new-plan__kids-checkbox-img .new-plan__kids-checkbox-img--checked {
+  display: block;
+  transition: all 0.3s;
+}
+
+.new-plan__joys-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 22px;
+  box-sizing: border-box;
+}
+
+.new-plan__joys-item {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 27px;
+  box-sizing: border-box;
+  position: relative;
+
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -14px;
+    width: 2px;
+    height: 111%;
+    background-color: #1d2e5b;
+  }
+}
+
+.new-plan__joys-plan {
+  width: 100%;
+  height: 220px;
+  padding: 10px 14px;
+  font-size: fs("mob-basic");
+  font-weight: fw("normal");
+  line-height: lh("medium");
+  text-align: left;
+  color: color("pog-special");
+  border-radius: 4px;
+  border: solid 1px color("pog-extra-four");
+  background-color: color("pog-clear");
+  resize: none;
+  box-sizing: border-box;
+
+  &:hover {
+    border: solid 1px color("pog-extra-dark");
+    transition: all 0.3s;
+  }
+
+  &:active,
+  &:focus {
+    border: solid 1px color("pog-main");
+    outline: none;
+    transition: all 0.3s;
+  }
+}
+
+.new-plan__joys-inner-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -14px;
+    width: 15px;
+    height: 2px;
+    background-color: color("pog-second");
+    border-radius: 1px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: color("pog-second");
+    border-radius: 50%;
+  }
+}
+
+.new-plan__joys-country {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 10px;
+  font-size: fs("mob-medium");
+  font-weight: fw("medium");
+  line-height: lh("small");
+  color: color("pog-second");
+  flex-grow: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, color("pog-grad") 0%, color("pog-grad") 60%, color("pog-clear") 100%);
+  }
+}
+
+.new-plan__joys-flag {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  padding: 0;
+  width: 35px;
+  height: 24px;
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: -17px;
+    width: 71px;
+    height: 48px;
+    transform: scale(0.5);
+    background-repeat: no-repeat;
+  }
+}
+
+.new-plan__joys-flag--bosnia {
+  &::before {
+    background-image: url("../img/flags/bosnia_and_herzegovina.png");
+  }
+}
+
+.new-plan__joys-flag--czech {
+  &::before {
+    background-image: url("../img/flags/czechia.png");
+  }
+}

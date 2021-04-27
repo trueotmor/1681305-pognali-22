@@ -1,0 +1,153 @@
+.calendar {
+  box-sizing: border-box;
+}
+
+.calendar__inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  border-top: 1px solid color("pog-extra-four");
+  border-bottom: 1px solid color("pog-extra-four");
+  box-sizing: border-box;
+}
+
+.calendar__button {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  position: relative;
+  width: 9px;
+  height: 18px;
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover .calendar__button-past-image,
+  &:hover .calendar__button-next-image {
+    opacity: 0.5;
+    transition: all 0.3s;
+  }
+
+  &:active .calendar__button-past-image,
+  &:active .calendar__button-next-image {
+    opacity: 0.1;
+    transition: all 0.3s;
+  }
+}
+
+.calendar__month {
+  margin: 12px 0 10px;
+  font-size: fs("basic");
+  line-height: lh("basic");
+  font-weight: fw("bold");
+  color: color("pog-second");
+}
+
+.calendar__button-past-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9px;
+  height: 18px;
+  fill: color("pog-standart");
+  opacity: 0.3;
+}
+
+.calendar__button-next-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 9px;
+  height: 18px;
+  fill: color("pog-standart");
+  opacity: 0.3;
+}
+
+.calendar__day-of-week-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.calendar__day-of-week-item,
+.calendar__day-of-week-item--dayoff {
+  font-size: fs("mob-small");
+  line-height: lh("small");
+  font-weight: fw("normal");
+  color: color("pog-special");
+}
+
+.calendar__day-of-week-item--dayoff {
+  color: color("pog-special-four");
+}
+
+.calendar__month-days-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 22px;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.calendar__month-days-item {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: calc((100%/7) - 1px);
+  font-size: fs("mob-small");
+  line-height: lh("small");
+  font-weight: fw("normal");
+  color: color("pog-special");
+  background-color: color("pog-back-light");
+  border: 1px solid color("pog-extra-six");
+  margin-right: -1px;
+  margin-bottom: -1px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+
+  &:hover {
+    background-color: color("pog-second");
+    box-shadow: 0 0 0 1px color("pog-special-four");
+    border: solid 1px color("pog-special-four");
+    z-index: 20;
+
+    @include bg-color(color("pog-second", 0));
+  }
+}
+
+.calendar__month-days-item--disabled {
+  opacity: 0.3;
+  background-color: color("pog-clear");
+  pointer-events: none;
+}
+
+.calendar__month-days-item--select {
+  background-color: color("pog-second");
+
+  @include bg-color(color("pog-second", 0));
+}
+
+.calendar__month-days-item--focus {
+  box-shadow: 0 0 0 1px color("pog-special-four");
+  border: solid 1px color("pog-special-four");
+  z-index: 20;
+}
