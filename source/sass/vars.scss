@@ -25,7 +25,7 @@ $colors : (
   pog-standart: #000000,
   pog-status-off: #f97676,
   pog-status-on: #81e31e,
-  pog-grad :rgba(255,255,255,0)
+  pog-grad :rgba(255, 255, 255, 0)
 );
 
 @function color($name, $ascss:1) {

@@ -25,4 +25,7 @@
   <symbol id="cross" viewBox="0 0 9 9">
     <path d="M7.875 1.125l-6.75 6.75M1.125 1.125l6.75 6.75" stroke="#AFB0B5" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
+  <symbol id="arrow" viewBox="0 0 8 11">
+    <path d="M3.65 10.35c.2.2.5.2.7 0l3.19-3.18a.5.5 0 10-.71-.7L4 9.28 1.17 6.46a.5.5 0 10-.7.71l3.18 3.18zM3.5 0v10h1V0h-1z"/>
+  </symbol>
 </svg>

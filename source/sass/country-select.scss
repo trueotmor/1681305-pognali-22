@@ -28,6 +28,39 @@
   }
 }
 
+.country-select__selected {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 50px;
+    width: 8px;
+    height: 8px;
+    background-color: color("pog-second");
+    z-index: 15;
+    border-radius: 50%;
+  }
+}
+
+.country-select__pick {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 50px;
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+    z-index: 15;
+    border-radius: 50%;
+    border: 1px solid color("pog-extra-four");
+  }
+}
+
 .country-select__remove {
   position: absolute;
   top: -10px;
@@ -196,11 +229,25 @@
 .country-select__new {
   background-color: color("pog-back-light");
   border-radius: 4px;
+  position: relative;
 
   &:hover .country-select__name-wrapper--new {
     background-color: color("pog-extra-third");
     border: solid 1px color("pog-extra-third");
     transition: all 0.3s;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 50px;
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+    z-index: 15;
+    border-radius: 50%;
+    border: 1px solid color("pog-extra-four");
   }
 }
 
@@ -221,15 +268,22 @@
 }
 
 .country-select__flag--bosnia {
-
   &::before {
-  background-image: url("../img/flags/bosnia_and_herzegovina.png");
+    background-image: url("../img/flags/bosnia_and_herzegovina.png");
   }
 }
 
 .country-select__flag--czech {
-
   &::before {
-  background-image: url("../img/flags/czechia.png");
+    background-image: url("../img/flags/czechia.png");
   }
+}
+
+.country-select__arrow-image {
+  width: 9px;
+  height: 12px;
+  position: absolute;
+  top: 49px;
+  right: 50px;
+  fill: color("pog-extra-four");
 }
