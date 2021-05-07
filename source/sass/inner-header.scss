@@ -34,3 +34,7 @@
     background-color: color("pog-special-third");
   }
 }
+
+.inner-header__title--catalog::after {
+  width: 172px;
+}

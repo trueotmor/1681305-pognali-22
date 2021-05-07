@@ -1,0 +1,110 @@
+.show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+
+  &:hover .show-more__image {
+    opacity: 0.6;
+    transition: all 0.3s;
+  }
+
+  &:active .show-more__image {
+    opacity: 0.3;
+    transition: all 0.3s;
+  }
+}
+
+.show-more__image {
+  transform: rotate(45deg);
+  width: 16px;
+  height: 16px;
+  stroke: color("pog-second");
+}
+
+.show-more__text {
+  font-size: fs("mob-basic-plus");
+  line-height: lh("wery-large");
+  font-weight: fw("bold");
+  color: color("pog-second");
+  cursor: pointer;
+  margin-left: 15px;
+  text-transform: uppercase;
+  padding-top: 5px;
+}
+
+.show-more__navigate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.show-more__pagination-list {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.show-more__button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 46px;
+}
+
+.show-more__button {
+  width: 50%;
+  height: 50px;
+  background-color: color("pog-clear");
+  padding: 0;
+  position: relative;
+
+  &:hover::after {
+    opacity: 0.6;
+    transition: all 0.3s;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+    transition: all 0.3s;
+  }
+}
+
+.show-more__button--back {
+  font-size: 0;
+  line-height: 0;
+  border-radius: 20px 0 0 20px;
+  border-right: 1px solid color("pog-back-light ");
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -5px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid color("pog-second");
+  }
+}
+
+.show-more__button--next {
+  font-size: 0;
+  line-height: 0;
+  border-radius: 0 20px 20px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -5px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid color("pog-second");
+  }
+}
