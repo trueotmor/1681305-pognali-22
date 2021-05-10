@@ -3,3 +3,15 @@
   margin: 0;
   padding: 0;
 }
+
+@media (min-width: $tablet) {
+  .text-type-two {
+    @include mob-text-type2-td;
+  }
+}
+
+@media (min-width: $desktop) {
+  .text-type-two {
+    @include mob-text-type2-td;
+  }
+}

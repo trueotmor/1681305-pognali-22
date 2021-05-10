@@ -9,7 +9,7 @@
 }
 
 .companions .wrapper {
-  padding: 0 25px;
+  padding: 128px 25px 34px;
   box-sizing: border-box;
   position: relative;
 }
@@ -17,40 +17,47 @@
 .companions__back-image-one {
   width: 100%;
 
-  ::before {
+  &::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 94px;
+    right: 25px;
     width: 143px;
     height: 143px;
     background-image: url("../img/companions/back-image/smolov-back-mob.jpg");
+    border-radius: 11px;
+    z-index: 10;
   }
 
-  ::after {
+  &::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 94px;
     left: 0;
-    width: 200px;
+    width: 113px;
     height: 132px;
     background-color: color("pog-back-decorate");
+    border-radius: 0 10px 10px 0;
+    z-index: 10;
   }
 }
 
 .companions__title {
+  position: relative;
   font-size: fs("medium");
   line-height: lh("medium-plus");
   font-weight: fw("bold");
   color: color("pog-special-third");
   margin: 0 0 20px;
   padding-left: 25px;
-  padding-top: 130px;
+  z-index: 11;
 }
 
 .companions__text-type-one {
   margin-bottom: 25px;
   padding: 0 25px;
+  position: relative;
+  z-index: 11;
 }
 
 .companions__text-type-two {
@@ -73,7 +80,6 @@
 }
 
 .companions__show-all {
-  margin-bottom: 34px;
   position: relative;
 
   &::before {
@@ -94,5 +100,20 @@
   &:active::before {
     opacity: 0.3;
     transition: all 0.3s;
+  }
+}
+
+
+
+
+
+
+@media (min-width: $tablet) {
+  .companions {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .companions .wrapper {
+    padding: 201px 75px 87px;
   }
 }

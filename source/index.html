@@ -376,7 +376,7 @@
             <h2 class="rate__title">Добавьте свой профиль</h2>
             <picture class="rate__image">
               <source>
-              <img src="img/rate/rates100x100.png" alt="сила рубля">
+              <img src="img/rate/rates100x100.png" width="100" height="100" alt="сила рубля">
             </picture>
           </div>
           <ul class="rate__list">
@@ -402,7 +402,12 @@
               <span class="rate__number rate__number--color-special-first">3</span>
             </li>
           </ul>
-          <a class="rate__show-business" href="">Показать тарифы для бизнеса</a>
+          <a class="rate__show-business" href="">
+            <svg class="rate_show-business-image">
+              <use xlink:href="img/transport/icon_sprite.svg#business"></use>
+            </svg>
+            Показать тарифы для бизнеса
+          </a>
         </div>
       </section>
 
@@ -410,14 +415,14 @@
       <section class="interest">
         <div class="wrapper">
           <h2 class="interest__title">Заинтересовались?</h2>
-          <p class="interest__text-type-one text-type-one">Зарегистрируйтесь,<br>это быстро и бесплатно!<br>Уже зарегистрированы? Тогда<br>скорее
+          <p class="interest__text-type-one text-type-one interest__text-indent-one">Зарегистрируйтесь, это&nbsp;быстро и бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее
             <a class="interest__login" href="form.html">авторизуйтесь</a>.
           </p>
           <form class="interest__mail-form" action="https://echo.htmlacademy.ru" method="POST">
             <input class="interest__input" type="email" name="email" placeholder="E-mail">
-            <button class="interest__button button__color--yellow" type="submit"></button>
+            <button class="interest__button button__color--yellow" type="submit"><span class="interest__button-text">Регистрация</span></button>
           </form>
-          <p class="interest__text-type-one text-type-one">Остались вопросы?<br>Мы с радостью на них ответим!</p>
+          <p class="interest__text-type-one text-type-one interest__text-indent-two">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
 
           <ul class="interest__contacts-list">
             <li class="interest__contacts-item">

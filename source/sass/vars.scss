@@ -144,6 +144,18 @@ wery-giant: 71px
   line-height: 22px;
 }
 
+@mixin mob-text-type1-td {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+@mixin mob-text-type2-td {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 24px;
+}
+
 @mixin level-type1 {
   font-weight: 700;
   font-size: 24px;
