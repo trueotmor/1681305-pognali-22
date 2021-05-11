@@ -21,3 +21,15 @@
 .page-header__menu {
   background-color: color("pog-clear");
 }
+
+@media (min-width: $tablet) {
+  .page-header__navigate {
+    padding: 0 40px 71px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .page-header__navigate {
+    display: none;
+  }
+}
