@@ -8,7 +8,7 @@
 }
 
 .about .wrapper {
-  padding: 0 60px 82px 49px;
+  padding: 30px 60px 82px 49px;
   box-sizing: border-box;
   background-image: url("../img/about/mobile-back-mob.png");
   background-repeat: no-repeat;
@@ -22,9 +22,114 @@
   font-weight: fw("bold");
   color: color("pog-special-third");
   margin: 0 0 20px;
-  padding-top: 30px;
 }
 
 .about__text-type-one {
   margin-bottom: 20px;
+  max-width: 210px;
+}
+
+.about__text-type-two {
+  max-width: 210px;
+}
+
+.about__show-all {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+  .about {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .about .wrapper {
+    padding: 41px 75px 89px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 40px;
+      width: 688px;
+      height: 212px;
+      background-color: color("pog-back-decorate");
+      border-radius: 20px;
+    }
+  }
+
+  .about__title {
+    font-size: fs("very-big");
+    line-height: lh("giant");
+    margin: 0 0 40px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .about__text-type-one {
+    margin-bottom: 31px;
+    max-width: 300px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .about__text-type-two {
+    margin-bottom: 52px;
+    max-width: 310px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .about__show-all {
+    display: block;
+    position: relative;
+    width: 276px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 33px;
+      right: 33px;
+      border-left: 10px solid color("pog-second");
+      border-bottom: 7.5px solid transparent;
+      border-top: 7.5px solid transparent;
+    }
+
+    &:active .about__show-all--text {
+      opacity: 0.3;
+      transition: all 0.3s;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+      transition: all 0.3s;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .about .wrapper {
+    padding: 132px 130px 163px;
+
+    &::before {
+      top: 70px;
+      left: 60px;
+      width: 212px;
+      height: 212px;
+    }
+  }
+
+  .about__title {
+    margin: 0 0 57px;
+  }
+
+  .about__text-type-one {
+    margin-bottom: 38px;
+    max-width: 620px;
+  }
+
+  .about__text-type-two {
+    margin-bottom: 85px;
+    max-width: 425px;
+  }
 }

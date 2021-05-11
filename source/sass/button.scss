@@ -42,3 +42,12 @@
   text-transform: uppercase;
   text-align: center;
 }
+
+@media (min-width: $tablet) {
+  .button--arguments {
+    padding: 29px 32px 27px;
+    font-size: fs("medium");
+    line-height: lh("medium-plus");
+    border-radius: 20px;
+  }
+}

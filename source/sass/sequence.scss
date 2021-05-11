@@ -46,6 +46,7 @@
 .sequence__text-wrapper {
   margin: 0 0 30px;
   padding: 0 25px 0 25px;
+  max-width: 160px;
 
   @include bg-color(color("pog-main", 0));
 }
@@ -112,4 +113,214 @@
   color: color("pog-main");
   margin: 0;
   max-width: 140px;
+}
+
+@media (min-width: $tablet) {
+  .sequence__detail {
+    padding: 0 40px 96px;
+  }
+
+  .sequence__text-wrapper {
+    margin: 0 0 211px;
+    padding: 0 35px;
+    max-width: 270px;
+  }
+
+  .sequence__title {
+    font-size: fs("wery-big");
+    line-height: lh("very-giant");
+    margin-top: 72px;
+    margin-bottom: 86px;
+    padding: 0 16px;
+  }
+
+  .sequence__text-type-one {
+    margin-bottom: 45px;
+  }
+
+  .sequence__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sequence__item {
+    height: 140px;
+    padding: 31px 33px 21px;
+    border-radius: 0;
+    font-size: fs("medium");
+    line-height: lh("medium-plus");
+    flex-direction: column;
+
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+
+    &:nth-child(even) {
+      margin-left: -41px;
+      width: 344px;
+    }
+
+    &:nth-child(odd) {
+      width: 385px;
+    }
+  }
+
+  .step-text {
+    max-width: 190px;
+  }
+
+  .step {
+    font-size: fs("very-large");
+    line-height: lh("wery-large");
+  }
+
+  .sequence__item--color-special-third {
+    border-radius: 20px 0 0 0;
+  }
+
+  .sequence__item--color-special-secondark {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .sequence__item--color-special-second {
+    border-radius: 0 0 0 20px;
+  }
+
+  .sequence__item--color-special-first {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .sequence__ave {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+
+    &::before {
+      width: 372px;
+      height: 451px;
+      top: auto;
+      bottom: -394px;
+      left: auto;
+      right: 71px;
+      background-image: url("../img/sequence/traveller-illustration-mob.png");
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
+
+    & .interaction__item {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+
+  .sequence .wrapper {
+    padding: 122px 0 0;
+  }
+
+  .sequence__detail {
+    padding: 0 60px 123px;
+  }
+
+  .sequence__text-wrapper {
+    margin: 0 23px 116px auto;
+    padding: 0;
+    max-width: 270px;
+  }
+
+  .sequence__title {
+    font-size: fs("wery-big");
+    line-height: lh("very-giant");
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    left: 127px;
+    top: -12px;
+    max-width: 500px;
+    position: absolute;
+  }
+
+  .sequence__text-type-one {
+    margin-bottom: 45px;
+  }
+
+  .sequence__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sequence__item {
+    height: 107px;
+    padding: 31px 33px 21px;
+    border-radius: 0;
+    font-size: fs("medium");
+    line-height: lh("medium-plus");
+    flex-direction: row;
+
+    &:nth-child(even) {
+      margin-left: 0;
+      width: 0;
+    }
+
+    &:nth-child(odd) {
+      width: 0;
+    }
+
+    &:not(:first-child) {
+      margin-top: 0;
+      margin-left: -30px;
+    }
+
+    &:not(:last-child) {
+      padding-right: 66px;
+    }
+  }
+
+  .step-text {
+    max-width: 190px;
+  }
+
+  .step {
+    font-size: fs("medium");
+    line-height: lh("medium-plus");
+  }
+
+  .sequence__item--color-special-third,
+  .sequence__item--color-special-secondark,
+  .sequence__item--color-special-second {
+    border-radius: 20px 0 0 20px;
+    min-width: 375px;
+  }
+
+  .sequence__item--color-special-third {
+    min-width: 345px;
+  }
+
+  .sequence__item--color-special-first {
+    border-radius: 20px;
+    min-width: 315px;
+  }
+
+  .sequence__ave {
+    padding: 0;
+    width: 100%;
+
+    &::before {
+      width: 431px;
+      height: 640px;
+      top: 0;
+      bottom: auto;
+      left: auto;
+      right: 405px;
+      background-image: url("../img/sequence/traveller-illustration-mob.png");
+      background-repeat: no-repeat;
+      z-index: 10;
+    }
+
+    & .interaction__item {
+      display: none;
+    }
+  }
 }
