@@ -3,3 +3,9 @@
   height: 30px;
   margin-top: -24px;
 }
+
+@media (min-width: $tablet) {
+  .double-back {
+    display: none;
+  }
+}

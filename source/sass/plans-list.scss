@@ -24,6 +24,11 @@
   font-weight: fw("medium");
 }
 
+.plans-list__second-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .plans-list__name {
   margin: 0;
   font-size: fs("mob-basic");
@@ -60,4 +65,119 @@
   letter-spacing: 0.03em;
   color: color("pog-standart");
   opacity: 0.3;
+}
+
+@media (min-width: $tablet) {
+  .plans-list__item {
+    padding: 40px 40px 14px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: color("pog-extra-four");
+      opacity: 0.3;
+      top: 98px;
+      left: 0;
+    }
+  }
+
+  .plans-list__item:not(:last-child) {
+    margin-bottom: 11px;
+  }
+
+  .plans-list__inner-wrapper {
+    margin-bottom: 34px;
+    justify-content: space-between;
+  }
+
+  .plans-list__number {
+    order: 1;
+    margin: 0;
+    font-size: fs("basic");
+    line-height: lh("basic");
+  }
+
+  .plans-list__name {
+    margin: 0;
+    font-size: fs("medium");
+    line-height: lh("medium-plus");
+  }
+
+  .plans-list__second-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+
+  .plans-list__companions-count {
+    margin: 0;
+    font-size: fs("basic");
+    line-height: lh("basic");
+    letter-spacing: 0.1em;
+  }
+
+  .plans-list__dates {
+    margin: 0;
+    font-size: fs("basic");
+    line-height: lh("basic");
+    letter-spacing: 0.1em;
+  }
+
+  .plans-list__link {
+    font-size: fs("basic");
+    line-height: lh("basic");
+    letter-spacing: 0.1em;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .plans-list__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 37px 43px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .plans-list__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .plans-list__inner-wrapper {
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .plans-list__number {
+    order: 0;
+    margin-right: 35px;
+  }
+
+  .plans-list__name {
+    margin: 0;
+  }
+
+  .plans-list__second-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 586px;
+    padding: 3px 0 0;
+  }
+
+  .plans-list__link {
+    margin: 0;
+    letter-spacing: 0.075em;
+  }
+
+  .plans-list__dates {
+    margin: 0;
+    padding-right: 90px;
+  }
 }

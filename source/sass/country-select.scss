@@ -26,6 +26,10 @@
     border: solid 1px color("pog-extra-dark");
     transition: all 0.3s;
   }
+
+  &:hover .country-select__name-wrapper--dropdown {
+    border: solid 1px color("pog-second");
+  }
 }
 
 .country-select__selected {
@@ -75,6 +79,7 @@
   background-color: color("pog-back-light");
   cursor: pointer;
   outline: none;
+  z-index: 20;
 
   &:hover .country-select__cross-image {
     opacity: 0.7;
@@ -121,6 +126,7 @@
   text-transform: uppercase;
   position: relative;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .country-select__button {
@@ -264,7 +270,6 @@
   height: 14px;
   stroke: color("pog-standart");
   opacity: 0.3;
-  z-index: 22;
 }
 
 .country-select__flag--bosnia {
@@ -286,4 +291,324 @@
   top: 49px;
   right: 50px;
   fill: color("pog-extra-four");
+}
+
+
+
+
+
+
+.country-select__name-wrapper--dropdown {
+  border: 1px solid color("pog-second");
+  border-radius: 4px 4px 0 0;
+  z-index: 16;
+  position: relative;
+  overflow: visible;
+
+  & .country-select__button::after {
+    display: none;
+  }
+
+  & .country-select__name {
+    color: color("pog-clear");
+    background-color: color("pog-second");
+  }
+}
+
+.country-select__dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 42px;
+  left: -1px;
+  width: 100%;
+  height: fit-content;
+  background-color: color("pog-clear");
+  border-radius: 0 0 4px 4px;
+  border: 1px solid color("pog-extra-four");
+}
+
+.country-select__dropdown--hide {
+  display: none;
+}
+
+.country-select__abc-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.country-select__abc-item {
+  width: calc((100% + 4px) / 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid color("pog-extra-four");
+  margin-left: -1px;
+  margin-top: -1px;
+  box-sizing: border-box;
+
+  &:nth-child(5n + 1) {
+    margin-left: 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  &:active {
+    background-color: color("pog-second");
+    border: 1px solid color("pog-second");
+    z-index: 30;
+    transition: all 0.3s;
+
+    & .country-select__abc-link {
+      color: color("pog-clear");
+    }
+  }
+
+  &:hover {
+    border: 1px solid color("pog-extra-dark");
+    z-index: 30;
+    transition: all 0.3s;
+  }
+}
+
+.country-select__abc-link {
+  text-decoration: none;
+  color: color("pog-second");
+  font-weight: fw("medium");
+  font-size: fs("mob-small");
+  line-height: lh("small");
+  text-transform: uppercase;
+  padding: 10px 14px;
+}
+
+.country-select__names-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 20px;
+}
+
+.country-select__name-item {
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
+.country-select__name-link {
+  text-decoration: none;
+  color: color("pog-special");
+  font-weight: fw("normal");
+  font-size: fs("mob-basic");
+  line-height: lh("medium");
+
+  &:hover {
+    color: color("pog-second");
+    transition: all 0.3s;
+  }
+
+  &:active {
+    color: color("pog-second");
+    transition: all 0.3s;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet) {
+  .country-select__list {
+    margin-bottom: 50px;
+    padding-top: 42px;
+    border-top: 1px solid color("pog-special-lighter");
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 142px;
+      width: 1px;
+      height: 110%;
+      background: linear-gradient(180deg, color("pog-special-lighter") 0%, color("pog-special-lighter") 85%, color("pog-clear") 100%);
+    }
+  }
+
+  .country-select__item {
+    width: 369px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &:hover .country-select__flag {
+      border: none;
+    }
+  }
+
+  .country-select__flag-wrapper {
+    margin: 0;
+    width: 0;
+  }
+
+  .country-select__name {
+    padding: 26px 25px 22px;
+    font-size: fs("basic");
+    line-height: lh("basic");
+    letter-spacing: 2px;
+    box-sizing: border-box;
+  }
+
+  .country-select__button,
+  .country-select__button-new {
+    width: 9px;
+    height: 18px;
+    padding: 35px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .country-select__button-image {
+    display: block;
+    position: absolute;
+    top: 27px;
+    right: 28px;
+    width: 10px;
+    height: 17px;
+  }
+
+  .country-select__button-new-image {
+    top: 25px;
+    left: auto;
+    right: 23px;
+    width: 21px;
+    height: 21px;
+  }
+
+  .country-select__arrow-image {
+    display: none;
+  }
+
+  .country-select__flag {
+    padding: 0;
+    width: 100%;
+    height: 70px;
+    border: none;
+
+    &::before {
+      top: 12px;
+      left: 52px;
+      transform: scale(1);
+    }
+  }
+
+  .country-select__selected {
+    &::before {
+      top: 27px;
+      right: -34px;
+      width: 14px;
+      height: 14px;
+      background-color: color("pog-second");
+    }
+  }
+
+  .country-select__pick {
+    &::before {
+      top: 27px;
+      right: -34px;
+      width: 12px;
+      height: 12px;
+      background-color: color("pog-clear");
+    }
+  }
+
+  .country-select__new {
+    background-color: color("pog-extra-third");
+
+    &::before {
+      top: 27px;
+      right: -34px;
+      width: 12px;
+      height: 12px;
+      background-color: color("pog-back-light");
+    }
+  }
+
+  .country-select__remove {
+    top: 25px;
+    right: -170px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+  }
+
+  .country-select__cross-image {
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    opacity: 0.1;
+  }
+}
+
+@media (min-width: $desktop) {
+  .country-select__list {
+    margin-bottom: 58px;
+    padding-top: 62px;
+
+    &::after {
+      right: 225px;
+      height: 540px;
+      background: color("pog-special-lighter");
+    }
+  }
+
+  .country-select__item {
+    width: 730px;
+  }
+
+  .country-select__button-image {
+    top: 25px;
+    right: 28px;
+    width: 13px;
+    height: 20px;
+  }
+
+  .country-select__selected {
+    &::before {
+      right: -52px;
+    }
+  }
+
+  .country-select__pick {
+    &::before {
+      right: -52px;
+    }
+  }
+
+  .country-select__new {
+    &::before {
+      right: -52px;
+    }
+  }
+
+  .country-select__remove {
+    top: 24px;
+    right: -270px;
+  }
+
+  .country-select__flag {
+    &::before {
+      top: 12px;
+      left: 85px;
+    }
+  }
 }

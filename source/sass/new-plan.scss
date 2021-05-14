@@ -78,6 +78,11 @@
   opacity: 1;
 }
 
+.new-plan__slider--step-two,
+.new-plan__slider--step-three {
+  display: none;
+}
+
 .new-plan__step-title {
   display: flex;
   flex-direction: column;
@@ -302,6 +307,11 @@
   }
 }
 
+.new-plan__button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .new-plan__joys-flag--bosnia {
   &::before {
     background-image: url("../img/flags/bosnia_and_herzegovina.png");
@@ -311,5 +321,316 @@
 .new-plan__joys-flag--czech {
   &::before {
     background-image: url("../img/flags/czechia.png");
+  }
+}
+
+@media (min-width: $tablet) {
+  .new-plan .wrapper {
+    padding: 53px 75px 114px;
+  }
+
+  .new-plan__step {
+    border-radius: 30px;
+    margin-bottom: 39px;
+    padding: 48px 40px 54px;
+  }
+
+  .new-plan__title {
+    margin-bottom: 56px;
+    font-size: fs("big");
+    line-height: lh("wery-big");
+  }
+
+  .new-plan__step-title {
+    margin-bottom: 34px;
+  }
+
+  .new-plan__step-title-text {
+    font-size: fs("big");
+    line-height: lh("wery-big");
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  .new-plan__step-description {
+    margin: 0;
+    margin-bottom: 33px;
+    font-size: fs("basic");
+    line-height: lh("medium-plus");
+    max-width: 500px;
+  }
+
+  .new-plan__step-description--narrow {
+    max-width: 430px;
+  }
+
+  .new-plan__step-description-three {
+    margin-bottom: 35px;
+  }
+
+  .new-plan__button-wrapper {
+    flex-direction: row;
+  }
+
+  .new-plan__joys-list {
+    margin-bottom: 44px;
+    border-top: 1px solid color("pog-special-lighter");
+    padding-top: 26px;
+  }
+
+  .new-plan__joys-item {
+    margin-bottom: 39px;
+
+    &:not(:last-child)::before {
+      top: 24px;
+      left: auto;
+      right: 6px;
+      height: 118%;
+    }
+  }
+
+  .new-plan__joys-inner-wrapper {
+    margin-bottom: 31px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      top: 17px;
+      left: auto;
+      right: 0;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .new-plan__joys-country {
+    padding-left: 0;
+    font-size: fs("very-large");
+    line-height: lh("wery-large");
+    font-weight: fw("bold");
+    flex-grow: 1;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .new-plan__joys-flag {
+    width: 70px;
+    height: 47px;
+
+    &::before {
+      top: 0;
+      right: 38px;
+      transform: scale(1);
+    }
+  }
+
+  .new-plan__joys-plan {
+    width: 500px;
+    height: 140px;
+    padding: 19px 35px 19px 18px;
+    font-size: fs("basic");
+    line-height: lh("basic");
+  }
+
+  .new-plan__calendar {
+    order: 1;
+  }
+
+  .new-plan__whith-kids {
+    margin-bottom: 34px;
+    padding-top: 7px;
+  }
+
+  .new-plan__kids-label {
+    font-size: fs("basic");
+    font-weight: fw("medium");
+    line-height: lh("basic");
+    padding-left: 58px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .new-plan__kids-checkbox-img {
+    &::before {
+      top: -7px;
+      left: 0;
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  .new-plan__kids-checkbox-img--checked {
+    top: 6px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .new-plan__slider {
+    right: 4px;
+    top: -92px;
+  }
+
+  .new-plan__slider-item:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .new-plan {
+    border-radius: 60px 60px 0 0;
+    margin-top: -60px;
+  }
+
+  .new-plan .wrapper {
+    padding: 55px 60px 121px;
+  }
+
+  .new-plan__step {
+    border-radius: 60px;
+    margin-bottom: 44px;
+    padding: 100px 160px 105px;
+  }
+
+  .new-plan__slider--step-two,
+  .new-plan__slider--step-three {
+    display: block;
+  }
+
+  .new-plan__title {
+    margin-bottom: 54px;
+    padding-left: 69px;
+  }
+
+  .new-plan__step-title {
+    flex-direction: row;
+  }
+
+  .new-plan__step-title-text {
+    &:not(:last-child) {
+      margin-bottom: 0;
+      padding-right: 10px;
+    }
+  }
+
+  .new-plan__step-description {
+    margin-bottom: 55px;
+    max-width: 533px;
+  }
+
+  .new-plan__step-description--step-one {
+    max-width: 580px;
+    margin-bottom: 82px;
+  }
+
+  .new-plan__step-description--narrow {
+    max-width: 430px;
+  }
+
+  .new-plan__step-description-three {
+    margin-bottom: 55px;
+  }
+
+  .new-plan__button-wrapper {
+    justify-content: space-between;
+  }
+
+  .new-plan__calendar {
+    order: 1;
+  }
+
+  .new-plan__whith-kids {
+    position: absolute;
+    right: 159px;
+    top: 320px;
+    margin-bottom: 34px;
+    padding-top: 7px;
+  }
+
+  .new-plan__slider {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    right: 204px;
+    top: 106px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  .new-plan__slider-item:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
+  .new-plan__slider-dot {
+    font-size: fs("basic");
+    line-height: lh("basic-plus");
+    color: color("pog-special");
+    font-weight: fw("normal");
+    text-transform: uppercase;
+    font-style: inherit;
+    opacity: 0.6;
+    letter-spacing: 0.1em;
+    padding-left: 42px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -5px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: color("pog-second");
+      opacity: 0.6;
+    }
+  }
+
+  .new-plan__slider-dot--current {
+    color: color("pog-second");
+    opacity: 1;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  .new-plan__joys-list {
+    margin-bottom: 52px;
+    padding-top: 71px;
+    border-top: 1px solid color("pog-special-lighter");
+  }
+
+  .new-plan__joys-plan {
+    width: 730px;
+    height: 140px;
+    padding: 25px 10px 25px 25px;
+  }
+
+  .new-plan__joys-flag {
+    &::before {
+      top: 4px;
+      right: 114px;
+    }
+  }
+
+  .new-plan__joys-item {
+    &:not(:last-child)::before {
+      right: 224px;
+    }
+  }
+
+  .new-plan__joys-inner-wrapper {
+    &::after {
+      right: 218px;
+    }
   }
 }

@@ -28,3 +28,22 @@
   list-style: none;
   box-sizing: border-box;
 }
+
+@media (min-width: $tablet) {
+  .my-plans .wrapper {
+    padding: 57px 75px 106px;
+  }
+
+  .my-plans__title {
+    margin-bottom: 48px;
+    font-size: fs("big");
+    line-height: lh("wery-big");
+  }
+}
+
+
+@media (min-width: $desktop) {
+  .my-plans .wrapper {
+    padding: 57px 60px 124px 125px;
+  }
+}

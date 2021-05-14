@@ -96,8 +96,22 @@
     <header class="inner-header">
       <div class="wrapper">
         <h1 class="inner-header__title">Направления</h1>
-        <div class="level-progress"> <!--Круг с уровнем и прогресбаром для desctop версии---> </div>
-        <div class="profile-photo"> <!---фото профиля для desctop версии--> </div>
+        <div class="inner-header__desktop">
+          <div class="inner-header__level-progress">
+            <svg class="inner-header__level-progress-bar">
+              <use xlink:href="#level-progress-bar">
+                <svg id="level-progress-bar" width="95" height="95">
+                  <circle cx="48" cy="48" r="47" fill="red"></circle>
+                </svg>
+              </use>
+            </svg>
+          </div>
+          <div class="inner-header__photo-desktop">
+            <picture class="inner-header__photo">
+                <img class="inner-header__img" src="img/demin.jpg" alt="Ваше фото" width="190" height="190">
+            </picture>
+          </div>
+        </div>
       </div>
     </header>
     <div class="double-back"></div>
@@ -126,7 +140,7 @@
 
           </div>
           <div class="preview-profile__button-wrapper">
-            <button class="preview-profile__button" type="button"><span class="preview-profile__button-text">Сменить фото</span></button>
+            <button class="preview-profile__button" type="button"><span class="preview-profile__button-text"><span class="preview-profile__button-text--hidden">Сменить</span> фото</span></button>
           </div>
 
           <div class="preview-profile__tags tags">
@@ -153,7 +167,7 @@
           </div>
 
           <div class="preview-profile__my-transport my-transport">
-            <h3 class="tags__title">Транспорт</h3>
+            <h3 class="my-transport__title">Транспорт</h3>
             <div class="my-transport__list-wrapper">
               <ul class="my-transport__list">
                 <li class="preview-profile__transport-item transport transport--bg-clear">
@@ -181,8 +195,6 @@
           </div>
         </div>
       </section>
-
-
       <section class="my-plans">
         <div class="wrapper">
           <h2 class="my-plans__title">Мои планы:</h2>
@@ -192,18 +204,22 @@
                 <p class="plans-list__number">1.</p>
                 <p class="plans-list__name">Франция, Италия</p>
               </div>
-              <p class="plans-list__companions-count">3 попутчика</p>
-              <p class="plans-list__dates">26 мар - 29 мар</p>
-              <a class="plans-list__link" href="plans.html">Изменить</a>
+              <div class="plans-list__second-wrapper">
+                <p class="plans-list__companions-count">3 попутчика</p>
+                <p class="plans-list__dates">26 мар — 29 мар</p>
+                <a class="plans-list__link" href="plans.html">Изменить</a>
+              </div>
             </li>
             <li class="plans-list__item">
               <div class="plans-list__inner-wrapper">
                 <p class="plans-list__number">2.</p>
-                <p class="plans-list__name">Тайланд, Индонезия</p>
+                <p class="plans-list__name">Таиланд, Индонезия</p>
               </div>
-              <p class="plans-list__companions-count">1 попутчик</p>
-              <p class="plans-list__dates">1 июл - 15 июл</p>
-              <a class="plans-list__link" href="plans.html">Изменить</a>
+              <div class="plans-list__second-wrapper">
+                <p class="plans-list__companions-count">1 попутчик</p>
+                <p class="plans-list__dates">1 июл — 15 июл</p>
+                <a class="plans-list__link" href="plans.html">Изменить</a>
+              </div>
             </li>
           </ol>
         </div>
@@ -217,23 +233,23 @@
               <ul class="new-plan__slider new-plan__slider--step-one">
                 <li class="new-plan__slider-item">
                   <span class="new-plan__slider-dot new-plan__slider-dot--current">
-                    "Даты пребывания"
+                    Даты
                   </span>
                 </li>
                 <li class="new-plan__slider-item">
                   <span class="new-plan__slider-dot">
-                    "Маршрут"
+                    Маршрут
                   </span>
                 </li>
                 <li class="new-plan__slider-item">
                   <span class="new-plan__slider-dot">
-                    "Развлечения"
+                    Развлечения
                   </span>
                 </li>
               </ul>
               <h3 class="new-plan__step-title"><span class="new-plan__step-title-text">Шаг 1.</span><span class="new-plan__step-title-text">Даты пребывания</span></h3>
-              <p class="new-plan__step-description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-              <div class="step-counts">
+              <p class="new-plan__step-description new-plan__step-description--step-one">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <div class="step-counts step-counts--border-top">
                 <div class="step-counts__label-wrapper">
                   <span class="step-counts__label">Ищу попутчиков:</span>
                   <span class="step-counts__units">Чел.</span>
@@ -245,7 +261,7 @@
                 </div>
               </div>
 
-              <div class="step-counts">
+              <div class="step-counts step-counts--order">
                 <div class="step-counts__label-wrapper">
                   <span class="step-counts__label">Длительность:</span>
                   <span class="step-counts__units">Дн.</span>
@@ -293,13 +309,23 @@
                   <li class="calendar__day-of-week-item--dayoff">С</li>
                   <li class="calendar__day-of-week-item--dayoff">В</li>
                 </ul>
+                <ul class="calendar__day-of-week-list calendar__day-of-week-list--td">
+                  <li class="calendar__day-of-week-item">Пн</li>
+                  <li class="calendar__day-of-week-item">Вт</li>
+                  <li class="calendar__day-of-week-item">Ср</li>
+                  <li class="calendar__day-of-week-item">Чт</li>
+                  <li class="calendar__day-of-week-item">Пт</li>
+                  <li class="calendar__day-of-week-item--dayoff">Сб</li>
+                  <li class="calendar__day-of-week-item--dayoff">Вс</li>
+                </ul>
                 <ul class="calendar__month-days-list">
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">23</li>
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">24</li>
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">25</li>
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">26</li>
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">27</li>
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">28</li>
-                  <li class="calendar__month-days-item calendar__month-days-item--disabled">1</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--disabled">1<span class="calendar__month-days-text">мар</span></li>
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">2</li>
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">3</li>
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">4</li>
@@ -324,18 +350,17 @@
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">23</li>
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">24</li>
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">25</li>
-                  <li class="calendar__month-days-item calendar__month-days-item--select calendar__month-days-item--focus">26</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--select calendar__month-days-item--focus">26 <span class="calendar__month-days-arrival">Заезд</span></li>
                   <li class="calendar__month-days-item calendar__month-days-item--select">27</li>
-                  <li class="calendar__month-days-item calendar__month-days-item--select">28</li>
+                  <li class="calendar__month-days-item calendar__month-days-item--select">28<span class="calendar__month-days-arrival">Выезд</span></li>
                   <li class="calendar__month-days-item">29</li>
                   <li class="calendar__month-days-item">30</li>
                   <li class="calendar__month-days-item">31</li>
-                  <li class="calendar__month-days-item">1</li>
+                  <li class="calendar__month-days-item">1<span class="calendar__month-days-text">апр</span></li>
                   <li class="calendar__month-days-item">2</li>
                   <li class="calendar__month-days-item">3</li>
                   <li class="calendar__month-days-item">4</li>
                   <li class="calendar__month-days-item">5</li>
-                  <li class="calendar__month-days-item">6</li>
                 </ul>
               </div>
               <a class="button button__color--yellow  button__next-step button__next-step--arguments" href="#step-two"><span class="button__text-active">Следующий шаг</span></a>
@@ -343,8 +368,25 @@
             </div>
 
             <div class="new-plan__step" id="step-two">
+              <ul class="new-plan__slider new-plan__slider--step-two">
+                <li class="new-plan__slider-item">
+                  <span class="new-plan__slider-dot">
+                    Даты
+                  </span>
+                </li>
+                <li class="new-plan__slider-item">
+                  <span class="new-plan__slider-dot new-plan__slider-dot--current">
+                    Маршрут
+                  </span>
+                </li>
+                <li class="new-plan__slider-item">
+                  <span class="new-plan__slider-dot">
+                    Развлечения
+                  </span>
+                </li>
+              </ul>
               <h3 class="new-plan__step-title"><span class="new-plan__step-title-text">Шаг 2.</span><span class="new-plan__step-title-text">Маршрут</span></h3>
-              <p class="new-plan__step-description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <p class="new-plan__step-description new-plan__step-description--narrow">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
               <div class="new-plan__country-select country-select">
                 <ul class="country-select__list">
                   <li class="country-select__item country-select__selected">
@@ -392,7 +434,7 @@
                     </svg>
                   </li>
                   <li class="country-select__item country-select__pick">
-                    <div class="country-select__name-wrapper">
+                    <div class="country-select__name-wrapper country-select__name-wrapper--dropdown"> <!-- ccountry-select__name-wrapper--dropdown -->
                       <span class="country-select__name">Выберите страну</span>
                       <button class="country-select__button" type="button">
                         Выбор страны
@@ -400,6 +442,48 @@
                           <use xlink:href="img/transport/icon_sprite.svg#past"></use>
                         </svg>
                       </button>
+                      <div class="country-select__dropdown">
+                        <ul class="country-select__abc-list">
+                          <li class="country-select__abc-item country-select__abc-item--selected"><a class="country-select__abc-link" href="#">А</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Б</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">В</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Г</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Д</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Е</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">З</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">И</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">К</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Л</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">М</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Н</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">О</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">П</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Р</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">С</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Т</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">У</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Ф</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Х</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Ч</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Ш</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Щ</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Э</a></li>
+                          <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Ю</a></li>
+                        </ul>
+                        <ul class="country-select__names-list">
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Австралия</a></li>
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Австрия</a></li>
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Азербайджан</a></li>
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Албания</a></li>
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Алжир</a></li>
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Ангола</a></li>
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Андорра</a></li>
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Антигуа и Барбуда</a></li>
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Аргентина</a></li>
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Армения</a></li>
+                          <li class="country-select__name-item"><a class="country-select__name-link" href="#">Афганистан</a></li>
+                        </ul>
+                      </div> <!-- country-select__dropdown--hide -->
                     </div>
                     <button class="country-select__remove" type="button">
                       <svg class="country-select__cross-image">
@@ -415,7 +499,7 @@
                       <span class="country-select__name">Добавить страну</span>
                       <button class="country-select__button-new" type="button">
                         Выбор страны
-                        <svg class="country-select__button-new-image" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="country-select__button-new-image"viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                           <path stroke-width="2" d="M7 0v14M0 7h14"/>
                         </svg>
                       </button>
@@ -423,16 +507,35 @@
                   </li>
                 </ul>
               </div>
-              <a class="button button__color--yellow  button__next-step button__next-step--arguments" href="#step-three"><span class="button__text-active">Следующий шаг</span></a>
-              <a class="button  button__next-step button__next-step--arguments" href="#step-one"><span class="button__text-active">На шаг назад</span></a>
+              <div class="new-plan__button-wrapper">
+                <a class="button button__color--yellow  button__next-step button__next-step--arguments" href="#step-three"><span class="button__text-active">Следующий шаг</span></a>
+                <a class="button  button__next-step button__back-step--arguments" href="#step-one"><span class="button__text-active">На шаг назад</span></a>
+              </div>
             </div>
 
             <div class="new-plan__step" id="step-three">
+              <ul class="new-plan__slider new-plan__slider--step-three">
+                <li class="new-plan__slider-item">
+                  <span class="new-plan__slider-dot">
+                    Даты
+                  </span>
+                </li>
+                <li class="new-plan__slider-item">
+                  <span class="new-plan__slider-dot">
+                    Маршрут
+                  </span>
+                </li>
+                <li class="new-plan__slider-item">
+                  <span class="new-plan__slider-dot new-plan__slider-dot--current">
+                    Развлечения
+                  </span>
+                </li>
+              </ul>
               <h3 class="new-plan__step-title"><span class="new-plan__step-title-text">Шаг 3.</span><span class="new-plan__step-title-text">Развлечения</span></h3>
-              <p class="new-plan__step-description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <p class="new-plan__step-description new-plan__step-description-three">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
               <ul class="new-plan__joys-list">
                 <li class="new-plan__joys-item">
-                  <div class="new-plan__joys-inner-wrapper">
+                  <div class="new-plan__joys-inner-wrapper new-plan__joys-inner-wrapper--border">
                     <span class="new-plan__joys-country">Босния и Герцеговина</span>
                     <span class="new-plan__joys-flag new-plan__joys-flag--bosnia">Босния и Герцеговина</span>
                   </div>
@@ -443,12 +546,13 @@
                     <span class="new-plan__joys-country">Чехия</span>
                     <span class="new-plan__joys-flag new-plan__joys-flag--czech">Чехия</span>
                   </div>
-                  <textarea class="new-plan__joys-plan" placeholder="План действий" aria-label="План действий">Пить пиво и лазить
-по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <textarea class="new-plan__joys-plan" placeholder="План действий" aria-label="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </li>
               </ul>
-              <button class="button button__color--yellow  button__next-step button__next-step--arguments" type="submit"><span class="button__text-active">Отправить</span></button>
-              <a class="button  button__next-step button__next-step--arguments" href="#step-two"><span class="button__text-active">На шаг назад</span></a>
+              <div class="new-plan__button-wrapper">
+                <button class="button button__color--yellow  button__next-step button__next-step--arguments" type="submit"><span class="button__text-active">Отправить</span></button>
+                <a class="button  button__next-step button__back-step--arguments" href="#step-two"><span class="button__text-active">На шаг назад</span></a>
+              </div>
             </div>
           </form>
         </div>
