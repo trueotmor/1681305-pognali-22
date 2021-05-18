@@ -2,12 +2,12 @@
   position: relative;
   z-index: 0;
   width: 100%;
-  margin: -40px auto 0;
+  margin: -60px auto 0;
   background-color: color("pog-back-light");
 }
 
 .perfect-companion .wrapper {
-  padding: 65px 25px 60px;
+  padding: 85px 25px 60px;
   box-sizing: border-box;
 }
 
@@ -88,6 +88,10 @@
   display: inline-block;
 }
 
+.perfect-companion__subtitle-colon {
+  display: none;
+}
+
 .perfect-companion__toggle {
   display: flex;
   justify-content: space-between;
@@ -143,17 +147,6 @@
   &:not(:last-child) {
     margin-bottom: 12px;
   }
-
-  &:hover .perfect-companion__hobby-label-text,
-  &:hover .perfect-companion__hobby-label::before {
-    opacity: 0.6;
-    transition: all 0.3s;
-  }
-
-  &:active {
-    opacity: 0.3;
-    transition: all 0.3s;
-  }
 }
 
 .perfect-companion__music-item {
@@ -162,17 +155,6 @@
   &:not(:last-child) {
     margin-bottom: 12px;
   }
-
-  &:hover .perfect-companion__music-label-text,
-  &:hover .perfect-companion__music-label::before {
-    opacity: 0.6;
-    transition: all 0.3s;
-  }
-
-  &:active {
-    opacity: 0.3;
-    transition: all 0.3s;
-  }
 }
 
 .perfect-companion__food-item {
@@ -180,17 +162,6 @@
 
   &:not(:last-child) {
     margin-bottom: 12px;
-  }
-
-  &:hover .perfect-companion__food-label-text,
-  &:hover .perfect-companion__food-label::before {
-    opacity: 0.6;
-    transition: all 0.3s;
-  }
-
-  &:active {
-    opacity: 0.3;
-    transition: all 0.3s;
   }
 }
 
@@ -214,6 +185,21 @@
     border-radius: 4px;
     background-color: color("pog-clear");
     cursor: pointer;
+  }
+
+  &:hover .perfect-companion__hobby-label-text,
+  &:hover .perfect-companion__hobby-label::before,
+  &:hover .perfect-companion__music-label-text,
+  &:hover .perfect-companion__music-label::before,
+  &:hover .perfect-companion__food-label-text,
+  &:hover .perfect-companion__food-label::before {
+    opacity: 0.6;
+    transition: all 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: all 0.3s;
   }
 }
 
@@ -370,7 +356,6 @@
   border-radius: 50%;
   background-color: color("pog-second");
   cursor: pointer;
-  box-shadow: 5px;
   margin-top: -13px;
   margin-left: -13px;
   border: 8px solid transparent;
@@ -402,5 +387,365 @@
   &:hover {
     transform: scale(2);
     transition: all 0.5s;
+  }
+}
+
+@media (min-width: $tablet) {
+  .perfect-companion .wrapper {
+    padding: 103px 40px 152px;
+    box-sizing: border-box;
+  }
+
+  .perfect-companion__filter-wrapper {
+    padding: 35px;
+    margin-bottom: 43px;
+  }
+
+  .perfect-companion__title {
+    font-size: fs("very-large");
+    line-height: lh("wery-large");
+    max-width: 100%;
+    margin-bottom: 38px;
+  }
+
+  .perfect-companion__list {
+    margin: 0;
+    margin-bottom: 36px;
+    padding: 38px 0 29px;
+    border-top: 1px solid color("pog-special-muddy");
+    border-bottom: 1px solid color("pog-special-muddy");
+  }
+
+  .perfect-companion__item {
+    display: flex;
+    border: none;
+
+    &:nth-child(-n+2) {
+      margin-bottom: 30px;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 22px;
+    }
+
+    &:nth-child(4) {
+      margin-bottom: 14px;
+    }
+
+    &:last-child {
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
+  }
+
+  .perfect-companion__item-inner-wrapper {
+    display: flex;
+    align-items: center;
+    min-width: 120px;
+  }
+
+  .perfect-companion__subtitle {
+    font-size: fs("basic");
+    line-height: lh("basic");
+    font-weight: fw("medium");
+    margin: 0;
+    padding: 0;
+  }
+
+  .perfect-companion__subtitle-colon {
+    display: inline-block;
+  }
+
+  .perfect-companion__toggle {
+    pointer-events: none;
+    margin: 0;
+  }
+
+  .perfect-companion__toggle-image {
+    display: none;
+  }
+
+  .perfect-companion__hobby-list,
+  .perfect-companion__music-list,
+  .perfect-companion__food-list {
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+  }
+
+  .perfect-companion__hobby-item,
+  .perfect-companion__music-item,
+  .perfect-companion__food-item {
+    padding-left: 44px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+      width: 125px;
+    }
+  }
+
+  .perfect-companion__hobby-label,
+  .perfect-companion__music-label,
+  .perfect-companion__food-label {
+    font-size: fs("basic");
+    line-height: lh("basic");
+
+    &::before {
+      top: -4px;
+      left: 7px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .perfect-companion__select-img--checked {
+    top: 3px;
+    left: 14px;
+    width: 11px;
+    height: 11px;
+    fill: color("pog-main");
+    cursor: pointer;
+  }
+
+  .perfect-companion__transport-list {
+    margin: 0;
+  }
+
+  .perfect-companion__transport-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    margin-right: 2px;
+  }
+
+  .perfect-companion__transport-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+
+  .perfect-companion__transport-checkbox + .perfect-companion__transport-label .perfect-companion__transport-img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .perfect-companion__level-wrapper {
+    order: 1;
+    width: 148px;
+
+    &::after {
+      margin: -10px 0 0 -17px;
+      width: 21px;
+      border: 6px solid color("pog-clear");
+    }
+  }
+
+  .perfect-companion__level {
+    width: 50%;
+    height: 42px;
+    font-size: fs("basic");
+    line-height: lh("basic");
+    letter-spacing: 1.3px;
+    padding: 2px 0 0;
+  }
+
+  .perfect-companion__handles {
+    position: relative;
+    padding: 21px 0 29px;
+    margin-right: 65px;
+    width: 270px;
+  }
+
+  .perfect-companion__handle-scale {
+    height: 3px;
+  }
+
+  .perfect-companion__handle-bar {
+    height: 3px;
+  }
+
+  .perfect-companion__handle--min,
+  .perfect-companion__handle--max {
+    width: 13px;
+    height: 13px;
+    margin-top: -18px;
+    margin-left: -14px;
+  }
+
+  .perfect-companion__filter-submit {
+    padding: 17px 25px 13px;
+    font-size: fs("basic");
+    line-height: lh("basic");
+    border-radius: 25px;
+    width: 100%;
+    margin: 0;
+
+
+    &:hover {
+      box-shadow: 0 4px 4px 0 color("pog-shadow-fourth");
+      transition: all 0.3s;
+    }
+
+    &:active {
+      background-color: color("pog-special-muddy");
+      box-shadow: none;
+      transition: all 0.3s;
+
+      & .perfect-companion__filter-text {
+        opacity: 0.3;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .perfect-companion .wrapper {
+    padding: 103px 60px 166px;
+    display: grid;
+    grid-template-columns: auto 285px;
+    grid-template-rows: auto 160px 100px;
+    column-gap: 85px;
+  }
+
+  .perfect-companion__filter-wrapper {
+    padding: 46px 46px 48px 49px;
+    margin-bottom: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+  }
+
+  .perfect-companion__title {
+    margin-bottom: 35px;
+  }
+
+  .perfect-companion__list {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .perfect-companion__item {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(-n+2) {
+      margin: auto;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: auto;
+    }
+
+    &:nth-child(4) {
+      margin-bottom: auto;
+    }
+
+    &:last-child {
+      justify-content: space-between;
+      margin-bottom: auto;
+    }
+  }
+
+  .perfect-companion__item-inner-wrapper {
+    min-width: 100%;
+    margin-bottom: 19px;
+  }
+
+  .perfect-companion__subtitle-colon {
+    display: none;
+  }
+
+  .perfect-companion__toggle {
+    pointer-events: all;
+  }
+
+  .perfect-companion__toggle-image {
+    display: block;
+    padding: 0;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid color("pog-first");
+    border-left: 5px solid transparent;
+    border-top: 5px solid transparent;
+  }
+
+  .perfect-companion__hobby-list,
+  .perfect-companion__music-list,
+  .perfect-companion__food-list {
+    flex-direction: column;
+    margin-bottom: 32px;
+    padding-top: 10px;
+  }
+
+  .perfect-companion__hobby-item,
+  .perfect-companion__music-item,
+  .perfect-companion__food-item {
+    padding-left: 37px;
+
+    &:not(:last-child) {
+      margin-bottom: 19px;
+      width: auto;
+    }
+  }
+
+  .perfect-companion__hobby-label,
+  .perfect-companion__music-label,
+  .perfect-companion__food-label {
+    &::before {
+      left: 0;
+    }
+  }
+
+  .perfect-companion__select-img--checked {
+    left: 7px;
+  }
+
+  .perfect-companion__transport-list {
+    margin-bottom: 35px;
+  }
+
+  .perfect-companion__transport-item {
+    width: 43px;
+    height: 43px;
+  }
+
+  .perfect-companion__level-wrapper {
+    order: 0;
+    width: auto;
+
+    &::after {
+      margin: -8px 0 0 -15px;
+    }
+  }
+
+  .perfect-companion__handles {
+    padding: 35px 0;
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .perfect-companion__handle-scale {
+    height: 3px;
+  }
+
+  .perfect-companion__handle-bar {
+    height: 3px;
+  }
+
+  .perfect-companion__handle--min,
+  .perfect-companion__handle--max {
+    margin-top: -15px;
+    margin-left: -14px;
+  }
+
+  .perfect-companion__filter-submit {
+    padding: 18px 23px 12px 27px;
+    margin: 0;
   }
 }

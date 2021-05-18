@@ -35,6 +35,7 @@ $colors : (
   pog-like: #f02323,
   pog-grad :rgba(255, 255, 255, 0),
   pog-shadow-fourth :rgba(0, 0, 0, 0.25),
+  pog-popup-shadow :rgba(54, 80, 148, 0.18)
 );
 
 @function color($name, $ascss:1) {

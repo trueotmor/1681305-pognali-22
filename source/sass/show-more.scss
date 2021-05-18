@@ -108,3 +108,121 @@
     border-left: 10px solid color("pog-second");
   }
 }
+
+@media (min-width: $tablet) {
+  .show-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 51px;
+
+    &:hover .show-more__image {
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+
+    &:active .show-more__image {
+      opacity: 0.3;
+      transition: all 0.3s;
+    }
+  }
+
+  .show-more__text {
+    font-size: fs("basic");
+    line-height: lh("basic");
+    cursor: pointer;
+    margin-left: 15px;
+    text-transform: uppercase;
+    padding-top: 3px;
+  }
+
+  .show-more__image {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+  }
+
+  .show-more__navigate {
+    background-color: color("pog-clear");
+    border-radius: 20px;
+  }
+
+  .show-more__pagination-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 28px 28px 22px;
+  }
+
+  .show-more__pagination-item--selected {
+    background-color: color("pog-special-first");
+    border-radius: 50%;
+  }
+
+  .show-more__pagination-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: fs("basic");
+    line-height: lh("small");
+    font-weight: fw("bold");
+    color: color("pog-second");
+
+    &:hover {
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+
+    &:active {
+      opacity: 0.3;
+      transition: all 0.3s;
+    }
+  }
+
+  .show-more__button-wrapper {
+    margin: 0;
+    margin-right: 20px;
+    width: auto;
+  }
+
+  .show-more__button {
+    width: 42px;
+    height: 50px;
+  }
+
+  .show-more__button--back {
+    border: none;
+  }
+}
+
+@media (min-width: $desktop) {
+  .show-more {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-bottom: 10px;
+    padding-right: 70px;
+  }
+
+  .show-more__image {
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+  }
+
+  .show-more__navigate {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .show-more__button-wrapper {
+    margin-right: 25px;
+  }
+
+  .show-more__button {
+    width: 45px;
+  }
+}

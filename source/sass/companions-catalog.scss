@@ -73,8 +73,8 @@
   background-color: color("pog-status-off");
 }
 
-.companions-catalog__name--on {
-  background-color: color("pog-status-off");
+.companions-catalog__name--on::after {
+  background-color: color("pog-status-on");
 }
 
 .companions-catalog__hashtag-list {
@@ -328,7 +328,7 @@
   font-weight: fw("bold");
   line-height: lh("small");
   text-transform: uppercase;
-  color: ("pog-main");
+  color: color("pog-main");
   background-color: color("pog-special-first");
   width: auto;
   padding: 13px 80px 9px;
@@ -347,5 +347,295 @@
       opacity: 0.3;
       transition: all 0.3s;
     }
+  }
+}
+
+@media (min-width: $tablet) {
+  .companions-catalog__list {
+    margin-bottom: 47px;
+  }
+
+  .companions-catalog__item {
+    border-radius: 20px;
+    background-color: color("pog-clear");
+    padding: 35px 25px 25px 35px;
+    box-sizing: border-box;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .companions-catalog__profile {
+    margin-bottom: 20px;
+  }
+
+  .companions-catalog__profile-image {
+    width: 190px;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-right: 36px;
+  }
+
+  .companions-catalog__image {
+    width: 190px;
+    height: 190px;
+    transform: scale(1);
+  }
+
+  .companions-catalog__name {
+    margin-bottom: 17px;
+    width: max-content;
+    font-size: fs("very-large");
+    line-height: lh("wery-large");
+
+    &::after {
+      top: 10px;
+      right: -35px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .companions-catalog__hashtag-list {
+    width: 225px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 46px;
+  }
+
+  .companions-catalog__hashtag-link {
+    text-decoration: none;
+    font-size: fs("basic");
+    line-height: lh("medium-plus");
+    color: color("pog-standart");
+  }
+
+  .companions-catalog__like-wrapper {
+    order: 1;
+    margin: 0;
+  }
+
+  .companions-catalog__like {
+    margin-right: 5px;
+    margin-top: 0;
+    width: 50px;
+    height: 50px;
+  }
+
+  .companions-catalog__like-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .companions-catalog__like-img--liked {
+    width: 20px;
+    height: 20px;
+  }
+
+  .companions-catalog__like-text {
+    font-size: fs("basic");
+    line-height: lh("basic");
+  }
+
+  .companions-catalog__call {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    font-size: fs("basic");
+    line-height: lh("basic");
+    width: 150px;
+    padding: 17px 32px 13px;
+    border-radius: 25px;
+    order: -1;
+  }
+
+  .companions-catalog__countries-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  .companions-catalog__countries-item {
+    font-size: fs("basic");
+    line-height: lh("basic");
+    margin-left: 47px;
+    margin-right: 27px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -17px;
+      left: -65px;
+      z-index: 10;
+      width: 71px;
+      height: 48px;
+      background-repeat: no-repeat;
+      transform: scale(0.5);
+    }
+  }
+
+  .companions-catalog__transport-item {
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+  }
+
+  .companions-catalog__transport-image {
+    width: 25px;
+    height: 25px;
+  }
+
+  .companions-catalog__countries-title {
+    margin-bottom: 23px;
+    font-size: fs("mob-basic");
+
+    &::after {
+      left: -35px;
+      width: 688px;
+    }
+  }
+
+  .companions-catalog__countries-title-text {
+    margin-left: 35px;
+  }
+
+  .companions-catalog__transport-title,
+  .companions-catalog__level-title {
+    display: none;
+  }
+
+  .companions-catalog__inner-wrapper {
+    position: absolute;
+    right: 40px;
+    flex-direction: column;
+    margin-bottom: 45px;
+  }
+
+  .companions-catalog__transport-list {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $desktop) {
+  .companions-catalog__list {
+    margin-bottom: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .companions-catalog__item {
+    padding: 0;
+    flex-direction: row;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .companions-catalog__profile {
+    margin: 0;
+  }
+
+  .companions-catalog__profile-image {
+    width: 285px;
+    height: 285px;
+    border-radius: 20px 0 0 20px;
+    margin-right: 16px;
+  }
+
+  .companions-catalog__image {
+    width: 285px;
+    height: 285px;
+  }
+
+  .companions-catalog__info {
+    padding: 46px;
+  }
+
+  .companions-catalog__name {
+    margin-bottom: 20px;
+
+    &::after {
+      top: 11px;
+      right: auto;
+      left: -26px;
+    }
+  }
+
+  .companions-catalog__hashtag-list {
+    margin-bottom: 44px;
+  }
+
+  .companions-catalog__like-wrapper {
+    margin-left: -8px;
+  }
+
+  .companions-catalog__like {
+    margin-right: 6px;
+  }
+
+  .companions-catalog__countries {
+    padding: 55px 35px 46px;
+  }
+
+  .companions-catalog__countries-title {
+    display: none;
+  }
+
+  .companions-catalog__countries-list {
+    flex-direction: column;
+  }
+
+  .companions-catalog__countries-item {
+    margin-right: 0;
+    margin-left: 52px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &::before {
+      top: -16px;
+      left: -69px;
+    }
+  }
+
+  .companions-catalog__transport-item {
+    background-color: transparent;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .companions-catalog__transport-image {
+    width: 25px;
+    height: 25px;
+  }
+
+  .companions-catalog__transport-title,
+  .companions-catalog__level-title {
+    display: none;
+  }
+
+  .companions-catalog__inner-wrapper {
+    position: absolute;
+    right: 147px;
+    bottom: 54px;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .companions-catalog__transport-list {
+    flex-direction: row;
+    margin: 0;
   }
 }
