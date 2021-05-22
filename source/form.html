@@ -98,17 +98,17 @@
         <h1 class="inner-header__title">Направления</h1>
         <div class="inner-header__desktop">
           <div class="inner-header__level-progress">
-            <svg class="inner-header__level-progress-bar">
-              <use xlink:href="#level-progress-bar">
-                <svg id="level-progress-bar" width="95" height="95">
-                  <circle cx="48" cy="48" r="47" fill="red"></circle>
-                </svg>
-              </use>
+            <svg class="level__progress-bar level__progress-bar--80 level__cap level__progress-bar--thin" width="100" height="100">
+              <use xlink:href="img/icon_sprite.svg#level-icon"></use>
             </svg>
+            <p class="level__number level__number--big level__number--white">80</p>
+            <p class="level__text level__text--big level__text--border-white">level</p>
           </div>
           <div class="inner-header__photo-desktop">
             <picture class="inner-header__photo">
-                <img class="inner-header__img" src="img/demin.jpg" alt="Ваше фото" width="190" height="190">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/companions/form/demin-desk-form@1x.webp 1x, img/companions/form/demin-desk-form@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/companions/form/demin-desk-form@1x.jpg 1x, img/companions/form/demin-desk-form@2x.jpg 2x">
+              <img class="inner-header__img" src="img/companions/form/demin-desk-form@1x.jpg" srcset="img/companions/form/demin-desk-form@2x.jpg 2x" width="190" height="190" alt="Ваше фото">
             </picture>
           </div>
         </div>
@@ -120,24 +120,21 @@
         <div class="wrapper">
           <h2 class="visually-hidden">Мои настройки профиля</h2>
           <div class="preview-profile__lvl-photo-wrapper">
-            <div class="preview-profile__level-progress">
-              <svg class="preview-profile__level-progress-bar level-progress-bar--80">
-                <use xlink:href="#level-progress-bar">
-                  <svg id="level-progress-bar" viewBox="0 0 100 100">
-                    <circle cx="35" cy="35" r="30" fill="none"></circle>
-                    <path class="preview-profile__lvl-stroke" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
-                  </svg>
-                </use>
+            <div class="preview-profile__level-progress level">
+              <svg class="level__progress-bar level__progress-bar--80 level__cap level__progress-bar--thin" width="100" height="100">
+                <use xlink:href="img/icon_sprite.svg#level-icon"></use>
               </svg>
+              <p class="level__number level__number--big level__number--main">80</p>
+              <p class="level__text level__text--big level__text--border">level</p>
             </div>
-
             <div class="preview-profile__photo-wrapper">
               <picture class="preview-profile__photo">
-                <source>
-                  <img class="preview-profile__img" src="img/demin.jpg" alt="Ваше фото" width="190" height="190">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/companions/form/demin-tab-form@1x.webp 1x, img/companions/form/demin-tab-form@2x.webp 2x">
+                  <source type="image/webp" srcset="img/companions/form/demin-mob-form@1x.webp 1x, img/companions/form/demin-mob-form@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/companions/form/demin-tab-form@1x.jpg 1x, img/companions/form/demin-tab-form@2x.jpg 2x">
+                  <img class="preview-profile__img" src="img/companions/form/demin-mob-form@1x.jpg" srcset="img/companions/form/demin-mob-form@2x.jpg 2x" width="100" height="100" alt="Ваше фото">
               </picture>
             </div>
-
           </div>
           <div class="preview-profile__button-wrapper">
             <button class="preview-profile__button" type="button"><span class="preview-profile__button-text"><span class="preview-profile__button-text--hidden">Сменить</span> фото</span></button>
@@ -172,22 +169,22 @@
               <ul class="my-transport__list">
                 <li class="preview-profile__transport-item transport transport--bg-clear">
                   <svg class="transport--my-transport">
-                    <use xlink:href="img/transport/icon_sprite.svg#plane"></use>
+                    <use xlink:href="img/icon_sprite.svg#plane"></use>
                   </svg>
                 </li>
                 <li class="preview-profile__transport-item transport transport--bg-clear">
                   <svg class="transport--my-transport">
-                    <use xlink:href="img/transport/icon_sprite.svg#auto"></use>
+                    <use xlink:href="img/icon_sprite.svg#auto"></use>
                   </svg>
                 </li>
                 <li class="preview-profile__transport-item transport transport--bg-clear">
                   <svg class="transport--my-transport">
-                    <use xlink:href="img/transport/icon_sprite.svg#bicycle"></use>
+                    <use xlink:href="img/icon_sprite.svg#bicycle"></use>
                   </svg>
                 </li>
                 <li class="preview-profile__transport-item transport transport--bg-clear">
                   <svg class="transport--my-transport">
-                    <use xlink:href="img/transport/icon_sprite.svg#run"></use>
+                    <use xlink:href="img/icon_sprite.svg#run"></use>
                   </svg>
                 </li>
               </ul>
@@ -277,7 +274,7 @@
               <input class="visually-hidden new-plan__checkbox" type="checkbox" name="kids" id="kids" checked>
               <label class="new-plan__kids-label new-plan__kids-checkbox-img" for="kids">
                 <svg class="new-plan__kids-checkbox-img--checked">
-                  <use xlink:href="img/transport/icon_sprite.svg#check"></use>
+                  <use xlink:href="img/icon_sprite.svg#check"></use>
                 </svg>
                 Можно с детьми
               </label>
@@ -288,14 +285,14 @@
                 <div class="calendar__inner-wrapper">
                   <button class="calendar__button calendar__past-month" type="button">
                     <svg class="calendar__button-past-image">
-                      <use xlink:href="img/transport/icon_sprite.svg#past"></use>
+                      <use xlink:href="img/icon_sprite.svg#past"></use>
                     </svg>
                     Предыдущий месяц
                   </button>
                   <div class="calendar__month">Март 2019</div>
                   <button class="calendar__button calendar__next-month" type="button">
                     <svg class="calendar__button-next-image">
-                      <use xlink:href="img/transport/icon_sprite.svg#next"></use>
+                      <use xlink:href="img/icon_sprite.svg#next"></use>
                     </svg>
                     Следующий месяц
                   </button>
@@ -395,7 +392,7 @@
                       <button class="country-select__button" type="button">
                         Выбор страны
                         <svg class="country-select__button-image">
-                          <use xlink:href="img/transport/icon_sprite.svg#past"></use>
+                          <use xlink:href="img/icon_sprite.svg#past"></use>
                         </svg>
                       </button>
                     </div>
@@ -404,11 +401,11 @@
                     </div>
                     <button class="country-select__remove" type="button">
                       <svg class="country-select__cross-image">
-                        <use xlink:href="img/transport/icon_sprite.svg#cross"></use>
+                        <use xlink:href="img/icon_sprite.svg#cross"></use>
                       </svg>
                     </button>
                     <svg class="country-select__arrow-image">
-                      <use xlink:href="img/transport/icon_sprite.svg#arrow"></use>
+                      <use xlink:href="img/icon_sprite.svg#arrow"></use>
                     </svg>
                   </li>
                   <li class="country-select__item country-select__selected">
@@ -417,7 +414,7 @@
                       <button class="country-select__button" type="button">
                         Выбор страны
                         <svg class="country-select__button-image">
-                          <use xlink:href="img/transport/icon_sprite.svg#past"></use>
+                          <use xlink:href="img/icon_sprite.svg#past"></use>
                         </svg>
                       </button>
                     </div>
@@ -426,11 +423,11 @@
                     </div>
                     <button class="country-select__remove" type="button">
                       <svg class="country-select__cross-image">
-                        <use xlink:href="img/transport/icon_sprite.svg#cross"></use>
+                        <use xlink:href="img/icon_sprite.svg#cross"></use>
                       </svg>
                     </button>
                     <svg class="country-select__arrow-image">
-                      <use xlink:href="img/transport/icon_sprite.svg#arrow"></use>
+                      <use xlink:href="img/icon_sprite.svg#arrow"></use>
                     </svg>
                   </li>
                   <li class="country-select__item country-select__pick">
@@ -439,10 +436,10 @@
                       <button class="country-select__button" type="button">
                         Выбор страны
                         <svg class="country-select__button-image">
-                          <use xlink:href="img/transport/icon_sprite.svg#past"></use>
+                          <use xlink:href="img/icon_sprite.svg#past"></use>
                         </svg>
                         <svg class="country-select__button-image--dropdown">
-                          <use xlink:href="img/transport/icon_sprite.svg#cross"></use>
+                          <use xlink:href="img/icon_sprite.svg#cross"></use>
                         </svg>
                       </button>
                       <div class="country-select__dropdown">
@@ -490,11 +487,11 @@
                     </div>
                     <button class="country-select__remove" type="button">
                       <svg class="country-select__cross-image">
-                        <use xlink:href="img/transport/icon_sprite.svg#cross"></use>
+                        <use xlink:href="img/icon_sprite.svg#cross"></use>
                       </svg>
                     </button>
                     <svg class="country-select__arrow-image">
-                      <use xlink:href="img/transport/icon_sprite.svg#arrow"></use>
+                      <use xlink:href="img/icon_sprite.svg#arrow"></use>
                     </svg>
                   </li>
                   <li class="country-select__item country-select__new">
@@ -564,9 +561,11 @@
     </main>
     <footer class="page-footer">
       <div class="wrapper">
-        <a class="page-footer__logo" href="#">
+        <a class="page-footer__logo" href="index.html">
           <picture>
-            <img src="img/logo_mobile_menu.png" width="100" height="15" alt="Сервис поиска попутчиков «Погнали»">
+            <source media="(min-width: 1440px)" srcset="img/logo-desk-dark@1x.png 1x, img/logo-desk-dark@1x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tab-dark@1x.png 1x, img/logo-tab-dark@1x.png 2x">
+            <img class="page-footer__logo-image" src="img/logo_mob-dark@1x.png" srcset="img/logo_mob-dark@2x.png 2x" width="96" height="15" alt="Сервис поиска попутчиков «Погнали»">
           </picture>
         </a>
         <ul class="page-footer__social-list">

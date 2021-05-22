@@ -9,22 +9,21 @@
 
 .transport--param {
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
   fill: color("pog-second");
+}
 
-  &:hover {
-    opacity: 0.15;
-    transition: all 0.3s;
-  }
+.transport--off {
+  opacity: 0.15;
 }
 
 .transport__lining {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
 }
 
 .transport--my-transport {
@@ -64,7 +63,7 @@
   bottom: -65px;
   z-index: 1;
   white-space: nowrap;
-  transform: translate(-44%);
+  transform: translate(-6%);
 
   &::before {
     content: "";

@@ -19,27 +19,21 @@
 
 .preview-profile__level-progress {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-
-.preview-profile__level-progress-bar {
-  position: absolute;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
   width: 100px;
   height: 100px;
+  padding-right: 5px;
+
+  & svg + p {
+    margin-bottom: 7px;
+  }
 }
 
-.preview-profile__lvl-stroke {
-  stroke: color("pog-special-third");
-  stroke-linecap: round;
-  stroke-width: 3;
-  fill: none;
+.preview-profile__level-progress svg {
+  transform: scale(2.4);
+  top: 40px;
+  left: 38px;
+  width: 70px;
+  height: 70px;
 }
 
 .preview-profile__photo-wrapper {

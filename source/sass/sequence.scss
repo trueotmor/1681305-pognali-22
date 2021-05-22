@@ -2,12 +2,22 @@
   background-color: color("pog-main");
   height: min-content;
   margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .sequence--back {
-  background-image: url("../img/sequence/globe-back-mob.jpg");
+  background-image: url("../img/sequence/globe-back-mob@1x.jpg");
+  background-size: 320px auto;
   background-repeat: no-repeat;
   background-position: center top;
+}
+
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .sequence--back {
+    background-image: url("../img/sequence/globe-back-mob@2x.jpg");
+    background-size: 640px auto;
+  }
 }
 
 .sequence__ave {
@@ -22,10 +32,17 @@
     width: 192px;
     height: 255px;
     bottom: 20px;
-    left: 55px;
-    background-image: url("../img/sequence/traveller-illustration-mob.png");
+    left: 80px;
+    background-image: url("../img/sequence/traveller-illustration-mob@1x.png");
     background-repeat: no-repeat;
     z-index: 50;
+  }
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .sequence__ave::before {
+      background-image: url("../img/sequence/traveller-illustration-mob@2x.png");
+      background-size: 384px auto;
+    }
   }
 }
 
@@ -38,17 +55,18 @@
   font-size: fs("big");
   font-weight: fw("bold");
   margin-top: 93px;
-  margin-bottom: 265px;
+  margin-bottom: 241px;
   padding: 0 16px;
   color: color("pog-clear");
 }
 
 .sequence__text-wrapper {
-  margin: 0 0 30px;
-  padding: 0 25px 0 25px;
-  max-width: 160px;
+  margin: -50px 0 0;
+  padding: 50px 85px 109px 50px;
+
 
   @include bg-color(color("pog-main", 0));
+  background-color: color("pog-main");
 }
 
 .sequence__text-type-one {
@@ -56,8 +74,8 @@
 }
 
 .sequence__detail {
-  background-color: color("pog-main");
-  padding: 50px 25px 40px;
+  background-color: color("pog-first");
+  padding: 28px 0 40px;
 }
 
 .sequence__list {
@@ -65,7 +83,8 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  margin-top: -80px;
+  padding: 0 25px;
 }
 
 .sequence__item {
@@ -116,20 +135,39 @@
 }
 
 @media (min-width: $tablet) {
+  .sequence {
+    background-color: color("pog-first");
+  }
+
+  .sequence--back {
+    background-image: url("../img/sequence/globe-back-tab@1x.jpg");
+    background-size: 768px 612px;
+    background-position: center bottom 236px;
+  }
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .sequence--back {
+      background-image: url("../img/sequence/globe-back-tab@2x.jpg");
+      background-size: 1536px auto;
+    }
+  }
+
   .sequence__detail {
     padding: 0 40px 96px;
+    background-color: transparent;
   }
 
   .sequence__text-wrapper {
-    margin: 0 0 211px;
+    margin: 0 0 212px;
     padding: 0 35px;
     max-width: 270px;
+    background-color: transparent;
   }
 
   .sequence__title {
     font-size: fs("wery-big");
     line-height: lh("very-giant");
-    margin-top: 72px;
+    margin-top: 163px;
     margin-bottom: 86px;
     padding: 0 16px;
   }
@@ -141,6 +179,8 @@
   .sequence__list {
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
   }
 
   .sequence__item {
@@ -200,12 +240,19 @@
       width: 372px;
       height: 451px;
       top: auto;
-      bottom: -394px;
+      bottom: -395px;
       left: auto;
-      right: 71px;
-      background-image: url("../img/sequence/traveller-illustration-mob.png");
+      right: 111px;
+      background-image: url("../img/sequence/traveller-illustration-tab@1x.png");
       background-repeat: no-repeat;
       z-index: 10;
+    }
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .sequence__ave::before {
+        background-image: url("../img/sequence/traveller-illustration-tab@2x.png");
+        background-size: 744px auto;
+      }
     }
 
     & .interaction__item {
@@ -215,8 +262,21 @@
 }
 
 @media (min-width: $desktop) {
+  .sequence--back {
+    background-image: url("../img/sequence/globe-back-desk@1x.jpg");
+    background-size: 1440px 750px;
+    background-position: center top;
+  }
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .sequence--back {
+      background-image: url("../img/sequence/globe-back-desk@2x.jpg");
+      background-size: 2880px auto;
+    }
+  }
+
   .sequence .wrapper {
-    padding: 122px 0 0;
+    padding: 222px 0 0;
   }
 
   .sequence__detail {
@@ -248,6 +308,8 @@
   .sequence__list {
     flex-direction: row;
     flex-wrap: wrap;
+    z-index: 10;
+    position: relative;
   }
 
   .sequence__item {
@@ -309,17 +371,20 @@
     &::before {
       width: 431px;
       height: 640px;
-      top: 0;
+      top: -110px;
       bottom: auto;
       left: auto;
       right: 405px;
-      background-image: url("../img/sequence/traveller-illustration-mob.png");
+      background-image: url("../img/sequence/traveller-illustration-desk@1x.png");
       background-repeat: no-repeat;
-      z-index: 10;
+      z-index: 0;
     }
 
-    & .interaction__item {
-      display: none;
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .sequence__ave::before {
+        background-image: url("../img/sequence/traveller-illustration-tab@2x.png");
+        background-size: 744px auto;
+      }
     }
   }
 }

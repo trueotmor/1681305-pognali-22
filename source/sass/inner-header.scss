@@ -118,13 +118,31 @@
     justify-content: space-between;
   }
 
-  .inner-header__level-progress-bar {
-    width: 95px;
-    height: 95px;
+  .inner-header__level-progress {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    padding-right: 5px;
+
+    & svg + p {
+      margin-bottom: 4px;
+    }
+  }
+
+  .inner-header__level-progress svg {
+    transform: scale(2.3);
+    top: 35px;
+    left: 38px;
+    width: 70px;
+    height: 70px;
   }
 
   .inner-header__img {
-    border-radius: 11px 11px 0 0;
+    border-radius: 15px 15px 0 0;
     vertical-align: top;
   }
 
@@ -144,4 +162,3 @@
     margin-left: 22px;
   }
 }
-

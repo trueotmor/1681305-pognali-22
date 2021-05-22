@@ -10,7 +10,7 @@
 
 .map .wrapper {
   box-sizing: border-box;
-  padding: 95px 25px 35px;
+  padding: 92px 25px 35px;
 }
 
 .map__inner-wrapper {
@@ -18,7 +18,7 @@
   flex-wrap: nowrap;
   align-items: center;
   box-sizing: border-box;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
 }
 
 .map-header__adress {
@@ -47,7 +47,7 @@
   height: 62px;
   border: 3px solid color("pog-main");
   border-radius: 10px;
-  padding: 10px 22px;
+  padding: 10px 20px;
   color: color("pog-second");
   font-size: fs("mob-medium");
   line-height: lh("small");
@@ -160,7 +160,7 @@
   }
 
   .map__display {
-    height: 580px;
+    height: 615px;
   }
 }
 

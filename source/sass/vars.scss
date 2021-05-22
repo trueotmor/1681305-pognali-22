@@ -34,8 +34,15 @@ $colors : (
   pog-soft: #f9eaea,
   pog-like: #f02323,
   pog-grad :rgba(255, 255, 255, 0),
+  pog-grad-half :rgba(255, 255, 255, 0.5),
   pog-shadow-fourth :rgba(0, 0, 0, 0.25),
-  pog-popup-shadow :rgba(54, 80, 148, 0.18)
+  pog-shadow-half :rgba(0, 0, 0, 0.5),
+  pog-shadow-low :rgba(0, 0, 0, 0.05),
+  pog-card-shadow :rgba(2, 3, 5, 0.18),
+  pog-popup-shadow :rgba(0, 0, 0, 0.16),
+  pog-shadow-business-mob: rgba(29, 46, 91, 0.14),
+  pog-shadow-business-tab: rgba(29, 46, 91, 0.18),
+  pog-special-transparent: rgba(68, 68, 68, 0.4)
 );
 
 @function color($name, $ascss:1) {

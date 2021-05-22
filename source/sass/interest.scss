@@ -206,13 +206,13 @@
   }
 
   .interest .wrapper {
-    padding: 136px 75px 60px;
+    padding: 146px 75px 57px;
   }
 
   .interest__title {
     font-size: fs("very-big");
     line-height: lh("medium-plus");
-    margin-bottom: 59px;
+    margin-bottom: 69px;
   }
 
   .interest__text-indent-one {
@@ -226,13 +226,13 @@
   }
 
   .interest__mail-form {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 
   .interest__input {
     height: 80px;
     border-radius: 20px;
-    padding: 15px 25px;
+    padding: 15px 35px;
 
     @include level-type1;
   }
@@ -240,7 +240,7 @@
   .interest__button {
     width: 80px;
     height: 80px;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
 
     &::after {
       top: 32px;

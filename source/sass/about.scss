@@ -8,12 +8,21 @@
 }
 
 .about .wrapper {
-  padding: 30px 60px 82px 49px;
+  padding: 32px 60px 82px 49px;
   box-sizing: border-box;
-  background-image: url("../img/about/mobile-back-mob.png");
+  background-image: url("../img/about/about-mob@1x.png");
+  background-color: color("pog-first");
+  background-size: 292px auto;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right 10px bottom;
   margin: 0 auto;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .about .wrapper {
+      background-image: url("../img/about/about-mob@2x.png");
+      background-size: 584px auto;
+    }
+  }
 }
 
 .about__title {
@@ -21,11 +30,11 @@
   line-height: lh("medium-plus");
   font-weight: fw("bold");
   color: color("pog-special-third");
-  margin: 0 0 20px;
+  margin: 0 0 19px;
 }
 
 .about__text-type-one {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   max-width: 210px;
 }
 
@@ -43,8 +52,9 @@
   }
 
   .about .wrapper {
-    padding: 41px 75px 89px;
+    padding: 41px 75px 93px;
     position: relative;
+    background: transparent;
 
     &::before {
       content: "";
@@ -55,6 +65,25 @@
       height: 212px;
       background-color: color("pog-back-decorate");
       border-radius: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 48px;
+      right: 8px;
+      width: 376px;
+      height: 548px;
+      background-image: url("../img/about/about-tab@1x.png");
+      background-size: 376px 548px;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .about .wrapper::after {
+        background-image: url("../img/about/about-mob@2x.png");
+        background-size: 752px 1084px;
+      }
     }
   }
 
@@ -110,12 +139,29 @@
 @media (min-width: $desktop) {
   .about .wrapper {
     padding: 132px 130px 163px;
+    background-image: url("../img/about/about-desk@1x.png");
+    background-repeat: no-repeat;
+    background-size: 630px auto;
+    background-position: right 60px bottom;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .about .wrapper {
+        background-image: url("../img/about/about-desk@2x.png");
+        background-repeat: no-repeat;
+        background-size: 1260px auto;
+      }
+    }
 
     &::before {
+      display: block;
       top: 70px;
       left: 60px;
       width: 212px;
       height: 212px;
+    }
+
+    &::after {
+      display: none;
     }
   }
 

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -19,23 +17,55 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-
-
-  <body class="page-body">
+  <body class="page-body js-disabled">
     <header class="page-header">
-      <div class="wrapper page-header__menu">
+      <div class="page-header__menu page-header__menu--turn page-header__menu--expand">
         <div class="page-header__top-wrapper">
           <a class="page-header__logo" href="#">
-            <img src="img/logo_mobile.png" width="96" height="15" alt="Сервис поиска попутчиков «Погнали»">  <!--class="page-header__logo-image"-->
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desk-dark@1x.png 1x, img/logo-desk-dark@1x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tab-dark@1x.png 1x, img/logo-tab-dark@1x.png 2x">
+              <img class="page-header__logo-image page-header__logo-image--scroll" src="img/logo_mob-dark@1x.png" srcset="img/logo_mob-dark@2x.png 2x" width="96" height="15" alt="Сервис поиска попутчиков «Погнали»">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desk-white@1x.png 1x, img/logo-desk-white@1x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tab-white@1x.png 1x, img/logo-tab-white@1x.png 2x">
+              <img class="page-header__logo-image" src="img/logo_mob-white@1x.png" srcset="img/logo_mob-white@2x.png 2x" width="96" height="15" alt="Сервис поиска попутчиков «Погнали»">
+            </picture>
           </a>
-          <button class="navigate__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="page-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+            <svg class="page-header__toggle-image">
+              <use xlink:href="img/icon_sprite.svg#burger"></use>
+            </svg>
+            <svg class="page-header__toggle-image page-header__toggle-image--expand">
+              <use xlink:href="img/icon_sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="page-header__interaction">
+            <ul class="interaction interaction--back">
+              <li class="interaction__item">
+                <a class="interaction__phone" href="tel:8005558628" aria-label="Позвонить">
+                  <svg class="handset" width="19" height="19" viewBox="0 0 19 19" fill="" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.77429 8.22389C9.77429 8.41289 9.92792 8.56139 10.1157 8.56139C10.5048 8.56139 10.8189 8.87526 10.8189 9.25664C10.8189 9.44226 10.9725 9.59414 11.1603 9.59414C11.348 9.59414 11.5017 9.44226 11.5017 9.25664C11.5017 8.50064 10.8804 7.88639 10.1157 7.88639C9.92792 7.88639 9.77429 8.03827 9.77429 8.22389ZM15.332 9.59414C15.5231 9.59414 15.6733 9.44226 15.6733 9.25664C15.6733 6.22589 13.1813 3.76215 10.1157 3.76215C9.92792 3.76215 9.77429 3.914 9.77429 4.09965C9.77429 4.28527 9.92792 4.43715 10.1157 4.43715C12.8057 4.43715 14.9906 6.60051 14.9906 9.25664C14.9906 9.44226 15.1442 9.59414 15.332 9.59414Z"/>
+                    <path d="M12.9047 9.25661C12.9047 9.44223 13.0583 9.59411 13.2461 9.59411C13.4339 9.59411 13.5875 9.44223 13.5875 9.25661C13.5875 7.36324 12.0308 5.82424 10.1157 5.82424C9.9279 5.82424 9.77427 5.97612 9.77427 6.16174C9.77427 6.35074 9.9279 6.49924 10.1157 6.49924C11.6553 6.49924 12.9047 7.73786 12.9047 9.25661ZM10.1157 1.69998C9.9279 1.69998 9.77427 1.85186 9.77427 2.03748C9.77427 2.22312 9.9279 2.37498 10.1157 2.37498C13.9562 2.37498 17.0798 5.46312 17.0798 9.25661C17.0798 9.44223 17.23 9.59411 17.4212 9.59411C17.6089 9.59411 17.7626 9.44223 17.7626 9.25661C17.7626 5.0885 14.3317 1.69998 10.1157 1.69998ZM13.4509 12.8139L13.0037 13.0535C12.2493 13.4619 11.6622 14.5812 10.7312 13.7375L8.30011 11.3L6.20004 9.25661C5.14495 7.92348 6.32635 7.60623 6.73941 6.85699L6.98179 6.41825C7.25489 5.91873 7.35388 5.35849 7.27196 4.79823C7.19345 4.23799 6.93741 3.72836 6.52775 3.32336C6.02935 2.83062 5.36707 2.56062 4.66042 2.56062C3.95376 2.56062 3.28807 2.83062 2.78964 3.32336L2.61556 3.49886C1.69383 4.41012 1.588 5.97948 2.31514 7.92348C3.0013 9.77973 4.3839 11.7912 6.20004 13.5867C8.96862 16.3239 12.0513 17.9 14.2634 17.9C15.1373 17.9 15.8781 17.6536 16.4039 17.1339L16.5814 16.9584C17.0764 16.469 17.3529 15.8142 17.3563 15.1089C17.3529 14.4204 17.0695 13.7454 16.5814 13.2627C15.7587 12.4494 14.4717 12.2671 13.4509 12.8139Z"/>
+                    </svg>
+                </a>
+              </li>
+              <li class="interaction__item">
+                <a class="interaction__envelop" href="mailto:mail@htmlacademy.ru" aria-label="Написать">
+                  <svg class="envelop" width="17" height="14" viewBox="0 0 17 14" fill="" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.0166 2.32528L7.7666 6.55572C7.9934 6.69747 8.2868 6.76467 8.582 6.76467C8.8772 6.76467 9.1706 6.69747 9.3974 6.55572L16.1474 2.32528C16.5875 2.04913 17.0033 0.974976 16.196 0.974976H0.968901C0.161601 0.974976 0.577401 2.04913 1.0166 2.32528ZM16.3517 4.63842L9.3974 8.86677C9.0914 9.05367 8.8772 9.07572 8.582 9.07572C8.2868 9.07572 8.0726 9.05367 7.7666 8.86677C7.4606 8.67987 1.3469 4.94082 0.847401 4.63737C0.496401 4.42317 0.500001 4.67412 0.500001 4.86732V12.525C0.500001 12.966 1.0094 13.575 1.4 13.575H15.8C16.1906 13.575 16.7 12.966 16.7 12.525V4.86837C16.7 4.67517 16.7036 4.42422 16.3517 4.63842Z"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="interaction__item">
+                <a class="interaction__login" href="form.html"><span class="interaction__login-text">Авторизация</span></a>
+              </li>
+            </ul>
+          </div>
         </div>
         <nav class="page-header__navigate navigate">
-
-
-            <a class="navigate__logo" href="#">
-              <img src="img/logo_mobile_menu.png" width="100" height="15" alt="Сервис поиска попутчиков «Погнали»">
-            </a>
             <ul class="navigate__user-list">
               <li class="navigate__user-item navigate__user-item--current">
                 <a class="navigate__user-link" href="#">О сервисе</a>
@@ -149,8 +179,6 @@
           </div>
         </div>
       </section>
-
-
       <section class="about">
         <div class="wrapper">
           <h2 class="about__title">О сервисе</h2>
@@ -159,8 +187,6 @@
           <a class="button button__color--yellow button--arguments about__show-all" href=""><span class="about__show-all--text">Подробнее</span></a>
         </div>
       </section>
-
-
       <section class="directions">
         <div class="wrapper">
           <h2 class="directions__title">Направления</h2>
@@ -168,19 +194,21 @@
           <ul class="directions__list">
             <li class="directions__item">
               <picture>
-                <source>
-                <img class="directions__image" src="img/directions/thailand-mobile.jpg" alt="Тайланд" width="270" height="110">
+                <source media="(min-width: 1440px)" srcset="img/directions/thailand-desk@1x.png 1x, img/directions/thailand-desk@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/directions/thailand-desk@1x.png 1x, img/directions/thailand-desk@2x.png 2x">
+                <img class="directions__image" src="img/directions/thailand-mob@1x.png" srcset="img/directions/thailand-mob@2x.png" width="270" height="110" alt="Таиланд">
               </picture>
               <div class="directions__country-info country-info country-info--thailand">
-                <h3 class="country-info__name">Тайланд</h3>
+                <h3 class="country-info__name">Таиланд</h3>
                 <p class="country-info__tagline">Джунгли зовут!</p>
                 <span class="country-info__users-count">18321</span>
               </div>
             </li>
             <li class="directions__item">
               <picture>
-                <source>
-                <img class="directions__image" src="img/directions/france-mobile.jpg" alt="Франция" width="270" height="110">
+                <source media="(min-width: 1440px)" srcset="img/directions/france-desk@1x.png 1x, img/directions/france-desk@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/directions/france-desk@1x.png 1x, img/directions/france-desk@2x.png 2x">
+                <img class="directions__image" src="img/directions/france-mob@1x.png" srcset="img/directions/france-mob@2x.png" width="270" height="110" alt="Франция">
               </picture>
               <div class="directions__country-info country-info country-info--france">
                 <h3 class="country-info__name">Франция</h3>
@@ -190,8 +218,9 @@
             </li>
             <li class="directions__item">
               <picture>
-                <source>
-                <img class="directions__image" src="img/directions/czech-mobile.jpg" alt="Чехия" width="270" height="110">
+                <source media="(min-width: 1440px)" srcset="img/directions/czech-desk@1x.png 1x, img/directions/czech-desk@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/directions/czech-desk@1x.png 1x, img/directions/czech-desk@2x.png 2x">
+                <img class="directions__image" src="img/directions/czech-mob@1x.png" srcset="img/directions/czech-mob@2x.png" width="270" height="110" alt="Чехия">
               </picture>
               <div class="directions__country-info country-info country-info--czech">
                 <h3 class="country-info__name">Чехия</h3>
@@ -200,38 +229,40 @@
               </div>
             </li>
           </ul>
-          <a class="button button__color--yellow button--arguments directions__show-all" href=""><span class="directions__show-all--text">Показать все</span></a>
+          <a class="button button__color--yellow button--arguments directions__show-all" href="#"><span class="directions__show-all--text">Показать все</span></a>
         </div>
       </section>
-
-
       <section class="companions">
         <div class="wrapper">
           <h2 class="companions__title">Попутчики</h2>
           <div class="companions__back-image-one"></div>
+          <div class="companions__back-image-two"></div>
           <p class="companions__text-type-one text-type-one">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
           <p class="companions__text-type-two text-type-two">Теперь можно легко найти единомышленников!</p>
           <ul class="companions__cards-list">
             <li class="companions__cards-item profile">
               <a class="profile__image-wrapper" href="#">
                 <picture>
-                  <source>
-                  <img class="profile__image" src="img/companions/profile/user-one.jpg" width="270" height="270" alt="Фото попутчика">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/companions/index/firsova@1x.webp 1x, img/companions/index/firsova@2x.webp 2x">
+                  <source type="image/webp" srcset="img/companions/index/firsova-mob@1x.webp 1x, img/companions/index/firsova-mob@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/companions/index/firsova@1x.jpg 1x, img/companions/index/firsova@2x.jpg 2x">
+                  <img class="profile__image" src="img/companions/index/firsova-mob@1x.jpg" srcset="img/companions/index/firsova-mob@2x.jpg 2x" width="270" height="270" alt="Фото попутчика">
                 </picture>
               </a>
               <div class="profile__info-wrapper">
-                <div class="profile__level">
-                  <svg width="100" height="100">
-                    <circle cx="35" cy="35" r="30" fill="none"></circle>
-                    <path fill="none" stroke-linecap="round" stroke-width="3" stroke="#ff8d30" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
+                <div class="profile__level level level--middle level--dark">
+                  <svg class="level__progress-bar level__progress-bar--99" width="60" height="60">
+                    <use xlink:href="img/icon_sprite.svg#level-icon"></use>
                   </svg>
+                  <p class="level__number level__number--white">99</p>
+                  <p class="level__text level__text--white">level</p>
                 </div>
                 <ul class="profile__countries-list">
                   <li class="profile__countries-item profile__countries-item--sri-lanka">
                     <span class="profile__country-title">Шри-Ланка</span>
                   </li>
                   <li class="profile__countries-item profile__countries-item--thailand">
-                    <span class="profile__country-title">Тайланд</span>
+                    <span class="profile__country-title">Таиланд</span>
                   </li>
                   <li class="profile__countries-item profile__countries-item--seychelles">
                     <span class="profile__country-title">Сейшелы</span>
@@ -265,36 +296,35 @@
                     <li class="profile__transport-item transport transport--no-bg">
                       <div class="transport__lining">
                         <svg class="transport--param">
-                          <use xlink:href="img/transport/icon_sprite.svg#plane"></use>
+                          <use xlink:href="img/icon_sprite.svg#plane"></use>
                         </svg>
                       </div>
                       <span class="transport__title">Самолетом</span>
                     </li>
                     <li class="profile__transport-item transport transport--no-bg">
                       <div class="transport__lining">
-                        <svg class="transport--param">
-                          <use xlink:href="img/transport/icon_sprite.svg#auto"></use>
+                        <svg class="transport--param transport--off">
+                          <use xlink:href="img/icon_sprite.svg#auto"></use>
                         </svg>
                       </div>
                       <span class="transport__title">Автотранспортом</span>
                     </li>
                     <li class="profile__transport-item transport transport--no-bg">
                       <div class="transport__lining">
-                        <svg class="transport--param">
-                          <use xlink:href="img/transport/icon_sprite.svg#bicycle"></use>
+                        <svg class="transport--param transport--off">
+                          <use xlink:href="img/icon_sprite.svg#bicycle"></use>
                         </svg>
                       </div>
                       <span class="transport__title">На велосипеде</span>
                     </li>
                     <li class="profile__transport-item transport transport--plane transport--no-bg">
                       <div class="transport__lining">
-                        <svg class="transport--param">
-                          <use xlink:href="img/transport/icon_sprite.svg#run"></use>
+                        <svg class="transport--param transport--off">
+                          <use xlink:href="img/icon_sprite.svg#run"></use>
                         </svg>
                       </div>
                       <span class="transport__title">На своих двоих</span>
                     </li>
-
                   </ul>
                 </div>
               </div>
@@ -302,16 +332,20 @@
             <li class="companions__cards-item profile">
               <a class="profile__image-wrapper" href="#">
                 <picture>
-                  <source>
-                  <img class="profile__image" src="img/companions/profile/user-two.jpg" alt="Фото попутчика">
-                </picture>
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/companions/index/demin@1x.webp 1x, img/companions/index/demin@2x.webp 2x">
+                    <source type="image/webp" srcset="img/companions/index/demin-mob@1x.webp 1x, img/companions/index/demin-mob@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/companions/index/demin@1x.jpg 1x, img/companions/index/demin@2x.jpg 2x">
+                    <img class="profile__image" src="img/companions/index/demin-mob@1x.jpg" srcset="img/companions/index/demin-mob@2x.jpg 2x" width="270" height="270" alt="Фото попутчика">
+                  </picture>
               </a>
               <div class="profile__info-wrapper">
-                <div class="profile__level">
-                  <svg width="100" height="100">
-                    <circle cx="35" cy="35" r="30" fill="none"></circle>
-                    <path fill="none" stroke-linecap="round" stroke-width="3" stroke="#ff8d30" d="M35 6.5 a 25 25 0 0 1 0 57 a 25 25 0 0 1 0 -57"></path>
+                <div class="profile__level level level--middle level--dark">
+                  <svg class="level__progress-bar level__progress-bar--80" width="60" height="60">
+                    <use xlink:href="img/icon_sprite.svg#level-icon"></use>
                   </svg>
+                  <p class="level__number level__number--white">80</p>
+                  <p class="level__text level__text--white">level</p>
                 </div>
                 <ul class="profile__countries-list">
                   <li class="profile__countries-item profile__countries-item--belgium">
@@ -345,29 +379,28 @@
                   <ul class="profile__transport-list">
                     <li class="profile__transport-item transport transport--no-bg">
                       <svg class="transport--param">
-                        <use xlink:href="img/transport/icon_sprite.svg#plane"></use>
+                        <use xlink:href="img/icon_sprite.svg#plane"></use>
                       </svg>
                       <span class="transport__title">Самолетом</span>
                     </li>
                     <li class="profile__transport-item transport transport--no-bg">
                       <svg class="transport--param">
-                        <use xlink:href="img/transport/icon_sprite.svg#auto"></use>
+                        <use xlink:href="img/icon_sprite.svg#auto"></use>
                       </svg>
                       <span class="transport__title">Автотранспортом</span>
                     </li>
                     <li class="profile__transport-item transport transport--no-bg">
-                      <svg class="transport--param">
-                        <use xlink:href="img/transport/icon_sprite.svg#bicycle"></use>
+                      <svg class="transport--param transport--off">
+                        <use xlink:href="img/icon_sprite.svg#bicycle"></use>
                       </svg>
                       <span class="transport__title">На велосипеде</span>
                     </li>
                     <li class="profile__transport-item transport transport--no-bg">
                       <svg class="transport--param">
-                        <use xlink:href="img/transport/icon_sprite.svg#run"></use>
+                        <use xlink:href="img/icon_sprite.svg#run"></use>
                       </svg>
                       <span class="transport__title">На своих двоих</span>
                     </li>
-
                   </ul>
                 </div>
               </div>
@@ -377,8 +410,6 @@
           <a class="button button__color--yellow button--arguments companions__show-all" href=""><span class="companions__show-all--text">Показать всех</span></a>
         </div>
       </section>
-
-
       <section class="rate">
         <div class="wrapper">
           <div class="rate__titile-wrapper">
@@ -411,16 +442,14 @@
               <span class="rate__number rate__number--color-special-first">3</span>
             </li>
           </ul>
-          <a class="rate__show-business" href="">
+          <a class="rate__show-business" href="#business__modal">
             <svg class="rate_show-business-image">
-              <use xlink:href="img/transport/icon_sprite.svg#business"></use>
+              <use xlink:href="img/icon_sprite.svg#business"></use>
             </svg>
             Показать тарифы для бизнеса
           </a>
         </div>
       </section>
-
-
       <section class="interest">
         <div class="wrapper">
           <h2 class="interest__title">Заинтересовались?</h2>
@@ -432,7 +461,6 @@
             <button class="interest__button button__color--yellow" type="submit"><span class="interest__button-text">Регистрация</span></button>
           </form>
           <p class="interest__text-type-one text-type-one interest__text-indent-two">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
-
           <ul class="interest__contacts-list">
             <li class="interest__contacts-item">
               <a class="interest__int-phone int-phone" href="tel:+78005558628">
@@ -455,11 +483,8 @@
               </a>
             </li>
           </ul>
-
         </div>
       </section>
-
-
       <section class="map">
         <div class="wrapper">
           <h2 class="map__title visually-hidden">Проложить маршрут</h2>
@@ -472,7 +497,7 @@
           </svg>
           <p class="map-header__adress">Ул. Большая Конюшенная, 19/8</p>
           </div>
-          <a class="map-header__button" href=""><span class="map-header__button-text">Проложить маршрут</span></a>
+          <a class="map-header__button" href="https://yandex.ru/maps/?ll=29.775581%2C56.696013&mode=routes&rtext=59.938635%2C30.323118~53.145597%2C29.225538&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323%252C59.939%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8~ymapsbm1%3A%2F%2Fgeo%3Fll%3D29.226%252C53.146%26spn%3D0.186%252C0.148%26text%3D%25D0%2591%25D0%25B5%25D0%25BB%25D0%25B0%25D1%2580%25D1%2583%25D1%2581%25D1%258C%252C%2520%25D0%259C%25D0%25B0%25D0%25B3%25D1%2596%25D0%25BB%25D1%2591%25D1%259E%25D1%2581%25D0%25BA%25D0%25B0%25D1%258F%2520%25D0%25B2%25D0%25BE%25D0%25B1%25D0%25BB%25D0%25B0%25D1%2581%25D1%2586%25D1%258C%252C%2520%25D0%2591%25D0%25B0%25D0%25B1%25D1%2580%25D1%2583%25D0%25B9%25D1%2581%25D0%25BA&utm_source=main_stripe_big&z=6.8"><span class="map-header__button-text">Проложить маршрут</span></a>
           </div>
         </div>
       </section>
@@ -484,7 +509,9 @@
       <div class="wrapper">
         <a class="page-footer__logo" href="#">
           <picture>
-            <img src="img/logo_mobile_menu.png" width="100" height="15" alt="Сервис поиска попутчиков «Погнали»">
+            <source media="(min-width: 1440px)" srcset="img/logo-desk-dark@1x.png 1x, img/logo-desk-dark@1x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tab-dark@1x.png 1x, img/logo-tab-dark@1x.png 2x">
+            <img class="page-footer__logo-image" src="img/logo_mob-dark@1x.png" srcset="img/logo_mob-dark@2x.png 2x" width="96" height="15" alt="Сервис поиска попутчиков «Погнали»">
           </picture>
         </a>
         <ul class="page-footer__social-list">
@@ -519,8 +546,35 @@
           </a>
       </div>
     </footer>
+    <div class="business__modal-position" id="business__modal">
+      <a class="business__modal-close" href="#modal__closed"></a>
+    <div class="business__modal-wrapper">
+      <h4 class="business__modal-title">Бизнес-тарифы</h4>
+      <ul class="business__modal-list">
+        <li class="business__modal-item">
+          <p class="business__modal-text">Реклама у блоггера</p>
+          <p class="business__modal-text">300 000руб./пост</p>
+        </li>
+        <li class="business__modal-item">
+          <p class="business__modal-text">Накрутка подписчиков</p>
+          <p class="business__modal-text">от 1 руб./шт.</p>
+        </li>
+        <li class="business__modal-item">
+          <p class="business__modal-text">Лайк от ботов</p>
+          <p class="business__modal-text">от 20 коп./лайк</p>
+        </li>
+        <li class="business__modal-item">
+          <p class="business__modal-text">Ваш продакт-плейсмент</p>
+          <p class="business__modal-text">Индивидуально</p>
+        </li>
+      </ul>
+      <a class="business__modal-button" href="#modal__closed"><span class="business__modal-button-text">Закрыть окно</span></a>
+    </div>
+    </div>
+    <div class="business__modal-closed" id="modal__closed"></div>
       <!--Подключение *.js-->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=a49c1bfe-97e3-407b-9b2d-e226713e4778&lang=ru_RU"></script>
     <script src="js/map.js"></script>
+    <script src="js/pog.js"></script>
   </body>
 </html>

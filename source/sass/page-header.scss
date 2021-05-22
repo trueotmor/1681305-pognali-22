@@ -1,35 +1,250 @@
 .page-header {
   position: relative;
-  z-index: 20;
+  z-index: 21;
   box-sizing: border-box;
   background-color: color("pog-main");
 }
 
-.page-header__navigate {
+.page-header__interaction {
+  display: none;
+}
 
+.page-header__menu {
+  background-color: color("pog-main");
+  padding: 14px 0 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page-header__navigate {
+  width: 320px;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 25px;
+  display: none;
 }
 
 .page-header__top-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0;
   margin: 0 auto;
   width: 270px;
+  min-height: 30px;
 }
 
-.page-header__menu {
+.page-header__logo-image {
+  width: 96px;
+  height: 15px;
+  fill: color("pog-clear");
+
+  &--scroll {
+    display: none;
+  }
+}
+
+.page-header__menu--turn {
+  background-color: color("pog-main");
+  margin-bottom: -74px;
+}
+
+.page-header__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header__toggle-image {
+  width: 25px;
+  height: 11px;
+  fill: color("pog-clear");
+
+  &--expand {
+    display: none;
+  }
+}
+
+.page-header__menu--scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: color("pog-clear");
+
+  & .page-header__toggle-image {
+    fill: color("pog-extra-light");
+  }
+
+  & .page-header__logo-image {
+    display: none;
+
+    &--scroll {
+      display: block;
+    }
+  }
+}
+
+.page-header__menu--expand {
+  @media (max-width: $desktop) {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: color("pog-clear");
+
+    & .page-header__toggle-image {
+      display: none;
+      fill: color("pog-extra-light");
+
+      &--expand {
+        display: block;
+        stroke: color("pog-extra-light");
+        width: 24px;
+        height: 22px;
+      }
+    }
+
+    & .page-header__logo-image {
+      display: none;
+
+      &--scroll {
+        display: block;
+      }
+    }
+
+    & .page-header__navigate {
+      display: block;
+    }
+  }
+}
+
+.js-disabled .page-header__toggle {
+  display: none;
 }
 
 @media (min-width: $tablet) {
+  .page-header__menu {
+    background-color: color("pog-first");
+    padding: 41px 0 40px;
+
+    &--scroll {
+      background-color: color("pog-clear");
+    }
+  }
+
+  .page-header__interaction {
+    display: block;
+
+    & .interaction__phone {
+      display: none;
+    }
+
+    & .interaction__envelop {
+      display: none;
+    }
+
+    & .interaction__login {
+      display: flex;
+      width: 188px;
+      height: 50px;
+      border-radius: 25px;
+      align-items: center;
+      justify-content: center;
+      font-size: fs("basic");
+      line-height: lh("basic");
+      font-weight: fw("bold");
+      color: color("pog-main");
+      text-transform: uppercase;
+    }
+  }
+
+  .page-header__menu--expand {
+    background-color: color("pog-clear");
+
+    & .interaction__login {
+      font-weight: fw("normal");
+      letter-spacing: 0.03em;
+    }
+  }
+
+  .page-header__menu--turn {
+    margin-bottom: -131px;
+  }
+
+  .page-header__toggle {
+    margin-left: 22px;
+  }
+
+  .page-header__top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+    width: 688px;
+    min-height: 47px;
+  }
+
   .page-header__navigate {
     padding: 0 40px 71px;
+    width: 768px;
+    box-sizing: border-box;
+  }
+
+  .page-header__logo-image {
+    width: 164px;
+    height: 42px;
   }
 }
 
 @media (min-width: $desktop) {
-  .page-header__navigate {
+  .page-header__top-wrapper {
+    width: 1320px;
+    min-height: 60px;
+  }
+
+  .page-header__menu--turn {
+    margin-bottom: -117px;
+  }
+
+  .page-header__logo-image {
+    width: 200px;
+    height: 55px;
+  }
+
+  .page-header__toggle {
     display: none;
+  }
+
+  .page-header__interaction {
+    & .interaction__phone {
+      display: flex;
+      width: 50px;
+      height: 50px;
+    }
+
+    & .interaction__envelop {
+      display: flex;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .page-header__menu--expand {
+    & .page-header__navigate {
+      display: none;
+    }
+
+    & .interaction__login {
+      font-weight: fw("bold");
+      letter-spacing: normal;
+    }
   }
 }

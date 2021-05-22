@@ -15,7 +15,12 @@
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
+}
+
+.page-footer__logo-image {
+  width: 96px;
+  height: 15px;
 }
 
 .page-footer__social-list {
@@ -158,6 +163,11 @@
     align-items: center;
     margin: 0;
   }
+
+  .page-footer__logo-image {
+    width: 164px;
+    height: 42px;
+  }
 }
 
 @media (min-width: $desktop) {
@@ -170,5 +180,10 @@
     padding: 47px 60px 43px;
     display: flex;
     justify-content: space-between;
+  }
+
+  .page-footer__logo-image {
+    width: 200px;
+    height: 55px;
   }
 }

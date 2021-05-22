@@ -1,0 +1,249 @@
+.level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  padding: 5px 0 0 2px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+
+  &--middle {
+    width: 60px;
+    height: 60px;
+  }
+
+  &--big {
+    width: 100px;
+    height: 100px;
+  }
+
+  &--dark {
+    background-color: color("pog-shadow-half");
+  }
+}
+
+.level__progress-bar {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 60px;
+  height: 60px;
+  stroke-linecap: round;
+  stroke-width: 4px;
+  stroke: color("pog-special-third");
+}
+
+.level__progress-bar--thin {
+  stroke-width: 2px;
+}
+
+.level__progress-bar--99 {
+  stroke-dasharray: 170, 170;
+}
+
+.level__progress-bar--80 {
+  stroke-dasharray: 150, 150;
+}
+
+.level__progress-bar-small--99 {
+  stroke-dasharray: 173, 100;
+}
+
+.level__progress-bar-small--80 {
+  stroke-dasharray: 140, 100;
+}
+
+.level__progress-bar-small--25 {
+  stroke-dasharray: 43, 220;
+}
+
+.level__progress-bar-small--50 {
+  stroke-dasharray: 90, 120;
+}
+
+.level__cap {
+  stroke-linecap: butt;
+}
+
+.level__number {
+  margin: 0;
+  font-size: fs("medium");
+  font-weight: fw("bold");
+  line-height: lh("basic");
+  color: color("pog-second");
+
+  &--white {
+    color: color("pog-clear");
+  }
+
+  &--main {
+    color: color("pog-main");
+  }
+
+  &--big {
+    font-size: fs("big");
+    line-height: lh("wery-big");
+  }
+}
+
+.level__text {
+  display: block;
+  margin: 0;
+  padding: 0 2px 0 2px;
+  font-size: fs("mob-small");
+  font-weight: fw("normal");
+  line-height: lh("small");
+  text-align: center;
+  color: color("pog-special");
+  border-top: 1px solid color("pog-special-transparent");
+
+  &--white {
+    color: color("pog-clear");
+    border-top: 1px solid color("pog-grad-half");
+  }
+
+  &--hidden {
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    padding: 0;
+  }
+
+  &--big {
+    font-size: fs("mob-medium");
+    line-height: lh("mob-small");
+  }
+
+  &--border {
+    border: none;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 55px;
+      left: 21px;
+      width: 52px;
+      height: 1px;
+      background-color: color("pog-special");
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .level {
+    width: 60px;
+    height: 60px;
+    padding: 4px 0 0 2px;
+
+    &--big {
+      width: 94px;
+      height: 94px;
+    }
+  }
+
+  .level__progress-bar-small {
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+
+    transform: scale(1.25);
+  }
+
+  .level__number {
+    font-size: fs("medium");
+    line-height: lh("medium-plus");
+
+    &--big {
+      font-size: fs("big");
+      line-height: lh("wery-big");
+    }
+  }
+
+
+  .level__text {
+    display: block;
+    margin: 0;
+    padding: 0 2px 0 2px;
+    font-size: fs("mob-small");
+    font-weight: fw("normal");
+    line-height: lh("small");
+    text-align: center;
+    color: color("pog-special");
+    border-top: 1px solid color("pog-special-transparent");
+
+    &--white {
+      color: color("pog-clear");
+      border-top: 1px solid color("pog-grad-half");
+    }
+
+    &--big {
+      font-size: fs("mob-medium");
+      line-height: lh("mob-small");
+    }
+
+    &--border {
+      border: none;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 55px;
+        left: 21px;
+        width: 52px;
+        height: 1px;
+        background-color: color("pog-special");
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .level__text {
+    &--big {
+      color: color("pog-clear");
+      border-top: 1px solid color("pog-grad-half");
+    }
+
+    &--border {
+      border: none;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 55px;
+        left: 21px;
+        width: 52px;
+        height: 1px;
+        background-color: color("pog-special");
+        opacity: 0.3;
+      }
+    }
+
+    &--border-white {
+      border: none;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 55px;
+        left: 23px;
+        width: 50px;
+        height: 1px;
+        background-color: color("pog-clear");
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .level__number {
+    &--big {
+      color: color("pog-clear");
+    }
+  }
+}
