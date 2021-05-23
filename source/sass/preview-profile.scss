@@ -4,7 +4,7 @@
 }
 
 .preview-profile .wrapper {
-  padding: 80px 25px 64px;
+  padding: 80px 25px 38px;
   box-sizing: border-box;
 }
 
@@ -13,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   padding: 0 19px;
 }
 
@@ -97,7 +97,7 @@
 
 @media (min-width: $tablet) {
   .preview-profile .wrapper {
-    padding: 126px 75px 88px;
+    padding: 124px 75px 88px;
     position: relative;
   }
 
@@ -181,7 +181,7 @@
     height: 44px;
   }
 
-  .preview-profile__button-text--hidden {
+  .preview-profile__button-text-hidden {
     position: absolute;
     width: 0;
     height: 0;

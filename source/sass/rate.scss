@@ -236,27 +236,29 @@
   }
 
   .rate .wrapper {
-    padding: 167px 135px 165px 135px;
+    padding: 167px 135px 162px 132px;
   }
 
   .rate__titile-wrapper {
     margin-bottom: 134px;
   }
 
+  .rate__title {
+    margin: 0 auto;
+  }
+
   .rate__image {
     position: absolute;
-    top: 380px;
-    right: 165px;
+    top: 346px;
+    right: 133px;
     z-index: 11;
-    width: 145px;
-    height: 145px;
-
-    /*Добавить изображение*/
+    width: 198px;
+    height: 198px;
   }
 
   .rate__list {
     padding-right: 270px;
-    margin-bottom: 33px;
+    margin-bottom: 30px;
 
     &::after {
       right: 240px;
@@ -309,5 +311,13 @@
     border-radius: 50%;
     padding: 20px;
     margin-right: 21px;
+  }
+
+  .rate__item {
+    height: 68px;
+
+    &:first-child .rate__option-wrapper {
+      padding: 19px 0;
+    }
   }
 }

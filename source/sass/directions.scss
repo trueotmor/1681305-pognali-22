@@ -171,15 +171,15 @@
   .directions .wrapper {
     padding: 221px 130px 138px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 560px auto;
     grid-template-rows: auto auto 80px;
-    column-gap: 60px;
+    column-gap: 170px;
 
     &::after {
       content: "";
       position: absolute;
-      top: 143px;
-      right: 49px;
+      top: 148px;
+      right: 59px;
       width: 288px;
       height: 574px;
       background-image: url("../img/directions/flags-back@1x.jpg");
@@ -200,26 +200,29 @@
   .directions__title {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    margin-left: 125px;
+    margin-left: 0;
+    padding-top: 7px;
     position: relative;
     z-index: 10;
   }
 
   .directions__text-type-one {
-    margin-left: 125px;
+    margin-left: 0;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     position: relative;
     z-index: 10;
+    margin-bottom: 96px;
   }
 
   .directions__show-all {
-    margin-left: 125px;
+    margin-left: 0;
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     width: 275px;
     position: relative;
     z-index: 10;
+    padding: 29px 35px 27px;
 
     &::before {
       top: 33px;
@@ -246,6 +249,19 @@
       background: linear-gradient(180deg, color("pog-grad") 0%, color("pog-back-light") 70%, color("pog-back-light") 100%);
       border-radius: 0 0 20px 20px;
       z-index: 11;
+    }
+  }
+
+  .directions__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .directions__country-info {
+    &::before {
+      transform: scale(1);
+      top: 22px;
+      left: auto;
+      right: -33px;
     }
   }
 }

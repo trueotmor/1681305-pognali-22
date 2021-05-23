@@ -173,6 +173,7 @@
   .map-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .map .wrapper {
@@ -183,6 +184,8 @@
 
   .map__inner-wrapper {
     margin-bottom: 0;
+    flex-grow: 1;
+    justify-content: center;
   }
 
   .map-header__image {
@@ -191,11 +194,12 @@
   }
 
   .map__display {
-    height: 515px;
+    height: 545px;
   }
 
   .map-header__button {
     width: 324px;
+    padding: 29px 35px 27px 35px;
 
     &::after {
       top: 30px;

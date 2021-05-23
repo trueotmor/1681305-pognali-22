@@ -14,24 +14,68 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml"/>
     <meta name="theme-color" content="#ffffff">
     <!--подключение стилей-->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page-body">
+  <body class="page-body js-disabled">
     <header class="page-header">
-      <div class="wrapper page-header__menu">
+      <div class="page-header__menu page-header__menu--turn page-header__menu--expand page-header__menu--inner">
         <div class="page-header__top-wrapper">
-          <a class="page-header__logo" href="#">
-            <img src="img/logo_mobile.png" width="96" height="15" alt="Сервис поиска попутчиков «Погнали»">  <!--class="page-header__logo-image"-->
+          <a class="page-header__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desk-dark@1x.png 1x, img/logo-desk-dark@1x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tab-dark@1x.png 1x, img/logo-tab-dark@1x.png 2x">
+              <img class="page-header__logo-image page-header__logo-image--scroll" src="img/logo_mob-dark@1x.png" srcset="img/logo_mob-dark@2x.png 2x" width="96" height="15" alt="Сервис поиска попутчиков «Погнали»">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desk-white@1x.png 1x, img/logo-desk-white@1x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tab-white@1x.png 1x, img/logo-tab-white@1x.png 2x">
+              <img class="page-header__logo-image" src="img/logo_mob-white@1x.png" srcset="img/logo_mob-white@2x.png 2x" width="96" height="15" alt="Сервис поиска попутчиков «Погнали»">
+            </picture>
           </a>
-          <button class="navigate__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="page-header__nav-desk-list">
+            <li class="page-header__nav-desk-item">
+              <a class="page-header__nav-desk-link" href="#">О сервисе</a>
+            </li>
+            <li class="page-header__nav-desk-item">
+              <a class="page-header__nav-desk-link" href="#">Направления</a>
+            </li>
+            <li class="page-header__nav-desk-item">
+              <a class="page-header__nav-desk-link" href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+          <button class="page-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+            <svg class="page-header__toggle-image" width="25" height="11">
+              <use xlink:href="img/icon_sprite.svg#burger"></use>
+            </svg>
+            <svg class="page-header__toggle-image page-header__toggle-image--expand" width="24" height="22">
+              <use xlink:href="img/icon_sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="page-header__interaction">
+            <ul class="interaction interaction--back">
+              <li class="interaction__item">
+                <a class="interaction__phone" href="tel:8005558628" aria-label="Позвонить">
+                  <svg class="handset" width="19" height="19" viewBox="0 0 19 19" fill="" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.77429 8.22389C9.77429 8.41289 9.92792 8.56139 10.1157 8.56139C10.5048 8.56139 10.8189 8.87526 10.8189 9.25664C10.8189 9.44226 10.9725 9.59414 11.1603 9.59414C11.348 9.59414 11.5017 9.44226 11.5017 9.25664C11.5017 8.50064 10.8804 7.88639 10.1157 7.88639C9.92792 7.88639 9.77429 8.03827 9.77429 8.22389ZM15.332 9.59414C15.5231 9.59414 15.6733 9.44226 15.6733 9.25664C15.6733 6.22589 13.1813 3.76215 10.1157 3.76215C9.92792 3.76215 9.77429 3.914 9.77429 4.09965C9.77429 4.28527 9.92792 4.43715 10.1157 4.43715C12.8057 4.43715 14.9906 6.60051 14.9906 9.25664C14.9906 9.44226 15.1442 9.59414 15.332 9.59414Z"/>
+                    <path d="M12.9047 9.25661C12.9047 9.44223 13.0583 9.59411 13.2461 9.59411C13.4339 9.59411 13.5875 9.44223 13.5875 9.25661C13.5875 7.36324 12.0308 5.82424 10.1157 5.82424C9.9279 5.82424 9.77427 5.97612 9.77427 6.16174C9.77427 6.35074 9.9279 6.49924 10.1157 6.49924C11.6553 6.49924 12.9047 7.73786 12.9047 9.25661ZM10.1157 1.69998C9.9279 1.69998 9.77427 1.85186 9.77427 2.03748C9.77427 2.22312 9.9279 2.37498 10.1157 2.37498C13.9562 2.37498 17.0798 5.46312 17.0798 9.25661C17.0798 9.44223 17.23 9.59411 17.4212 9.59411C17.6089 9.59411 17.7626 9.44223 17.7626 9.25661C17.7626 5.0885 14.3317 1.69998 10.1157 1.69998ZM13.4509 12.8139L13.0037 13.0535C12.2493 13.4619 11.6622 14.5812 10.7312 13.7375L8.30011 11.3L6.20004 9.25661C5.14495 7.92348 6.32635 7.60623 6.73941 6.85699L6.98179 6.41825C7.25489 5.91873 7.35388 5.35849 7.27196 4.79823C7.19345 4.23799 6.93741 3.72836 6.52775 3.32336C6.02935 2.83062 5.36707 2.56062 4.66042 2.56062C3.95376 2.56062 3.28807 2.83062 2.78964 3.32336L2.61556 3.49886C1.69383 4.41012 1.588 5.97948 2.31514 7.92348C3.0013 9.77973 4.3839 11.7912 6.20004 13.5867C8.96862 16.3239 12.0513 17.9 14.2634 17.9C15.1373 17.9 15.8781 17.6536 16.4039 17.1339L16.5814 16.9584C17.0764 16.469 17.3529 15.8142 17.3563 15.1089C17.3529 14.4204 17.0695 13.7454 16.5814 13.2627C15.7587 12.4494 14.4717 12.2671 13.4509 12.8139Z"/>
+                    </svg>
+                </a>
+              </li>
+              <li class="interaction__item">
+                <a class="interaction__envelop" href="mailto:mail@htmlacademy.ru" aria-label="Написать">
+                  <svg class="envelop" width="17" height="14" viewBox="0 0 17 14" fill="" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.0166 2.32528L7.7666 6.55572C7.9934 6.69747 8.2868 6.76467 8.582 6.76467C8.8772 6.76467 9.1706 6.69747 9.3974 6.55572L16.1474 2.32528C16.5875 2.04913 17.0033 0.974976 16.196 0.974976H0.968901C0.161601 0.974976 0.577401 2.04913 1.0166 2.32528ZM16.3517 4.63842L9.3974 8.86677C9.0914 9.05367 8.8772 9.07572 8.582 9.07572C8.2868 9.07572 8.0726 9.05367 7.7666 8.86677C7.4606 8.67987 1.3469 4.94082 0.847401 4.63737C0.496401 4.42317 0.500001 4.67412 0.500001 4.86732V12.525C0.500001 12.966 1.0094 13.575 1.4 13.575H15.8C16.1906 13.575 16.7 12.966 16.7 12.525V4.86837C16.7 4.67517 16.7036 4.42422 16.3517 4.63842Z"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="interaction__item">
+                <a class="interaction__login" href="form.html"><span class="interaction__login-text">Авторизация</span></a>
+              </li>
+            </ul>
+          </div>
         </div>
         <nav class="page-header__navigate navigate">
-
-
-            <a class="navigate__logo" href="#">
-              <img src="img/logo_mobile_menu.png" width="100" height="15" alt="Сервис поиска попутчиков «Погнали»">
-            </a>
             <ul class="navigate__user-list">
               <li class="navigate__user-item navigate__user-item--current">
                 <a class="navigate__user-link" href="#">О сервисе</a>
@@ -69,21 +113,21 @@
             <ul class="navigate__social-list">
               <li class="navigate__social-item">
                 <a class="navigate__social-link social-link" href="#" aria-label="facebook">
-                  <svg class="social-link__fb" width="11" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="social-link__fb" viewBox="0 0 11 21" xmlns="http://www.w3.org/2000/svg" width="11" height="21">
                     <path d="M7.49 20.81H2.13v-9.67H0V6.35h2.07c-.16-2.17.23-3.75 1.2-4.83A4.88 4.88 0 016.86 0h3.75v4.61H7.67a4.7 4.7 0 00-.2 1.74h3.15v4.79H7.46l.02 9.67zM3.32 19.7h2.97V10h3.14V7.5H6.29v-.57c0-1.5 0-2.84.78-3.34l.15-.1h2.2V1.12H6.9a3.82 3.82 0 00-2.74 1.13c-.79.92-1.11 2.47-.87 4.6l.08.63h-2.2V10h2.15v9.68z"/>
                   </svg>
                 </a>
               </li>
               <li class="navigate__social-item">
                 <a class="navigate__social-link social-link" href="#" aria-label="vkontakte">
-                  <svg class="social-link__vk" width="23" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="social-link__vk" viewBox="0 0 23 12" xmlns="http://www.w3.org/2000/svg" width="23" height="12">
                     <path d="M17.77 11.83a2.98 2.98 0 01-1.55-.47 7.57 7.57 0 01-1.32-1.15c-.32-.33-.87-.88-1.07-.88-.21 0-.36.69-.35 1.18 0 .33-.12.66-.35.9-.26.22-.57.35-.9.38H10.8c-2.05-.05-4-.85-5.51-2.25C2.56 7 .2 2.18.12 1.97a1.01 1.01 0 01.1-1.1C.52.61.88.48 1.25.5h3.12c.24.04.48.13.7.26.2.14.36.33.46.55.32.7.7 1.36 1.1 2 .97 1.5 1.4 1.85 1.56 1.92.17-.7.22-1.43.14-2.15.03-.33-.03-.66-.15-.96a.98.98 0 00-.58-.22l-.54-.51c-.1-.5.44-.93.82-1.1A6.38 6.38 0 0110.2.02h.52c.54-.01 1.07.04 1.6.15 1.26.27 1.21 1.3 1.16 2.49 0 .34-.03.75-.03 1.21v.36c-.03.33-.01.66.06.98a6.8 6.8 0 001.54-1.86c.43-.67.8-1.38 1.13-2.1a1.18 1.18 0 011.18-.72h3.46c.74 0 1.18.22 1.36.64.18.42.12 1.25-1.75 3.46l-.74.85a5.5 5.5 0 00-.92 1.19c.28.32.6.6.95.85.85.65 1.6 1.43 2.22 2.3a1.2 1.2 0 01.2 1.27 1.71 1.71 0 01-1.4.75l-2.81.03-.17-.03zM13.83 8.2c.66 0 1.24.6 1.86 1.22.33.37.7.7 1.11.97.31.21.67.32 1.04.32h.07l2.82-.04c.14 0 .28-.04.4-.1l-.07-.12a9.86 9.86 0 00-1.99-2.04c-.88-.75-1.33-1.1-1.39-1.68-.05-.58.37-1.08 1.2-2.04l.74-.83a8.05 8.05 0 001.52-2.21 4.16 4.16 0 00-.5 0H17.4a.4.4 0 00-.18 0c-.34.8-.75 1.56-1.22 2.29-1.4 2.11-2.06 2.4-2.53 2.4a.88.88 0 01-.41-.1c-.75-.44-.75-1.39-.7-2.08v-.32c0-.49 0-.9.03-1.27.06-1.26 0-1.27-.28-1.33-.45-.1-.91-.14-1.38-.12h-.5c-.48-.01-.95.01-1.42.07.07.05.13.12.19.19.3.49.46 1.06.43 1.63.1 1.24.05 2.85-.74 3.24-.14.07-.29.1-.44.1-.7 0-1.38-.66-2.54-2.44-.45-.69-.85-1.4-1.2-2.14l-.05-.08a.9.9 0 00-.24-.08H1.2c.44.92 2.51 4.97 4.84 7.09 1.3 1.2 2.99 1.9 4.76 1.97h1.37a.74.74 0 00.2-.07v-.07c0-.2 0-1.95 1.17-2.25.1-.04.19-.06.29-.08z"/>
                   </svg>
                 </a>
               </li>
               <li class="navigate__social-item social-link">
                 <a class="navigate__social-link" href="#" aria-label="instagram">
-                  <svg class="social-link__insta" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="social-link__insta" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
                     <path d="M12.96 1.8a3.25 3.25 0 013.24 3.24v7.92a3.25 3.25 0 01-3.24 3.24H5.04a3.25 3.25 0 01-3.23-3.24V5.04A3.25 3.25 0 015.04 1.8h7.92zm0-1.08H5.04A4.32 4.32 0 00.72 5.04v7.92a4.32 4.32 0 004.32 4.32h7.92a4.32 4.32 0 004.32-4.32V5.04A4.32 4.32 0 0012.96.72z"/>
                     <path d="M9 5.82a3.19 3.19 0 110 6.38 3.19 3.19 0 010-6.38zm0-1.08a4.27 4.27 0 100 8.54 4.27 4.27 0 000-8.54zM13.43 5.56a.96.96 0 100-1.93.96.96 0 000 1.93z"/>
                   </svg>
@@ -137,7 +181,7 @@
             </div>
           </div>
           <div class="preview-profile__button-wrapper">
-            <button class="preview-profile__button" type="button"><span class="preview-profile__button-text"><span class="preview-profile__button-text--hidden">Сменить</span> фото</span></button>
+            <button class="preview-profile__button" type="button"><span class="preview-profile__button-text"><span class="preview-profile__button-text-hidden">Сменить</span> фото</span></button>
           </div>
 
           <div class="preview-profile__tags tags">
@@ -168,22 +212,22 @@
             <div class="my-transport__list-wrapper">
               <ul class="my-transport__list">
                 <li class="preview-profile__transport-item transport transport--bg-clear">
-                  <svg class="transport--my-transport">
+                  <svg class="transport__my-transport" width="25" height="25">
                     <use xlink:href="img/icon_sprite.svg#plane"></use>
                   </svg>
                 </li>
                 <li class="preview-profile__transport-item transport transport--bg-clear">
-                  <svg class="transport--my-transport">
+                  <svg class="transport__my-transport" width="25" height="25">
                     <use xlink:href="img/icon_sprite.svg#auto"></use>
                   </svg>
                 </li>
                 <li class="preview-profile__transport-item transport transport--bg-clear">
-                  <svg class="transport--my-transport">
+                  <svg class="transport__my-transport transport__my-transport--disabled" width="25" height="25">
                     <use xlink:href="img/icon_sprite.svg#bicycle"></use>
                   </svg>
                 </li>
                 <li class="preview-profile__transport-item transport transport--bg-clear">
-                  <svg class="transport--my-transport">
+                  <svg class="transport__my-transport" width="25" height="25">
                     <use xlink:href="img/icon_sprite.svg#run"></use>
                   </svg>
                 </li>
@@ -273,7 +317,7 @@
             <div class="new-plan__whith-kids">
               <input class="visually-hidden new-plan__checkbox" type="checkbox" name="kids" id="kids" checked>
               <label class="new-plan__kids-label new-plan__kids-checkbox-img" for="kids">
-                <svg class="new-plan__kids-checkbox-img--checked">
+                <svg class="new-plan__kids-checkbox-img--checked" width="12" height="12">
                   <use xlink:href="img/icon_sprite.svg#check"></use>
                 </svg>
                 Можно с детьми
@@ -284,14 +328,14 @@
               <div class="calendar__month-select">
                 <div class="calendar__inner-wrapper">
                   <button class="calendar__button calendar__past-month" type="button">
-                    <svg class="calendar__button-past-image">
+                    <svg class="calendar__button-past-image" width="25" height="35">
                       <use xlink:href="img/icon_sprite.svg#past"></use>
                     </svg>
                     Предыдущий месяц
                   </button>
                   <div class="calendar__month">Март 2019</div>
                   <button class="calendar__button calendar__next-month" type="button">
-                    <svg class="calendar__button-next-image">
+                    <svg class="calendar__button-next-image" width="25" height="35">
                       <use xlink:href="img/icon_sprite.svg#next"></use>
                     </svg>
                     Следующий месяц
@@ -391,7 +435,7 @@
                       <span class="country-select__name">Босния и Герцеговина</span>
                       <button class="country-select__button" type="button">
                         Выбор страны
-                        <svg class="country-select__button-image">
+                        <svg class="country-select__button-image" width="10" height="17">
                           <use xlink:href="img/icon_sprite.svg#past"></use>
                         </svg>
                       </button>
@@ -400,11 +444,11 @@
                       <span class="country-select__flag country-select__flag--bosnia"></span>
                     </div>
                     <button class="country-select__remove" type="button">
-                      <svg class="country-select__cross-image">
+                      <svg class="country-select__cross-image" width="10" height="10">
                         <use xlink:href="img/icon_sprite.svg#cross"></use>
                       </svg>
                     </button>
-                    <svg class="country-select__arrow-image">
+                    <svg class="country-select__arrow-image" width="9" height="12">
                       <use xlink:href="img/icon_sprite.svg#arrow"></use>
                     </svg>
                   </li>
@@ -413,7 +457,7 @@
                       <span class="country-select__name">Чехия</span>
                       <button class="country-select__button" type="button">
                         Выбор страны
-                        <svg class="country-select__button-image">
+                        <svg class="country-select__button-image" width="10" height="17">
                           <use xlink:href="img/icon_sprite.svg#past"></use>
                         </svg>
                       </button>
@@ -422,23 +466,23 @@
                       <span class="country-select__flag country-select__flag--czech"></span>
                     </div>
                     <button class="country-select__remove" type="button">
-                      <svg class="country-select__cross-image">
+                      <svg class="country-select__cross-image" width="10" height="10">
                         <use xlink:href="img/icon_sprite.svg#cross"></use>
                       </svg>
                     </button>
-                    <svg class="country-select__arrow-image">
+                    <svg class="country-select__arrow-image" width="9" height="12">
                       <use xlink:href="img/icon_sprite.svg#arrow"></use>
                     </svg>
                   </li>
                   <li class="country-select__item country-select__pick">
-                    <div class="country-select__name-wrapper country-select__name-wrapper--dropdown"> <!-- ccountry-select__name-wrapper--dropdown -->
+                    <div class="country-select__name-wrapper"> <!-- ccountry-select__name-wrapper--dropdown -->
                       <span class="country-select__name">Выберите страну</span>
                       <button class="country-select__button" type="button">
                         Выбор страны
-                        <svg class="country-select__button-image">
+                        <svg class="country-select__button-image" width="10" height="17">
                           <use xlink:href="img/icon_sprite.svg#past"></use>
                         </svg>
-                        <svg class="country-select__button-image--dropdown">
+                        <svg class="country-select__button-image--dropdown" width="10" height="10">
                           <use xlink:href="img/icon_sprite.svg#cross"></use>
                         </svg>
                       </button>
@@ -486,11 +530,11 @@
                       </div> <!-- country-select__dropdown--hide -->
                     </div>
                     <button class="country-select__remove" type="button">
-                      <svg class="country-select__cross-image">
+                      <svg class="country-select__cross-image" width="10" height="10">
                         <use xlink:href="img/icon_sprite.svg#cross"></use>
                       </svg>
                     </button>
-                    <svg class="country-select__arrow-image">
+                    <svg class="country-select__arrow-image" width="9" height="12">
                       <use xlink:href="img/icon_sprite.svg#arrow"></use>
                     </svg>
                   </li>
@@ -499,7 +543,7 @@
                       <span class="country-select__name">Добавить страну</span>
                       <button class="country-select__button-new" type="button">
                         Выбор страны
-                        <svg class="country-select__button-new-image"viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="country-select__button-new-image"viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
                           <path stroke-width="2" d="M7 0v14M0 7h14"/>
                         </svg>
                       </button>
@@ -602,6 +646,6 @@
     </footer>
       <!--Подключение *.js-->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=a49c1bfe-97e3-407b-9b2d-e226713e4778&lang=ru_RU"></script>
-    <script src="js/map.js"></script>
+    <script src="js/pog.min.js"></script>
   </body>
 </html>

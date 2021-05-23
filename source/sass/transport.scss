@@ -26,11 +26,15 @@
   width: 30px;
 }
 
-.transport--my-transport {
+.transport__my-transport {
   display: block;
   width: 25px;
   height: 25px;
   fill: color("pog-second");
+}
+
+.transport__my-transport--disabled {
+  opacity: 0.15;
 }
 
 .transport--no-bg {

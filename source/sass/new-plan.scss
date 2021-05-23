@@ -36,6 +36,10 @@
   border-radius: 10px;
   margin-bottom: 10px;
   padding: 23px 25px 19px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .new-plan__slider {
@@ -187,7 +191,7 @@
 .new-plan__joys-item {
   padding: 0;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 16px;
   box-sizing: border-box;
   position: relative;
 
@@ -197,7 +201,7 @@
     top: 10px;
     left: -14px;
     width: 2px;
-    height: 111%;
+    height: 107%;
     background-color: #1d2e5b;
   }
 }

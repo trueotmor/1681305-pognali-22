@@ -262,21 +262,25 @@
 }
 
 @media (min-width: $desktop) {
+  .sequence {
+    background-color: color("pog-first");
+  }
+
   .sequence--back {
-    background-image: url("../img/sequence/globe-back-desk@1x.jpg");
+    background-image: url("../img/sequence/globe-back-desk@1x.png");
     background-size: 1440px 750px;
     background-position: center top;
   }
 
   @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .sequence--back {
-      background-image: url("../img/sequence/globe-back-desk@2x.jpg");
+      background-image: url("../img/sequence/globe-back-desk@2x.png");
       background-size: 2880px auto;
     }
   }
 
   .sequence .wrapper {
-    padding: 222px 0 0;
+    padding: 220px 0 0;
   }
 
   .sequence__detail {

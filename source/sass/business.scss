@@ -1,4 +1,4 @@
-.business__modal-position {
+.business {
   display: none;
   align-items: center;
   justify-content: center;
@@ -108,14 +108,6 @@
   font-weight: fw("bold");
   color: color("pog-second");
   padding-top: 3px;
-}
-
-.business__modal-closed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 @media (min-width: $tablet) {
