@@ -141,12 +141,12 @@
       <div class="wrapper">
         <h1 class="inner-header__title">Направления</h1>
         <div class="inner-header__desktop">
-          <div class="inner-header__level-progress">
-            <svg class="level__progress-bar level__progress-bar--80 level__cap level__progress-bar--thin" width="100" height="100">
+          <div class="inner-header__level-progress level-progress">
+            <svg class="level-progress__bar level-progress__bar--80 level-progress__cap level-progress__bar--thin" width="100" height="100">
               <use xlink:href="img/icon_sprite.svg#level-icon"></use>
             </svg>
-            <p class="level__number level__number--big level__number--white">80</p>
-            <p class="level__text level__text--big level__text--border-white">level</p>
+            <p class="level-progress__number level-progress__number--big level-progress__number--white">80</p>
+            <p class="level-progress__text level-progress__text--big level-progress__text--border-white">level</p>
           </div>
           <div class="inner-header__photo-desktop">
             <picture class="inner-header__photo">
@@ -296,7 +296,7 @@
                   <span class="step-counts__units">Чел.</span>
                 </div>
                 <div class="step-counts__input-box">
-                  <button class="step-counts__button step-counts__button-minus" type="button">&#8212</button>
+                  <button class="step-counts__button step-counts__button-minus" type="button">&#8212;</button>
                   <input class="step-counts__input" type="text" aria-label="Количество попутчиков" value="2">
                   <button class="step-counts__button step-counts__button-plus" type="button">+</button>
                 </div>
@@ -308,7 +308,7 @@
                   <span class="step-counts__units">Дн.</span>
                 </div>
                 <div class="step-counts__input-box">
-                  <button class="step-counts__button step-counts__button-minus" type="button">&#8212</button>
+                  <button class="step-counts__button step-counts__button-minus" type="button">&#8212;</button>
                   <input class="step-counts__input" type="text" aria-label="Количество попутчиков" value="3">
                   <button class="step-counts__button step-counts__button-plus" type="button">+</button>
                 </div>
@@ -317,7 +317,7 @@
             <div class="new-plan__whith-kids">
               <input class="visually-hidden new-plan__checkbox" type="checkbox" name="kids" id="kids" checked>
               <label class="new-plan__kids-label new-plan__kids-checkbox-img" for="kids">
-                <svg class="new-plan__kids-checkbox-img--checked" width="12" height="12">
+                <svg class="new-plan__kids-checkbox-img-checked" width="12" height="12">
                   <use xlink:href="img/icon_sprite.svg#check"></use>
                 </svg>
                 Можно с детьми
@@ -347,8 +347,8 @@
                   <li class="calendar__day-of-week-item">С</li>
                   <li class="calendar__day-of-week-item">Ч</li>
                   <li class="calendar__day-of-week-item">П</li>
-                  <li class="calendar__day-of-week-item--dayoff">С</li>
-                  <li class="calendar__day-of-week-item--dayoff">В</li>
+                  <li class="calendar__day-of-week-item-dayoff">С</li>
+                  <li class="calendar__day-of-week-item-dayoff">В</li>
                 </ul>
                 <ul class="calendar__day-of-week-list calendar__day-of-week-list--td">
                   <li class="calendar__day-of-week-item">Пн</li>
@@ -356,8 +356,8 @@
                   <li class="calendar__day-of-week-item">Ср</li>
                   <li class="calendar__day-of-week-item">Чт</li>
                   <li class="calendar__day-of-week-item">Пт</li>
-                  <li class="calendar__day-of-week-item--dayoff">Сб</li>
-                  <li class="calendar__day-of-week-item--dayoff">Вс</li>
+                  <li class="calendar__day-of-week-item-dayoff">Сб</li>
+                  <li class="calendar__day-of-week-item-dayoff">Вс</li>
                 </ul>
                 <ul class="calendar__month-days-list">
                   <li class="calendar__month-days-item calendar__month-days-item--disabled">23</li>
@@ -404,7 +404,7 @@
                   <li class="calendar__month-days-item">5</li>
                 </ul>
               </div>
-              <a class="button button__color--yellow  button__next-step button__next-step--arguments" href="#step-two"><span class="button__text-active">Следующий шаг</span></a>
+              <a class="button button--yellow new-plan__next-step new-plan__next-step--arguments" href="#step-two"><span class="button__text-active">Следующий шаг</span></a>
             </div>
             </div>
 
@@ -475,18 +475,18 @@
                     </svg>
                   </li>
                   <li class="country-select__item country-select__pick">
-                    <div class="country-select__name-wrapper"> <!-- ccountry-select__name-wrapper--dropdown -->
+                    <div class="country-select__name-wrapper country-select__name-wrapper--dropdown"> <!-- country-select__name-wrapper--dropdown -->
                       <span class="country-select__name">Выберите страну</span>
                       <button class="country-select__button" type="button">
                         Выбор страны
                         <svg class="country-select__button-image" width="10" height="17">
                           <use xlink:href="img/icon_sprite.svg#past"></use>
                         </svg>
-                        <svg class="country-select__button-image--dropdown" width="10" height="10">
+                        <svg class="country-select__button-image-dropdown" width="10" height="10">
                           <use xlink:href="img/icon_sprite.svg#cross"></use>
                         </svg>
                       </button>
-                      <div class="country-select__dropdown">
+                      <div class="country-select__dropdown">  <!-- country-select__dropdown--hide -->
                         <ul class="country-select__abc-list">
                           <li class="country-select__abc-item country-select__abc-item--selected"><a class="country-select__abc-link" href="#">А</a></li>
                           <li class="country-select__abc-item"><a class="country-select__abc-link" href="#">Б</a></li>
@@ -527,7 +527,7 @@
                           <li class="country-select__name-item"><a class="country-select__name-link" href="#">Армения</a></li>
                           <li class="country-select__name-item"><a class="country-select__name-link" href="#">Афганистан</a></li>
                         </ul>
-                      </div> <!-- country-select__dropdown--hide -->
+                      </div>
                     </div>
                     <button class="country-select__remove" type="button">
                       <svg class="country-select__cross-image" width="10" height="10">
@@ -543,7 +543,7 @@
                       <span class="country-select__name">Добавить страну</span>
                       <button class="country-select__button-new" type="button">
                         Выбор страны
-                        <svg class="country-select__button-new-image"viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                        <svg class="country-select__button-new-image" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
                           <path stroke-width="2" d="M7 0v14M0 7h14"/>
                         </svg>
                       </button>
@@ -552,8 +552,8 @@
                 </ul>
               </div>
               <div class="new-plan__button-wrapper">
-                <a class="button button__color--yellow  button__next-step button__next-step--arguments" href="#step-three"><span class="button__text-active">Следующий шаг</span></a>
-                <a class="button  button__next-step button__back-step--arguments" href="#step-one"><span class="button__text-active">На шаг назад</span></a>
+                <a class="button button--yellow  new-plan__next-step new-plan__next-step--arguments" href="#step-three"><span class="button__text-active">Следующий шаг</span></a>
+                <a class="button  new-plan__back-step new-plan__back-step--arguments" href="#step-one"><span class="button__text-active">На шаг назад</span></a>
               </div>
             </div>
 
@@ -594,8 +594,8 @@
                 </li>
               </ul>
               <div class="new-plan__button-wrapper">
-                <button class="button button__color--yellow  button__next-step button__next-step--arguments" type="submit"><span class="button__text-active">Отправить</span></button>
-                <a class="button  button__next-step button__back-step--arguments" href="#step-two"><span class="button__text-active">На шаг назад</span></a>
+                <button class="button button--yellow  new-plan__next-step new-plan__next-step--arguments" type="submit"><span class="button__text-active">Отправить</span></button>
+                <a class="button  new-plan__back-step new-plan__back-step--arguments" href="#step-two"><span class="button__text-active">На шаг назад</span></a>
               </div>
             </div>
           </form>

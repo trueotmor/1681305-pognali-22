@@ -120,7 +120,8 @@
   }
 }
 
-.int-mail__wrapper {
+.int-mail__wrapper,
+.int-phone__wrapper {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -248,7 +249,8 @@
     }
   }
 
-  .int-mail__wrapper {
+  .int-mail__wrapper,
+  .int-phone__wrapper {
     width: 68px;
     height: 68px;
   }
@@ -320,7 +322,8 @@
     text-align: left;
   }
 
-  .int-mail__wrapper {
+  .int-mail__wrapper,
+  .int-phone__wrapper {
     width: 90px;
     height: 90px;
   }

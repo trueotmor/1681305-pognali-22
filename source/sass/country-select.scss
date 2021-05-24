@@ -164,12 +164,12 @@
     transition: all 0.3s;
   }
 
-  &:hover .country-select__button-image--dropdown {
+  &:hover .country-select__button-image-dropdown {
     opacity: 1;
     transition: all 0.3s;
   }
 
-  &:active .country-select__button-image--dropdown {
+  &:active .country-select__button-image-dropdown {
     opacity: 0.1;
     transition: all 0.3s;
   }
@@ -323,7 +323,7 @@
     display: none;
   }
 
-  & .country-select__button-image--dropdown {
+  & .country-select__button-image-dropdown {
     display: block;
     position: absolute;
     top: 15px;
@@ -624,7 +624,7 @@
   }
 
   .country-select__name-wrapper--dropdown {
-    & .country-select__button-image--dropdown {
+    & .country-select__button-image-dropdown {
       display: block;
       position: absolute;
       top: 23px;

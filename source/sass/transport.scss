@@ -7,14 +7,14 @@
   box-sizing: border-box;
 }
 
-.transport--param {
+.transport__param {
   display: block;
   width: 23px;
   height: 23px;
   fill: color("pog-second");
 }
 
-.transport--off {
+.transport__param--off {
   opacity: 0.15;
 }
 

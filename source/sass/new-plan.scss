@@ -157,12 +157,12 @@
     transition: all 0.3s;
   }
 
-  &:active .new-plan__kids-checkbox-img--checked {
+  &:active .new-plan__kids-checkbox-img-checked {
     opacity: 0.3;
   }
 }
 
-.new-plan__kids-checkbox-img--checked {
+.new-plan__kids-checkbox-img-checked {
   display: none;
   position: absolute;
   top: 3px;
@@ -175,7 +175,7 @@
   fill: color("pog-main");
 }
 
-.new-plan__checkbox:checked + .new-plan__kids-checkbox-img .new-plan__kids-checkbox-img--checked {
+.new-plan__checkbox:checked + .new-plan__kids-checkbox-img .new-plan__kids-checkbox-img-checked {
   display: block;
   transition: all 0.3s;
 }
@@ -328,6 +328,24 @@
   }
 }
 
+.new-plan__next-step:active .button__text-active,
+.new-plan__back-step:active .button__text-active {
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+.new-plan__next-step--arguments,
+.new-plan__back-step--arguments {
+  padding: 7px 0 3px;
+  width: 100%;
+  font-size: fs("mob-basic-plus");
+  line-height: lh("wery-large");
+  font-weight: fw("bold");
+  border-radius: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 @media (min-width: $tablet) {
   .new-plan .wrapper {
     padding: 53px 75px 114px;
@@ -469,7 +487,7 @@
     }
   }
 
-  .new-plan__kids-checkbox-img--checked {
+  .new-plan__kids-checkbox-img-checked {
     top: 6px;
     left: 12px;
     width: 12px;
@@ -483,6 +501,51 @@
 
   .new-plan__slider-item:not(:last-child) {
     margin-right: 35px;
+  }
+
+  .new-plan__next-step--arguments {
+    padding: 29px 34px 27px;
+    font-size: fs("medium");
+    line-height: lh("medium-plus");
+    border-radius: 20px;
+    text-transform: none;
+    height: 80px;
+    width: 0;
+    min-width: 286px;
+    text-align: left;
+    position: relative;
+
+    ::before {
+      position: absolute;
+      content: "";
+      top: 33px;
+      right: 35px;
+      border-left: 10px solid color("pog-second");
+      border-bottom: 7.5px solid transparent;
+      border-top: 7.5px solid transparent;
+    }
+  }
+
+  .new-plan__back-step--arguments {
+    padding: 29px 5px 27px 30px;
+    margin-left: 34px;
+    font-size: fs("medium");
+    line-height: lh("medium-plus");
+    border-radius: 20px;
+    text-transform: none;
+    height: 80px;
+    text-align: right;
+    position: relative;
+
+    ::before {
+      position: absolute;
+      content: "";
+      top: 33px;
+      left: 35px;
+      border-right: 10px solid color("pog-second");
+      border-bottom: 7.5px solid transparent;
+      border-top: 7.5px solid transparent;
+    }
   }
 }
 
@@ -635,6 +698,16 @@
   .new-plan__joys-inner-wrapper {
     &::after {
       right: 218px;
+    }
+  }
+
+  .new-plan__back-step--arguments {
+    width: auto;
+    margin: 0;
+
+    ::before {
+      top: 31px;
+      left: 0;
     }
   }
 }

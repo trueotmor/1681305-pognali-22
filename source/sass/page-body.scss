@@ -14,3 +14,23 @@
   right: 0;
   bottom: 0;
 }
+
+.page-body__map-display {
+  background-color: color("pog-main");
+  margin-top: -60px;
+  z-index: 5;
+  position: relative;
+  height: 380px;
+}
+
+@media (min-width: $tablet) {
+  .page-body__map-display {
+    height: 615px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .page-body__map-display {
+    height: 545px;
+  }
+}

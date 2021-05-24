@@ -85,13 +85,6 @@
   }
 }
 
-.map__display {
-  background-color: color("pog-main");
-  margin-top: -60px;
-  z-index: 5;
-  position: relative;
-  height: 380px;
-}
 
 @media (min-width: $tablet) {
   .map {
@@ -158,10 +151,6 @@
       transition: all 0.3s;
     }
   }
-
-  .map__display {
-    height: 615px;
-  }
 }
 
 @media (min-width: $desktop) {
@@ -191,10 +180,6 @@
   .map-header__image {
     width: 90px;
     height: 90px;
-  }
-
-  .map__display {
-    height: 545px;
   }
 
   .map-header__button {

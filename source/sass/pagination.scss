@@ -1,0 +1,148 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination__list {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination__button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 46px;
+}
+
+.pagination__button {
+  width: 50%;
+  height: 50px;
+  background-color: color("pog-clear");
+  padding: 0;
+  position: relative;
+
+  &:hover::after {
+    opacity: 0.6;
+    transition: all 0.3s;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+    transition: all 0.3s;
+  }
+}
+
+.pagination__button--back {
+  font-size: 0;
+  line-height: 0;
+  border-radius: 20px 0 0 20px;
+  border-right: 1px solid color("pog-back-light ");
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -5px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid color("pog-second");
+  }
+}
+
+.pagination__button--next {
+  font-size: 0;
+  line-height: 0;
+  border-radius: 0 20px 20px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -5px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid color("pog-second");
+  }
+}
+
+@media (min-width: $tablet) {
+  .pagination {
+    background-color: color("pog-clear");
+    border-radius: 20px;
+  }
+
+  .pagination__list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 28px 28px 22px;
+  }
+
+  .pagination__item--selected {
+    background-color: color("pog-special-first");
+    border-radius: 50%;
+  }
+
+  .pagination__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: fs("basic");
+    line-height: lh("small");
+    font-weight: fw("bold");
+    color: color("pog-second");
+
+    &:hover {
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+
+    &:active {
+      opacity: 0.3;
+      transition: all 0.3s;
+    }
+  }
+
+  .pagination__button-wrapper {
+    margin: 0;
+    margin-right: 20px;
+    width: auto;
+  }
+
+  .pagination__button {
+    width: 42px;
+    height: 50px;
+  }
+
+  .pagination__button--back {
+    border: none;
+  }
+}
+
+@media (min-width: $desktop) {
+  .pagination {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .pagination__button-wrapper {
+    margin-right: 25px;
+  }
+
+  .pagination__button {
+    width: 45px;
+  }
+}

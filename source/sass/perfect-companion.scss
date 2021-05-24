@@ -203,7 +203,7 @@
   }
 }
 
-.perfect-companion__select-img--checked {
+.perfect-companion__select-img-checked {
   display: none;
   position: absolute;
   top: 5px;
@@ -214,9 +214,9 @@
   cursor: pointer;
 }
 
-.perfect-companion__checkbox:checked + .perfect-companion__hobby-label .perfect-companion__select-img--checked,
-.perfect-companion__checkbox:checked + .perfect-companion__music-label .perfect-companion__select-img--checked,
-.perfect-companion__checkbox:checked + .perfect-companion__food-label .perfect-companion__select-img--checked {
+.perfect-companion__checkbox:checked + .perfect-companion__hobby-label .perfect-companion__select-img-checked,
+.perfect-companion__checkbox:checked + .perfect-companion__music-label .perfect-companion__select-img-checked,
+.perfect-companion__checkbox:checked + .perfect-companion__food-label .perfect-companion__select-img-checked {
   display: block;
 }
 
@@ -347,7 +347,7 @@
   margin-left: 30%;
 }
 
-.perfect-companion__handle--min {
+.perfect-companion__handle-min {
   position: absolute;
   top: 50%;
   left: 30%;
@@ -368,7 +368,7 @@
   }
 }
 
-.perfect-companion__handle--max {
+.perfect-companion__handle-max {
   position: absolute;
   top: 50%;
   left: 100%;
@@ -498,7 +498,7 @@
     }
   }
 
-  .perfect-companion__select-img--checked {
+  .perfect-companion__select-img-checked {
     top: 3px;
     left: 14px;
     width: 11px;
@@ -569,8 +569,8 @@
     height: 3px;
   }
 
-  .perfect-companion__handle--min,
-  .perfect-companion__handle--max {
+  .perfect-companion__handle-min,
+  .perfect-companion__handle-max {
     width: 13px;
     height: 13px;
     margin-top: -18px;
@@ -701,7 +701,7 @@
     }
   }
 
-  .perfect-companion__select-img--checked {
+  .perfect-companion__select-img-checked {
     left: 7px;
   }
 
@@ -738,8 +738,8 @@
     height: 3px;
   }
 
-  .perfect-companion__handle--min,
-  .perfect-companion__handle--max {
+  .perfect-companion__handle-min,
+  .perfect-companion__handle-max {
     margin-top: -15px;
     margin-left: -14px;
   }

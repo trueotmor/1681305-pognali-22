@@ -94,6 +94,7 @@
 
 .filter__land-show {
   display: none;
+  font-family: inherit;
 }
 
 .filter__list {
@@ -356,6 +357,7 @@
     display: flex;
     align-items: flex-start;
     width: 170px;
+    font-style: inherit;
   }
 
   .filter__land-hide-image {

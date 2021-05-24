@@ -83,14 +83,14 @@
 }
 
 .calendar__day-of-week-item,
-.calendar__day-of-week-item--dayoff {
+.calendar__day-of-week-item-dayoff {
   font-size: fs("mob-small");
   line-height: lh("small");
   font-weight: fw("normal");
   color: color("pog-special");
 }
 
-.calendar__day-of-week-item--dayoff {
+.calendar__day-of-week-item-dayoff {
   color: color("pog-special-four");
 }
 
@@ -240,7 +240,7 @@
   }
 
   .calendar__day-of-week-item,
-  .calendar__day-of-week-item--dayoff {
+  .calendar__day-of-week-item-dayoff {
     font-size: fs("mob-medium");
   }
 }
@@ -280,7 +280,7 @@
   }
 
   .calendar__day-of-week-item,
-  .calendar__day-of-week-item--dayoff {
+  .calendar__day-of-week-item-dayoff {
     margin: 0 108px 0 16px;
   }
 
