@@ -6,7 +6,7 @@
   background-color: color("pog-back-light");
 }
 
-.perfect-companion .wrapper {
+.perfect-companion__wrapper {
   padding: 85px 25px 60px;
   box-sizing: border-box;
 }
@@ -391,7 +391,7 @@
 }
 
 @media (min-width: $tablet) {
-  .perfect-companion .wrapper {
+  .perfect-companion__wrapper {
     padding: 103px 40px 152px;
     box-sizing: border-box;
   }
@@ -605,7 +605,7 @@
 }
 
 @media (min-width: $desktop) {
-  .perfect-companion .wrapper {
+  .perfect-companion__wrapper {
     padding: 103px 60px 166px;
     display: grid;
     grid-template-columns: auto 285px;

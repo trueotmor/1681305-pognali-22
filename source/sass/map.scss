@@ -8,7 +8,7 @@
   @include bg-color(color("pog-special-first", 0));
 }
 
-.map .wrapper {
+.map__wrapper {
   box-sizing: border-box;
   padding: 92px 25px 35px;
 }
@@ -21,7 +21,7 @@
   margin-bottom: 31px;
 }
 
-.map-header__adress {
+.map__header-adress {
   text-transform: uppercase;
   color: color("pog-second");
   margin: 0;
@@ -32,12 +32,12 @@
   max-width: 200px;
 }
 
-.map-header__image {
+.map__header-image {
   width: 45px;
   height: 45px;
 }
 
-.map-header__button {
+.map__header-button {
   display: flex;
   box-sizing: border-box;
   align-items: center;
@@ -59,7 +59,7 @@
     color: color("pog-clear");
   }
 
-  &:active .map-header__button-text {
+  &:active .map__header-button-text {
     opacity: 0.3;
     transition: all 0.3s;
   }
@@ -92,7 +92,7 @@
     margin-top: -60px;
   }
 
-  .map .wrapper {
+  .map__wrapper {
     width: 768px;
     box-sizing: border-box;
     padding: 108px 75px 84px;
@@ -102,12 +102,12 @@
     margin-bottom: 44px;
   }
 
-  .map-header__image {
+  .map__header-image {
     width: 68px;
     height: 68px;
   }
 
-  .map-header__adress {
+  .map__header-adress {
     margin-left: 26px;
     font-size: fs("large");
     line-height: lh("very-large");
@@ -115,7 +115,7 @@
     max-width: none;
   }
 
-  .map-header__button {
+  .map__header-button {
     height: auto;
     max-height: 80px;
     border-radius: 20px;
@@ -165,7 +165,7 @@
     align-items: center;
   }
 
-  .map .wrapper {
+  .map__wrapper {
     width: 1440px;
     box-sizing: border-box;
     padding: 115px 135px 56px;
@@ -177,12 +177,12 @@
     justify-content: center;
   }
 
-  .map-header__image {
+  .map__header-image {
     width: 90px;
     height: 90px;
   }
 
-  .map-header__button {
+  .map__header-button {
     width: 324px;
     padding: 29px 35px 27px 35px;
 

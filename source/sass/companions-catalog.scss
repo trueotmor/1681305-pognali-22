@@ -8,6 +8,7 @@
 
 .companions-catalog__item {
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -399,6 +400,7 @@
   }
 
   .companions-catalog__item {
+    overflow: visible;
     border-radius: 20px;
     background-color: color("pog-clear");
     padding: 35px 25px 25px 35px;

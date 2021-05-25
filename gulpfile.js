@@ -18,18 +18,17 @@ const sync = require("browser-sync").create();
 
 const styles = () => {
   return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
-}
+  .pipe(plumber())
+  .pipe(sourcemap.init())
+  .pipe(sass())
+  .pipe(postcss([autoprefixer()]))
+  .pipe(gulp.dest("build/css"))
+  .pipe(postcss([csso()]))
+  .pipe(sourcemap.write("."))
+  .pipe(rename("style.min.css"))
+  .pipe(gulp.dest("build/css"))
+  .pipe(sync.stream());
+};
 
 exports.styles = styles;
 
@@ -87,13 +86,13 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/icons/*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
-}
+return gulp.src(["source/img/icons/*.svg","!source/img/icons/sprite.svg"])
+.pipe(svgstore({
+  inlineSvg: true
+}))
+.pipe(rename("sprite.svg"))
+.pipe(gulp.dest("build/img/icons/"));
+};
 
 exports.sprite = sprite;
 
@@ -103,8 +102,8 @@ const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.svg",
-    "!source/img/icons/*.svg",
+    "source/img/**/*.{svg,jpg,png}",
+    "!source/favicons/*.svg",
   ], {
     base: "source"
   })

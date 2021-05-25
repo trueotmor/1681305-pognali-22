@@ -13,6 +13,9 @@ $colors : (
   pog-extra-five : #d4d9eb,
   pog-extra-six : #d6d9e6,
   pog-extra-plus : #d6daed,
+  pog-extra-trans : #d9d9d9,
+  pog-extra-trans-dark : #b2b2b2,
+  pog-extra-trans-back : #e2e5f1,
   pog-extra-cloud : #c8cee8,
   pog-extra-dark: #959bb2,
   pog-extra-light : #cccccc,
@@ -42,7 +45,8 @@ $colors : (
   pog-popup-shadow :rgba(0, 0, 0, 0.16),
   pog-shadow-business-mob: rgba(29, 46, 91, 0.14),
   pog-shadow-business-tab: rgba(29, 46, 91, 0.18),
-  pog-special-transparent: rgba(68, 68, 68, 0.4)
+  pog-special-transparent: rgba(68, 68, 68, 0.4),
+  pog-shadow-transport: rgba(22, 28, 53, 0.17)
 );
 
 @function color($name, $ascss:1) {

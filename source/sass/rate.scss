@@ -8,7 +8,7 @@
   @include bg-color(color("pog-back-light", 0));
 }
 
-.rate .wrapper {
+.rate__wrapper {
   padding: 97px 25px 38px;
   box-sizing: border-box;
   position: relative;
@@ -125,7 +125,7 @@
     border-radius: 0 0 60px 60px;
   }
 
-  .rate .wrapper {
+  .rate__wrapper {
     padding: 134px 75px 60px 40px;
   }
 
@@ -235,7 +235,7 @@
     border-radius: 0 0 60px 60px;
   }
 
-  .rate .wrapper {
+  .rate__wrapper {
     padding: 167px 135px 162px 132px;
   }
 

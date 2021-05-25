@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.my-plans .wrapper {
+.my-plans__wrapper {
   padding: 28px 25px 60px;
   box-sizing: border-box;
 }
@@ -30,7 +30,7 @@
 }
 
 @media (min-width: $tablet) {
-  .my-plans .wrapper {
+  .my-plans__wrapper {
     padding: 57px 75px 106px;
   }
 
@@ -43,7 +43,7 @@
 
 
 @media (min-width: $desktop) {
-  .my-plans .wrapper {
+  .my-plans__wrapper {
     padding: 57px 60px 124px 125px;
   }
 }

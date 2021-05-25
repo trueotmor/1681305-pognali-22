@@ -76,7 +76,11 @@
 }
 
 .step-counts__button-plus {
-  padding-top: 5px;
+  padding-top: 0;
+}
+
+.step-counts__button-minus {
+  font-size: fs("mob-basic");
 }
 
 @media (min-width: $tablet) {
@@ -115,11 +119,14 @@
 
   .step-counts__button {
     font-size: fs("very-big");
-    padding-top: 5px;
   }
 
   .step-counts__button-plus {
-    padding-top: 8px;
+    padding-top: 0;
+  }
+
+  .step-counts__button-minus {
+    font-size: fs("medium");
   }
 }
 
@@ -168,11 +175,15 @@
   }
 
   .step-counts__button {
-    font-size: fs("very-big");
-    padding-top: 5px;
+    font-size: fs("big");
+    padding-top: 0;
   }
 
   .step-counts__button-plus {
-    padding-top: 8px;
+    padding-top: 0;
+  }
+
+  .step-counts__button-minus {
+    font-size: fs("medium");
   }
 }

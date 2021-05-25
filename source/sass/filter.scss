@@ -314,7 +314,7 @@
     z-index: 1;
   }
 
-  .filter .wrapper {
+  .filter__wrapper {
     padding: 123px 75px 58px;
     box-sizing: border-box;
   }
@@ -524,7 +524,7 @@
     background-color: color("pog-back-light");
   }
 
-  .filter .wrapper {
+  .filter__wrapper {
     padding: 121px 60px 108px;
   }
 
@@ -582,7 +582,7 @@
   }
 
   .filter__abc-list {
-    padding: 15px;
+    padding: 15px 15px 20px;
     margin: 0;
     width: 100%;
   }
@@ -669,7 +669,7 @@
   }
 
   .filter__by-country-button {
-    padding: 38px 25px 35px;
+    padding: 38px 32px 35px 25px;
     font-size: fs("basic");
   }
 
@@ -679,6 +679,10 @@
     height: 24px;
     transform: scale(1.2);
     margin-bottom: 3px;
-    margin-right: 21px;
+    margin-right: 17px;
+  }
+
+  .filter__abc-item--padding {
+    padding-top: 37px;
   }
 }

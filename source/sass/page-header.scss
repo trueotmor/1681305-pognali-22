@@ -11,7 +11,7 @@
 
 .page-header__menu {
   background-color: color("pog-main");
-  padding: 14px 0 30px;
+  padding: 20px 0 28px;
   width: 100%;
   margin: 0 auto;
 }
@@ -46,7 +46,8 @@
 
 .page-header__menu--turn {
   background-color: color("pog-main");
-  margin-bottom: -74px;
+  margin-bottom: -85px;
+  padding: 15px 0 40px;
 }
 
 .page-header__toggle {
@@ -80,7 +81,7 @@
 
 .page-header__menu--scroll {
   position: fixed;
-  padding: 27px 0 31px;
+  padding: 22px 0 25px;
   top: 0;
   left: 0;
   background-color: color("pog-clear");
@@ -99,6 +100,8 @@
 }
 
 .page-header__menu--expand {
+  padding: 20px 0 28px;
+
   @media (max-width: $desktop) {
 
     position: fixed;
@@ -132,10 +135,6 @@
   }
 }
 
-.js-disabled .page-header__toggle {
-  display: none;
-}
-
 .page-header__nav-desk-list {
   display: none;
 }
@@ -153,15 +152,15 @@
   .page-header__interaction {
     display: block;
 
-    & .interaction__phone {
+    & .page-header__interaction-phone {
       display: none;
     }
 
-    & .interaction__envelop {
+    & .page-header__interaction-envelop {
       display: none;
     }
 
-    & .interaction__login {
+    & .page-header__interaction-login {
       display: flex;
       width: 188px;
       height: 50px;
@@ -179,7 +178,7 @@
   .page-header__menu--expand {
     background-color: color("pog-clear");
 
-    & .interaction__login {
+    & .page-header__interaction-login {
       font-weight: fw("normal");
       letter-spacing: 0.03em;
     }
@@ -204,7 +203,7 @@
   }
 
   .page-header__navigate {
-    padding: 0 40px 71px;
+    padding: 0 40px 33px;
     width: 768px;
     box-sizing: border-box;
   }
@@ -257,13 +256,13 @@
   }
 
   .page-header__interaction {
-    & .interaction__phone {
+    & .page-header__interaction-phone {
       display: flex;
       width: 50px;
       height: 50px;
     }
 
-    & .interaction__envelop {
+    & .page-header__interaction-envelop {
       display: flex;
       width: 50px;
       height: 50px;
@@ -275,7 +274,7 @@
       display: none;
     }
 
-    & .interaction__login {
+    & .page-header__interaction-login {
       font-weight: fw("bold");
       letter-spacing: normal;
     }

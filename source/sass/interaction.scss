@@ -27,13 +27,13 @@
     transition: all 0.3s;
   }
 
-  &:active .handset {
+  &:active .interaction__handset-image {
     opacity: 0.3;
     transition: all 0.3s;
   }
 }
 
-.handset {
+.interaction__handset-image {
   fill: color("pog-main");
 }
 
@@ -51,13 +51,13 @@
     transition: all 0.3s;
   }
 
-  &:active .envelop {
+  &:active .interaction__envelop-image {
     opacity: 0.3;
     transition: all 0.3s;
   }
 }
 
-.envelop {
+.interaction__envelop-image {
   fill: color("pog-main");
 }
 

@@ -1,0 +1,9 @@
+.js-disabled {
+  & .js-disabled__toggle {
+    display: none;
+  }
+
+  & .js-disabled__menu {
+    position: relative;
+  }
+}

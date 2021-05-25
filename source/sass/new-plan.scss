@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-.new-plan .wrapper {
+.new-plan__wrapper {
   position: relative;
   box-sizing: border-box;
   padding: 30px 25px 95px;
@@ -347,14 +347,19 @@
 }
 
 @media (min-width: $tablet) {
-  .new-plan .wrapper {
-    padding: 53px 75px 114px;
+  .new-plan__wrapper {
+    padding: 53px 75px 150px;
   }
 
   .new-plan__step {
     border-radius: 30px;
     margin-bottom: 39px;
     padding: 48px 40px 54px;
+
+    &--two {
+      margin-bottom: 52px;
+      padding: 48px 42px 54px;
+    }
   }
 
   .new-plan__title {
@@ -386,6 +391,10 @@
 
   .new-plan__step-description--narrow {
     max-width: 430px;
+  }
+
+  .new-plan__step-description--step-one {
+    margin-bottom: 38px;
   }
 
   .new-plan__step-description-three {
@@ -555,8 +564,8 @@
     margin-top: -60px;
   }
 
-  .new-plan .wrapper {
-    padding: 55px 60px 121px;
+  .new-plan__wrapper {
+    padding: 55px 60px 161px;
   }
 
   .new-plan__step {

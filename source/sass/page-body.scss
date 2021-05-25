@@ -23,6 +23,16 @@
   height: 380px;
 }
 
+.page-body__js-disabled {
+  & .page-header__toggle {
+    display: none;
+  }
+
+  & .page-header__menu--expand {
+    position: relative;
+  }
+}
+
 @media (min-width: $tablet) {
   .page-body__map-display {
     height: 615px;

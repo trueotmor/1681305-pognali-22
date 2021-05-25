@@ -8,7 +8,7 @@
   @include bg-color(color("pog-first", 0));
 }
 
-.companions .wrapper {
+.companions__wrapper {
   padding: 128px 25px 30px;
   box-sizing: border-box;
   position: relative;
@@ -140,7 +140,7 @@
     border-radius: 0 0 60px 60px;
   }
 
-  .companions .wrapper {
+  .companions__wrapper {
     padding: 201px 75px 87px;
   }
 
@@ -227,7 +227,7 @@
 }
 
 @media (min-width: $desktop) {
-  .companions .wrapper {
+  .companions__wrapper {
     padding: 190px 60px 124px 130px;
     display: grid;
     grid-template-columns: 50% 50%;

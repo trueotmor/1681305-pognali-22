@@ -353,4 +353,8 @@
     width: 285px;
     height: 285px;
   }
+
+  .profile__transport-item:hover .profile__transport-title {
+    display: flex;
+  }
 }

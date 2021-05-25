@@ -8,7 +8,7 @@
   @include bg-color(color("pog-first", 0));
 }
 
-.interest .wrapper {
+.interest__wrapper {
   padding: 130px 25px 30px;
   box-sizing: border-box;
 }
@@ -87,8 +87,8 @@
   text-align: center;
   text-decoration: none;
 
-  &:hover .int-phone__number,
-  &:hover .int-phone__image {
+  &:hover .interest__phone-number,
+  &:hover .interest__phone-image {
     color: color("pog-special-second");
     fill: color("pog-special-second");
     transition: all 0.3s;
@@ -107,8 +107,8 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  &:hover .int-mail__mail,
-  &:hover .int-mail__image {
+  &:hover .interest__mail-text,
+  &:hover .interest__mail-image {
     color: color("pog-special-second");
     fill: color("pog-special-second");
     transition: all 0.3s;
@@ -120,8 +120,8 @@
   }
 }
 
-.int-mail__wrapper,
-.int-phone__wrapper {
+.interest__mail-wrapper,
+.interest__phone-wrapper {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -134,8 +134,8 @@
   align-items: center;
 }
 
-.int-phone__number,
-.int-mail__mail {
+.interest__phone-number,
+.interest__mail-text {
   display: flex;
   align-items: center;
   margin-left: 16px;
@@ -206,7 +206,7 @@
     margin-top: -60px;
   }
 
-  .interest .wrapper {
+  .interest__wrapper {
     padding: 146px 75px 57px;
   }
 
@@ -249,24 +249,24 @@
     }
   }
 
-  .int-mail__wrapper,
-  .int-phone__wrapper {
+  .interest__mail-wrapper,
+  .interest__phone-wrapper {
     width: 68px;
     height: 68px;
   }
 
-  .int-phone__image {
+  .interest__phone-image {
     width: 28px;
     height: 26px;
   }
 
-  .int-mail__image {
+  .interest__mail-image {
     width: 28px;
     height: 19px;
   }
 
-  .int-phone__number,
-  .int-mail__mail {
+  .interest__phone-number,
+  .interest__mail-text {
     margin-left: 22px;
     font-size: fs("large");
     line-height: lh("very-large");
@@ -279,7 +279,7 @@
     margin-top: -60px;
   }
 
-  .interest .wrapper {
+  .interest__wrapper {
     padding: 180px 135px 103px;
   }
 
@@ -322,24 +322,24 @@
     text-align: left;
   }
 
-  .int-mail__wrapper,
-  .int-phone__wrapper {
+  .interest__mail-wrapper,
+  .interest__phone-wrapper {
     width: 90px;
     height: 90px;
   }
 
-  .int-phone__image {
+  .interest__phone-image {
     width: 36px;
     height: 34px;
   }
 
-  .int-mail__image {
+  .interest__mail-image {
     width: 37px;
     height: 25px;
   }
 
-  .int-phone__number,
-  .int-mail__mail {
+  .interest__phone-number,
+  .interest__mail-text {
     margin-left: 22px;
     font-size: fs("large");
     line-height: lh("very-large");

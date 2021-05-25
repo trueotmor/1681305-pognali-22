@@ -2,7 +2,7 @@ document.querySelector(".page-header__toggle").addEventListener("click", () => {
   document.querySelector(".page-header__menu").classList.toggle("page-header__menu--expand")
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener("DOMContentLoaded", (event) => {
   document.querySelector("body").classList.remove("js-disabled")
 });
 
@@ -29,20 +29,20 @@ function throttle(fn, wait) {
 
 toogle_page_header_scroll();
 
-window.addEventListener('scroll', throttle(toogle_page_header_scroll, 300));
+window.addEventListener("scroll", throttle(toogle_page_header_scroll, 300));
 
 ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
+  var myMap = new ymaps.Map("map", {
           center: [59.938784, 30.323250],
           zoom: 17
       }, {
-          searchControlProvider: 'yandex#search'
+          searchControlProvider: "yandex#search"
       }),
       myPlacemark = new ymaps.Placemark([59.938784, 30.323250], {
-          hintContent: 'Pogнали'
+          hintContent: "Pogнали"
       }, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map/map_marker.svg',
+          iconLayout: "default#image",
+          iconImageHref: "img/map/map_marker.svg",
           iconImageSize: [41, 41],
           iconImageOffset: [0, 0]
       });
