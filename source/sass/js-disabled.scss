@@ -6,4 +6,48 @@
   & .js-disabled__menu {
     position: relative;
   }
+
+  & .js-disabled__background {
+    background: url("../img/map/background_map_mob@1x.png");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 320px auto;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/map/background_map_mob@2x.png");
+      background-size: 640px auto;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .js-disabled {
+    & .js-disabled__background {
+      background: url("../img/map/background_map_tab@1x.png");
+      background-repeat: repeat-x;
+      background-position: center;
+      background-size: 768px auto;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../img/map/background_map_tab@2x.png");
+        background-size: 1536px auto;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .js-disabled {
+    & .js-disabled__background {
+      background: url("../img/map/background_map_desk@1x.png");
+      background-repeat: repeat-x;
+      background-position: center;
+      background-size: 1440px auto;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../img/map/background_desk_mob@2x.png");
+        background-size: 2880px auto;
+      }
+    }
+  }
 }
