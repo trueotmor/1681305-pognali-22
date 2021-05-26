@@ -86,4 +86,14 @@
   <symbol id="btn-new" viewBox="0 0 14 14">
     <path stroke-width="2" d="M7 0v14M0 7h14"/>
   </symbol>
+  <symbol id="ellipsis" viewBox="0 0 17 3">
+    <circle cx="1.5" cy="1.5" r="1.5"/>
+    <circle cx="8.5" cy="1.5" r="1.5"/>
+    <circle cx="15.5" cy="1.5" r="1.5"/>
+  </symbol>
+  <symbol id="ellipsis-big" viewBox="0 0 30 6">
+    <circle cx="3" cy="3" r="3"></circle>
+    <circle cx="15" cy="3" r="3"></circle>
+    <circle cx="27" cy="3" r="3"></circle>
+  </symbol>
 </svg>
